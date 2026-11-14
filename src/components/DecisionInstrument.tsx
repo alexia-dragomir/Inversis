@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState, type ReactNode } from 'react';
 import type { Analysis } from '../engine/analysis';
 import { displayScore, planLabel, planNames, replayRows, replayLeaders, scoreSummary } from './display';
 
-export function DecisionInstrument({analysis}:{analysis:Analysis}) {
-  const [selected,setSelected]=useState('');
+export function DecisionInstrument({analysis,initialReplay='',replayGuide}:{analysis:Analysis;initialReplay?:string|undefined;replayGuide?:ReactNode}) {
+  const [selected,setSelected]=useState(initialReplay);
   const r=analysis.evaluation.state==='evaluated'?analysis.evaluation.result:null;
   if(!r?.computation)return null;
   const c=r.computation;
@@ -16,7 +16,7 @@ export function DecisionInstrument({analysis}:{analysis:Analysis}) {
       <div className="ranked-scores">{r.activeCandidateIds.map(id=><div className={`ranked-score candidate-${id}`} key={id}><div><span className="plan-key"/>{planNames[id]}{r.preferredSet.includes(id)&&<small>Selected set</small>}</div><strong>{displayScore(c.worstRegrets[id])}</strong><div className="score-track"><span style={{width:`${100*c.worstRegrets[id]!/max}%`}}/></div></div>)}</div>
       <aside className="score-gap"><span>Gap to the next minimax score</span><strong>{summary.margin===null?'No competitor':displayScore(summary.margin)}</strong><p>The difference between the two lowest worst-case regrets. Not confidence or a measure of crop performance.</p></aside><p className="small-note">Normalized exposure units, lower is better. Bars share a scale ending at {displayScore(max)}. These are neither probabilities nor agricultural outcomes.</p>
     </div>
-    <div className="replay-lab"><p className="eyebrow">Within one replay / weighted exposure</p><h2>Change the replay.</h2><div className="replay-tabs" aria-label="Choose historical replay">{r.validScenarioIds.map(id=>{const s=analysis.scenarios.find(s=>s.id===id)!;return <button className={`candidate-${replayLeaders(r,id).length===1?replayLeaders(r,id)[0]:'tie'}`} key={id} aria-pressed={id===scenario} onClick={()=>setSelected(id)}>{s.fiveYearStart}<span>–{s.fiveYearEnd}</span><small>{planLabel(replayLeaders(r,id))}</small></button>;})}</div>
+    <div className="replay-lab">{replayGuide}{replayGuide&&<p className="reference-comparison">Across all {r.validScenarioIds.length} replays: <strong>{planLabel(r.preferredSet)}</strong> is the conditional minimax selection · maximum regret <strong>{displayScore(summary.best.value)}</strong>. The replay comparison below uses weighted exposure.</p>}<p className="eyebrow">Within one replay / weighted exposure</p><h2>Change the replay.</h2><div className="replay-tabs" aria-label="Choose historical replay">{r.validScenarioIds.map(id=>{const s=analysis.scenarios.find(s=>s.id===id)!;return <button className={`candidate-${replayLeaders(r,id).length===1?replayLeaders(r,id)[0]:'tie'}`} key={id} aria-pressed={id===scenario} onClick={()=>setSelected(id)}>{s.fiveYearStart}<span>–{s.fiveYearEnd}</span><small>{planLabel(replayLeaders(r,id))}</small></button>;})}</div>
       <div className="replay-selection" aria-live="polite"><span>Lowest exposure in this replay</span><strong>{planLabel(rows.filter(row=>row.regret<=1e-10).map(row=>row.id))}</strong></div>
       <div className="loss-axis"><span>Weighted exposure</span><span>0 → 1</span></div>
       {rows.map(row=><div className={`replay-loss candidate-${row.id}`} key={row.id}><div><span><i className="plan-key"/>{planNames[row.id]}</span><strong>{displayScore(row.loss)}</strong></div><div className="loss-track"><span className="minimum-segment" style={{width:`${Math.min(...rows.map(r=>r.loss))*100}%`}}/><span className="regret-segment" style={{left:`${Math.min(...rows.map(r=>r.loss))*100}%`,width:`${row.regret*100}%`}}/></div><small>Regret <b>{displayScore(row.regret)}</b>{row.regret<=1e-10?' · replay comparator':''}</small></div>)}

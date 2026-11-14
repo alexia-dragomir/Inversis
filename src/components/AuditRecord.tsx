@@ -3,7 +3,7 @@ import type { DecisionCertificate } from '../domain/contracts';
 import { Brand } from './Brand';
 import { displayScore, planLabel, scoreSummary } from './display';
 
-export function AuditRecord({audit,onExport,busy}:{audit:DecisionCertificate;onExport:()=>void;busy:boolean}) {
+export function AuditRecord({audit,onExport,busy,referenceLabel}:{referenceLabel?:string|undefined;audit:DecisionCertificate;onExport:()=>void;busy:boolean}) {
   const [copyStatus,setCopyStatus]=useState('');
   const copyFingerprint=async()=>{try{await navigator.clipboard.writeText(audit.fingerprint);setCopyStatus('Full SHA-256 copied.');}catch{setCopyStatus('Clipboard unavailable. Select and copy the full fingerprint below.');}};
   const categories=[
@@ -19,7 +19,7 @@ export function AuditRecord({audit,onExport,busy}:{audit:DecisionCertificate;onE
   const sourceIds=[...new Set(audit.sourceManifest.map(s=>s.sourceId))];
   return <>
     <section className="audit-record">
-      <header><Brand/><div className="audit-seal">Inversis decision record<br/><b>Historical exposure · 2015–2024 UTC</b></div></header>
+      <header><Brand/><div className="audit-seal">Inversis decision record{referenceLabel&&<><br/><strong>{referenceLabel}</strong></>}<br/><b>Historical exposure · 2015–2024 UTC</b></div></header>
       <div className="audit-body"><div><p className="eyebrow">Conditional minimax selection</p><h2>{audit.decision.computation?planLabel(audit.decision.preferredSet):audit.decision.status.replaceAll('_',' ').toLowerCase()}</h2><p>{summary?audit.decision.activeCandidateIds.length===1?'Only one eligible plan remains. Zero regret is not evidence of competitive superiority.':'The selected set minimizes its largest missed opportunity across the complete shared historical replays.':'reasons' in audit.decision?audit.decision.reasons.join(' '):''}</p><p className="small-note">Historical environmental exposure, not agricultural certification or a forecast.</p><div className="audit-actions"><button className="button" disabled={busy} onClick={onExport}>Download certificate JSON ↓</button><button className="secondary-button" disabled={busy} onClick={()=>window.print()}>Print record</button></div><p className="small-note">JSON is the canonical record. The printable presentation is a human-readable summary.</p></div>
         <dl>{[['Model',audit.modelVersion],['Historical domain','2015–2024 UTC'],['Common complete replays',String(audit.decision.validScenarioIds.length)],['Preference',audit.context.preferenceWeights.map(w=>`${Math.round(w.weight*100)}% ${w.indicator}`).join(' / ')],['Field suitability','Not established']].map(([name,value])=><div key={name}><dt>{name}</dt><dd>{value}</dd></div>)}</dl>
       </div>
