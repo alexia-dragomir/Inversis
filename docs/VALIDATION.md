@@ -1,4 +1,21 @@
-# Stage 0 validation
+# Validation record
+
+## Stage 1 checkpoint
+
+Executed 2026-11-14: `npm run check` passed lint, strict TypeScript, **58 tests in five
+files**, offline byte/hash/metadata validation and deterministic evidence regeneration,
+and the production build. Tests use the retained authentic POWER and CMR captures;
+IMERG cell unit-test fixtures are synthetic and explicitly labeled. Separate integration
+tests validate the real one-day NetCDF subset and repeated download, including
+coordinate/dimension order, UTC bounds, native units, fill and half-hour counts.
+See [Stage 1 report](STAGE_1_REPORT.md).
+
+Browser smoke check confirmed all four routes, updated source status, persistent
+insufficient-evidence messages, and expanded provenance links. No ranking or
+certificate was rendered. This text-only UI update did not repeat the Stage 0
+responsive/accessibility audit or claim a new exhaustive one.
+
+## Historical Stage 0 validation
 
 Executed 2026-11-14. These checks validate the foundation, not agronomic correctness
 or NASA observations. No scientific engine exists yet.

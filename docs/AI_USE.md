@@ -8,7 +8,15 @@ NASA observations, scientific findings, crop rankings, field facts or imagery.
 Artifacts affected: the Stage 0 source, configuration, tests and documentation in this
 repository. All code must be treated as AI-assisted. Automated validation is recorded
 in `VALIDATION.md`; it is not human agronomic or scientific validation. Human review
-of Stage 0 and all later source/scientific claims remains pending.
+of Stage 0 was accepted by the owner. Stage 1 source claims require checkpoint review;
+scientific and agronomic validation remains pending.
+
+Stage 1: Codex assisted the NASA acquisition probe, runtime parsing and QC, adversarial
+tests, deterministic provenance, documentation and source-status UI updates. Original
+POWER and CMR response bytes came from NASA HTTPS endpoints, not AI generation.
+Firecrawl read official NASA documentation; the official Earthdata browser flow was
+used for access attempts. No credentials or private account profile are retained in
+the repository. Synthetic malformed records exist only inside clearly labeled tests.
 
 The application contains no runtime AI. The original project concept and authoritative
 specification were supplied by the owner. Do not imply AI originated verified science.

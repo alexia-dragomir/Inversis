@@ -1,5 +1,10 @@
 # Third-party software
 
+Stage 1 extraction uses [h5wasm 0.10.3](https://github.com/usnistgov/h5wasm), pinned
+as a development-only dependency. It reads authentic NetCDF4/HDF5 files offline and
+is not included in the application bundle. See its LICENSE.txt for NIST and bundled
+third-party terms.
+
 Installed versions from package metadata; complete transitive versions are pinned in package-lock.json. Runtime packages: React, React DOM and Scheduler. All other direct entries below are build/test/lint tooling.
 
 | Package | Version | License | Source |

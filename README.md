@@ -5,10 +5,12 @@
 A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
 *Field Shift: Adapting Farms with NASA Data*.
 
-**Stage 0 implemented.** The application provides a Context → Decision → Stability →
-Certificate shell and shared scientific contracts. No NASA observations have been
-ingested into this codebase. No ranking, reversal, exposure statistic or certificate
-has been computed. Stage 1 requires the owner's checkpoint review.
+**Stage 1 small-sample checkpoint.** Seven authentic NASA POWER T2M_MAX daily values
+(1–7 January 2024 UTC) and one IMERG Final V07B daily cell (January 1, 0 mm/day,
+48 valid half-hours) are retained and validated. Historical coverage is not established. The four-screen
+Context → Decision → Stability → Certificate architecture is preserved. No ranking,
+reversal, exposure statistic or certificate has been computed. See the
+[Stage 1 evidence report](docs/STAGE_1_REPORT.md) for exact scope and limitations.
 
 ## Run locally
 
@@ -22,7 +24,8 @@ npm run check
 
 On Windows, if npm is absent from PATH, add `C:\Program Files\nodejs` to the current
 terminal's PATH, or invoke its `npm.cmd` explicitly. No global packages are required.
-The `check` script runs lint, strict type checking, Vitest, and a production build.
+The `check` script runs lint, strict type checking, Vitest, deterministic evidence
+integrity/reprocessing verification, and a production build.
 `npm run preview` serves `dist` after a build. Four hash routes work on static hosts
 without rewrite rules: `#context`, `#decision`, `#stability`, `#certificate`.
 
@@ -30,13 +33,14 @@ without rewrite rules: `#context`, `#decision`, `#stability`, `#certificate`.
 
 - `src/domain/contracts.ts`: one shared schema for evidence, assumptions, agronomy,
   decisions, counterfactual branches and reproducible certificates.
-- `src/data`: explicit foundation state and proposed inputs. Future adapters validate
-  external input at runtime before it reaches the deterministic engine.
+- `src/data`: explicit foundation state and runtime source validators. Source access
+  samples are separated from comparison eligibility.
 - `src/engine`: reserved pure computational boundary, independent of React.
 - `src/agronomy`: reserved source-backed rule and eligibility boundary.
 - `src/pages`, `src/components`, `src/App.tsx`: accessible presentation/navigation;
   no scientific ranking logic lives here.
-- `public/evidence`: reserved for validated, redistributable manifests/extracts.
+- `public/evidence`: original public NASA JSON captures, receipts and reproducible
+  validation/discovery outputs; no authentication material.
 - `tests`: refusal-state, crop-order, rendering/navigation and compile-time contract checks.
 - `docs`: methods, provenance requirements, limitations, compliance and execution state.
 

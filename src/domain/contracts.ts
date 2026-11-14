@@ -28,7 +28,8 @@ export interface Site {
 }
 export interface SpatialSupport {
   readonly requestedCoordinates: { readonly latitude: number; readonly longitude: number };
-  readonly selectedCoordinates: { readonly latitude: number; readonly longitude: number };
+  /** Null when the service echoes the request point without reporting a native cell. */
+  readonly selectedCoordinates: { readonly latitude: number; readonly longitude: number } | null;
   readonly footprint: string;
   readonly nativeResolution: string;
   readonly extractionMethod: string;
@@ -37,7 +38,8 @@ export interface ProvenanceRecord {
   readonly id: string;
   readonly sourceId: string;
   readonly productFamily: string;
-  readonly collectionVersion: string;
+  readonly collectionVersion: string | null;
+  readonly serviceVersion?: string;
   readonly scienceVersion: string | null;
   readonly variablePath: string;
   readonly sourceType: EvidenceOrigin;

@@ -22,9 +22,9 @@ export function App() {
     <a className="skip-link" href="#main" onClick={event => { event.preventDefault(); main.current?.focus(); }}>Skip to content</a>
     <header className="header"><a className="wordmark" href="#context" aria-label="Inversis — Context">Inversis<span className="wordmark-dot" aria-hidden="true">.</span></a>
       <nav aria-label="Decision workflow">{steps.map((item, index) => <a href={`#${item}`} key={item} aria-current={step === item ? 'page' : undefined}><span className="nav-number" aria-hidden="true">0{index + 1}</span>{item}</a>)}</nav>
-      <span className="stage-label">Stage 0 / Foundation</span>
+      <span className="stage-label">Stage 1 / Evidence</span>
     </header>
-    <div className="workspace"><div className="evidence-notice"><span className="notice-dot" aria-hidden="true" />Evidence pending <span className="notice-detail">No NASA data ingested. No scientific results computed.</span></div>
+    <div className="workspace"><div className="evidence-notice"><span className="notice-dot" aria-hidden="true" />Evidence incomplete <span className="notice-detail">POWER and IMERG access samples validated. Crop comparisons remain withheld.</span></div>
       <main id="main" ref={main} tabIndex={-1}>{step === 'context' ? <ContextPage /> : <PendingPage stage={step} />}</main>
       <Methodology />
       <footer><span>Inversis · Know what would change the decision.</span><span>Historical exposure ≠ future prediction</span></footer>

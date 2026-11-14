@@ -29,13 +29,13 @@ export const initialDecision: DecisionResult = {
   status: 'INSUFFICIENT_EVIDENCE', provisional: true, constraintDependent: false,
   activeCandidateIds: candidates.map(({ id }) => id), confirmedCandidateIds: [],
   validScenarioIds: [], indicatorIds: [], weights: [], normalization: [], preferredSet: [],
-  reasons: ['NASA evidence has not been ingested or validated.', 'No complete common historical scenarios have been established.'],
+  reasons: ['Seven POWER days and one IMERG day validate source access, not crop comparisons.', 'No complete common historical scenarios have been established.'],
   warnings: ['No rotation has established field-level suitability.'],
 };
 
-/** Acquisition targets only. Exact metadata must be verified from actual retrieval. */
+/** Stage 1 source status; access samples do not establish comparison readiness. */
 export const plannedSources = [
-  { name: 'NASA POWER', product: 'Daily T2M_MAX', role: 'Maximum air temperature', unit: '°C', status: 'Not ingested' },
-  { name: 'GPM / IMERG', product: 'Final daily V07 · candidate product', role: 'Precipitation and dry spells', unit: 'Daily rate / accumulation semantics to verify', status: 'Not ingested' },
+  { name: 'NASA POWER', product: 'Daily T2M_MAX · 1–7 January 2024 UTC', role: 'Modeled maximum 2 m air temperature', unit: '°C · 7/7 days present', status: 'Access sample validated' },
+  { name: 'GPM / IMERG', product: 'Final daily V07 / V07B · 1 January 2024 UTC', role: 'Satellite/gauge precipitation estimate · native cell', unit: 'mm/day · 48/48 half-hours present', status: 'One-day sample validated' },
   { name: 'SMAP L4', product: 'SPL4SMGP V008 · optional third source', role: 'Model-assimilated root-zone moisture', unit: 'm³/m³ · to verify', status: 'Not ingested' },
 ] as const;

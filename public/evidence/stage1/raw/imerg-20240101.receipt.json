@@ -1,0 +1,9 @@
+{
+  "acquisitionMode": "user-downloaded GES DISC Transform Data; user attested agreement acceptance",
+  "registeredAtUTC": "2026-11-14T08:40:33.187Z",
+  "retrievalTimeUTC": null,
+  "retrievalTimeNote": "Exact download completion time was not captured; service transformation time is retained inside the NetCDF history.",
+  "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+  "bytes": 39155,
+  "sha256": "f305cb218e5cdccf45b3cc0c8b1d1c34e1a957c82ff565959d2b1cd599be372f"
+}

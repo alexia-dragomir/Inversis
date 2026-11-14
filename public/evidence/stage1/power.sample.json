@@ -1,0 +1,198 @@
+{
+  "kind": "validated-access-sample",
+  "eligibleForCropComparison": false,
+  "observations": [
+    {
+      "id": "POWER.T2M_MAX.UTC.2024-01-01",
+      "provenanceId": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+      "timeStartUTC": "2024-01-01T00:00:00.000Z",
+      "timeEndUTC": "2024-01-02T00:00:00.000Z",
+      "rawValue": 10.16,
+      "measurement": {
+        "status": "valid",
+        "quantity": {
+          "value": 10.16,
+          "unit": "degC"
+        },
+        "flags": [
+          "source-daily-value",
+          "no-per-day-quality-flags-returned"
+        ]
+      }
+    },
+    {
+      "id": "POWER.T2M_MAX.UTC.2024-01-02",
+      "provenanceId": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+      "timeStartUTC": "2024-01-02T00:00:00.000Z",
+      "timeEndUTC": "2024-01-03T00:00:00.000Z",
+      "rawValue": 8.07,
+      "measurement": {
+        "status": "valid",
+        "quantity": {
+          "value": 8.07,
+          "unit": "degC"
+        },
+        "flags": [
+          "source-daily-value",
+          "no-per-day-quality-flags-returned"
+        ]
+      }
+    },
+    {
+      "id": "POWER.T2M_MAX.UTC.2024-01-03",
+      "provenanceId": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+      "timeStartUTC": "2024-01-03T00:00:00.000Z",
+      "timeEndUTC": "2024-01-04T00:00:00.000Z",
+      "rawValue": 8.27,
+      "measurement": {
+        "status": "valid",
+        "quantity": {
+          "value": 8.27,
+          "unit": "degC"
+        },
+        "flags": [
+          "source-daily-value",
+          "no-per-day-quality-flags-returned"
+        ]
+      }
+    },
+    {
+      "id": "POWER.T2M_MAX.UTC.2024-01-04",
+      "provenanceId": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+      "timeStartUTC": "2024-01-04T00:00:00.000Z",
+      "timeEndUTC": "2024-01-05T00:00:00.000Z",
+      "rawValue": 12.41,
+      "measurement": {
+        "status": "valid",
+        "quantity": {
+          "value": 12.41,
+          "unit": "degC"
+        },
+        "flags": [
+          "source-daily-value",
+          "no-per-day-quality-flags-returned"
+        ]
+      }
+    },
+    {
+      "id": "POWER.T2M_MAX.UTC.2024-01-05",
+      "provenanceId": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+      "timeStartUTC": "2024-01-05T00:00:00.000Z",
+      "timeEndUTC": "2024-01-06T00:00:00.000Z",
+      "rawValue": 14.32,
+      "measurement": {
+        "status": "valid",
+        "quantity": {
+          "value": 14.32,
+          "unit": "degC"
+        },
+        "flags": [
+          "source-daily-value",
+          "no-per-day-quality-flags-returned"
+        ]
+      }
+    },
+    {
+      "id": "POWER.T2M_MAX.UTC.2024-01-06",
+      "provenanceId": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+      "timeStartUTC": "2024-01-06T00:00:00.000Z",
+      "timeEndUTC": "2024-01-07T00:00:00.000Z",
+      "rawValue": 13.25,
+      "measurement": {
+        "status": "valid",
+        "quantity": {
+          "value": 13.25,
+          "unit": "degC"
+        },
+        "flags": [
+          "source-daily-value",
+          "no-per-day-quality-flags-returned"
+        ]
+      }
+    },
+    {
+      "id": "POWER.T2M_MAX.UTC.2024-01-07",
+      "provenanceId": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+      "timeStartUTC": "2024-01-07T00:00:00.000Z",
+      "timeEndUTC": "2024-01-08T00:00:00.000Z",
+      "rawValue": 12.43,
+      "measurement": {
+        "status": "valid",
+        "quantity": {
+          "value": 12.43,
+          "unit": "degC"
+        },
+        "flags": [
+          "source-daily-value",
+          "no-per-day-quality-flags-returned"
+        ]
+      }
+    }
+  ],
+  "coverage": {
+    "expectedDays": 7,
+    "validDays": 7,
+    "missingDays": 0,
+    "longestGapDays": 0,
+    "policyId": "stage1-complete-daily-sample-v1",
+    "status": "passed",
+    "reasons": []
+  },
+  "provenance": {
+    "id": "power-t2m-max-8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+    "sourceId": "NASA-POWER/T2M_MAX/MERRA2",
+    "productFamily": "NASA POWER meteorology",
+    "collectionVersion": null,
+    "serviceVersion": "v2.10.3",
+    "scienceVersion": null,
+    "variablePath": "properties.parameter.T2M_MAX",
+    "sourceType": "model-derived",
+    "sourceUrl": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+    "doi": null,
+    "queryOrGranule": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX&community=AG&longitude=27.335&latitude=44.565&start=20240101&end=20240107&format=JSON&time-standard=UTC",
+    "retrievalTimeUTC": "2026-11-14T07:39:47.233Z",
+    "sourceTimeStandard": "UTC",
+    "utcAlignment": "Explicit UTC request and returned header; midnight-to-midnight intervals, exclusive end.",
+    "temporalSupport": "Daily maximum of source 2 m air temperature; not instantaneous or a daily mean.",
+    "spatialSupport": {
+      "requestedCoordinates": {
+        "latitude": 44.565,
+        "longitude": 27.335
+      },
+      "selectedCoordinates": null,
+      "footprint": "Gridded reanalysis; response echoes requested coordinate, not native cell centre/bounds.",
+      "nativeResolution": "Source-native gridded meteorology; numeric resolution and exact cell bounds are not reported in this response.",
+      "extractionMethod": "NASA POWER daily point service; underlying sampling delegated to POWER, native cell not exposed in this response."
+    },
+    "rawUnit": "C",
+    "fillValues": [
+      -999
+    ],
+    "processingVersion": "inversis-source-validation-v1",
+    "transformations": [
+      "C metadata mapped to canonical degC without changing numeric values.",
+      "YYYYMMDD keys represented as full UTC-day intervals.",
+      "Declared fill, absent and null values retained explicitly as missing; no interpolation."
+    ],
+    "sha256": "8f5fc2e10b48670040482041d59e0eb172c20eb570c950fde31770737cee14a9",
+    "dependenceNotes": [
+      "MERRA2/POWER source names retained from header; not a direct field measurement."
+    ]
+  },
+  "limitations": [
+    "Seven winter days prove access/format only; no complete crop window or five-year scenario.",
+    "Native cell identity and underlying collection/science version are not reported by this response; API version is not a dataset version.",
+    "Daily availability is checked; subdaily completeness and per-day source QC are not exposed by this API response.",
+    "Values are modeled gridded temperature estimates, not farm measurements."
+  ],
+  "processingHashes": {
+    "src/data/ingestion/validation.ts": "0eb0ea092b0dc7ed993505d64ae219af15013b18746d7e7c3d2011f20407b5a0",
+    "src/data/ingestion/power.ts": "021b4cfa0d49de321ef538be25e126e3cdcf1bdf42e9b1860bfa8aa7d0a8aba9",
+    "src/data/ingestion/imerg-discovery.ts": "0fb7ec183320e5bbb146377f6f3b4aeaad4293d3ff7f8e4476dde47155261d37",
+    "src/data/ingestion/imerg.ts": "290265c169d44ef4ceac464d8a0d785e740381529f1935b1601d854b0af06e36",
+    "scripts/verify-capture.ts": "095d207ba065c344b0353725c17966c3a9408cf7a9dbab27e05f33eee755afef",
+    "scripts/read-imerg.ts": "f78588456c899b35472ee13e98ebfcd45f677ca092dbe223e3672ffc247563c2",
+    "scripts/build-evidence.ts": "ab5e3d70d30fe4ede2749aecbe2b6a96015897196db63d22ca1df4428495529d",
+    "package-lock.json": "c3d67615e56910b1468e534cb3fbe22839c3d4583f2adffe0239f46431ed109f"
+  }
+}

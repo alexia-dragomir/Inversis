@@ -2,7 +2,7 @@
 
 Authority: the supplied Master Handoff v6, START HERE and Addendum I, then H, then G,
 then reconciled older sections. Addendum J updates preflight status only. The user's
-current Stage 0 request bounds implementation; later-stage behavior is planned.
+current Stage 1 request bounds implementation; later-stage behavior is planned.
 
 `src/domain/contracts.ts` is the single shared schema. It has no React imports and
 uses readonly records, discriminated unions, explicit units and no `any`.
@@ -21,7 +21,11 @@ uses readonly records, discriminated unions, explicit units and no `any`.
 
 Types cannot prove finite numbers, valid UTC intervals, genuine source identity, hash
 integrity, unit compatibility, equal matrix domains or complete field evidence.
-Runtime validation is a Stage 1+ requirement. No schema here certifies empirical data.
+Stage 1 adds runtime source validation. No schema alone certifies empirical data.
+Unknown collection versions and native selected coordinates may be null; unknown
+is never replaced by the API version or the echoed request coordinate. A separate
+optional serviceVersion records the POWER API version. A validated access sample
+does not imply eligible historical scenarios or independently verified geophysical accuracy.
 Nonempty tuples enforce cardinality, not uniqueness; validators must enforce unique IDs.
 The minimum common scenario count, tie tolerance, near-constant policy and reference
 protocol must be justified and declared before calculation; no fabricated defaults

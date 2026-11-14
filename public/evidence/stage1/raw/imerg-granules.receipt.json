@@ -1,0 +1,8 @@
+{
+  "url": "https://cmr.earthdata.nasa.gov/search/granules.umm_json?collection_concept_id=C2723754864-GES_DISC&temporal=2024-01-01T00%3A00%3A00Z%2C2024-01-01T23%3A59%3A59Z&point=27.335%2C44.565&page_size=2",
+  "retrievedAt": "2026-11-14T07:45:41.027Z",
+  "status": 200,
+  "contentType": "application/vnd.nasa.cmr.umm_results+json;version=1.6.7; charset=utf-8",
+  "bytes": 2357,
+  "sha256": "89b656a962cdb517d854f4fc77e0560eca87a1c5801bf8defffd127cfff3728d"
+}

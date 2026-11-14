@@ -26,7 +26,7 @@ export function ContextPage() {
     </section>
     <section className="section" aria-labelledby="evidence-title"><p className="eyebrow">What the comparison will need</p><h2 id="evidence-title">Four distinct kinds of evidence</h2>
       <div className="evidence-grid">
-        <article><span className="card-index">01</span><h3>NASA evidence</h3><p>POWER, IMERG and optional SMAP observations or modeled estimates.</p><strong>Not ingested</strong></article>
+        <article><span className="card-index">01</span><h3>NASA evidence</h3><p>Seven POWER days and one IMERG day validated. Common historical coverage remains pending.</p><strong>Access samples only</strong></article>
         <article><span className="card-index">02</span><h3>Crop characteristics</h3><p>Sensitive windows and source-backed succession cautions.</p><strong>Assumptions to validate</strong></article>
         <article><span className="card-index">03</span><h3>Local soil &amp; history</h3><p>Soil, previous crops, disease history and management.</p><strong>Unknown field facts</strong></article>
         <article><span className="card-index">04</span><h3>Farmer priorities</h3><p>Explicit crop permissions and preferences over exposure swings.</p><strong>Not supplied</strong></article>

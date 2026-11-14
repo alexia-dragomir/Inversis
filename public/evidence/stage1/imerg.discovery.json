@@ -1,0 +1,36 @@
+{
+  "collectionId": "C2723754864-GES_DISC",
+  "collectionVersion": "07",
+  "scienceVersion": "V07B",
+  "granuleId": "G3087510500-GES_DISC",
+  "granuleUR": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4",
+  "period": {
+    "startInclusiveUTC": "2024-01-01T00:00:00.000Z",
+    "endInclusiveUTC": "2024-01-01T23:59:59.999Z"
+  },
+  "downloadUrl": "https://data.gesdisc.earthdata.nasa.gov/data/GPM_L3/GPM_3IMERGDF.07/2024/01/3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4",
+  "opendapUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4",
+  "status": "metadata-only-no-precipitation-observations",
+  "captures": [
+    {
+      "url": "https://cmr.earthdata.nasa.gov/search/collections.umm_json?short_name=GPM_3IMERGDF&version=07&page_size=10",
+      "retrievedAt": "2026-11-14T07:44:36.686Z",
+      "sha256": "9c9bf1c92cf8ae2acb8abe008ba57e57236000d2765d8484f6a9fbfd52b4d41e"
+    },
+    {
+      "url": "https://cmr.earthdata.nasa.gov/search/granules.umm_json?collection_concept_id=C2723754864-GES_DISC&temporal=2024-01-01T00%3A00%3A00Z%2C2024-01-01T23%3A59%3A59Z&point=27.335%2C44.565&page_size=2",
+      "retrievedAt": "2026-11-14T07:45:41.027Z",
+      "sha256": "89b656a962cdb517d854f4fc77e0560eca87a1c5801bf8defffd127cfff3728d"
+    }
+  ],
+  "processingHashes": {
+    "src/data/ingestion/validation.ts": "0eb0ea092b0dc7ed993505d64ae219af15013b18746d7e7c3d2011f20407b5a0",
+    "src/data/ingestion/power.ts": "021b4cfa0d49de321ef538be25e126e3cdcf1bdf42e9b1860bfa8aa7d0a8aba9",
+    "src/data/ingestion/imerg-discovery.ts": "0fb7ec183320e5bbb146377f6f3b4aeaad4293d3ff7f8e4476dde47155261d37",
+    "src/data/ingestion/imerg.ts": "290265c169d44ef4ceac464d8a0d785e740381529f1935b1601d854b0af06e36",
+    "scripts/verify-capture.ts": "095d207ba065c344b0353725c17966c3a9408cf7a9dbab27e05f33eee755afef",
+    "scripts/read-imerg.ts": "f78588456c899b35472ee13e98ebfcd45f677ca092dbe223e3672ffc247563c2",
+    "scripts/build-evidence.ts": "ab5e3d70d30fe4ede2749aecbe2b6a96015897196db63d22ca1df4428495529d",
+    "package-lock.json": "c3d67615e56910b1468e534cb3fbe22839c3d4583f2adffe0239f46431ed109f"
+  }
+}

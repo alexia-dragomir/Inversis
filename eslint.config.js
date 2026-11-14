@@ -6,6 +6,7 @@ export default tseslint.config(
   { ignores: ['dist/**', 'node_modules/**', '.local/**'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
+  { files: ['scripts/**/*.mjs'], languageOptions: { globals: { fetch: 'readonly', AbortSignal: 'readonly' } } },
   {
     files: ['src/**/*.{ts,tsx}', 'tests/**/*.{ts,tsx}'],
     plugins: { 'react-hooks': hooks },

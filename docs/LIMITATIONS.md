@@ -1,9 +1,11 @@
 # Limitations and specification reconciliation
 
-Stage 0 has no source adapters, runtime data validators, exposure/normalization engine,
-ranking, agronomic rules, sensitivity grid, counterfactual execution or certificate
-generation. Contract completeness is not scientific validation. No field recommendation
-is supported. Intended NASA evidence remains unvalidated.
+Stage 1 validates seven POWER days and one IMERG day, including NetCDF extraction
+and an independent authenticated repeat. Historical coverage is not established.
+There is no exposure/normalization engine, ranking, agronomic rules, sensitivity
+grid, counterfactual execution or certificate generation. Contract completeness and
+source-format validation are not independent scientific validation. No field
+recommendation is supported. Full historical coverage remains unvalidated.
 
 Resolved specification conflicts:
 
