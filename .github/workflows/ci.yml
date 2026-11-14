@@ -21,4 +21,23 @@ jobs:
       - run: python scripts/independent-oracle.py
       - run: python scripts/independent-imerg-oracle.py
       - run: python scripts/independent-combined-oracle.py
+      - run: python scripts/independent-interpretation.py
       - run: npm run check
+      - uses: actions/upload-pages-artifact@v4
+        if: github.event_name == 'push' && github.ref == 'refs/heads/stage-1/evidence'
+        with:
+          path: dist
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/stage-1/evidence'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy verified static application
+        id: deployment
+        uses: actions/deploy-pages@v4

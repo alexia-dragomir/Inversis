@@ -47,3 +47,12 @@ Python oracle and TypeScript implementation are both AI-assisted; independent he
 means separate readers and arithmetic, not independent human scientific review.
 No runtime AI, invented observations, inferred farmer preferences or synthetic
 reversal claims are introduced. The retained heat-only mode is an explicit fallback.
+
+Phase 2: Codex audited the retained empirical artifacts, identified model-structure
+limitations and the missing alternative-normalization diagnostic, implemented separate
+interpretation/normalization/replay-influence checks, and independently verified their
+arithmetic in Python. It refined responsive charts, progressive disclosure and
+certificate provenance, and prepared GitHub Pages deployment. No new NASA data,
+credentials, model thresholds or candidate sequences were introduced. Both the app
+and diagnostic oracle remain AI-assisted. Browser checks are implementation QA,
+not independent scientific or agronomic approval.

@@ -20351,7 +20351,7 @@
     }
   ],
   "processingHashes": {
-    "scripts/build-imerg-analysis-evidence.ts": "1f2f78439d1045cb6a54ae673416d9974547d48fcdb6074575a86475e26bf732",
+    "scripts/build-imerg-analysis-evidence.ts": "353d9ef3978223f77b649e5bc9683b573d4e9f933cbc84ee966275494eb552eb",
     "scripts/build-imerg-history.py": "d55917fb6db925565787786f2204ce6b39469263e2ddba2cab542ea7a0dac910",
     "scripts/read-imerg.ts": "f78588456c899b35472ee13e98ebfcd45f677ca092dbe223e3672ffc247563c2",
     "scripts/read-imerg-archive.ts": "54d90ffd019705f1af9053b453058e207da40855b0028ab0f695926024f6894f",
@@ -20359,10 +20359,11 @@
     "src/data/ingestion/validation.ts": "d5382c89c7d1fb07dd27f8773458b60bd8641e66591ef7b5350a0d42cf267961",
     "src/engine/exposures.ts": "5df67fe7d4571b9ff7440f461bb12d93436126bf549ed9249acc2185b6868a74",
     "src/engine/decision.ts": "1e481a45ccf1f7cd4bfa8be53979ce4c42e1b10609fdd30dd4e2d480ff609016",
-    "src/engine/analysis.ts": "d94f889a4813c728ae8d9bb578e22d6056b3e7953b5e43f419337d5837c3f3c2",
+    "src/engine/analysis.ts": "831a1c14eabf7cc1fd3230011495a79a3258477a4968929cf33d9be73d697fe5",
     "src/engine/stability.ts": "96e7c6240347548635556ba1f0ea174f04c2e15c9f738171dcced9626a64df23",
+    "src/engine/interpretation.ts": "fbe8ef7a70efa0cad6fde716cf9b9876be17d4393006b81a6d32c0c07ce1c9e2",
     "src/engine/canonical.ts": "b79509cef190ea44ac8657d95542b47e58ea674e52ee20f042e866aa2b4b1787",
-    "src/domain/contracts.ts": "ea86e40fefab48b67329d78ec36655eccb9b610d70f4bc205157ed1206729de4",
+    "src/domain/contracts.ts": "79118e829b81a0bd747aa85e851d18453d7094ecab559e18c67adfcb4b7e735e",
     "src/data/analysis-contract.ts": "ff26be16fc5b63a9aef2427e861c74dd4e485d886334f7cfcfd4eebea7acb165",
     "package-lock.json": "c3d67615e56910b1468e534cb3fbe22839c3d4583f2adffe0239f46431ed109f"
   },

@@ -47,6 +47,7 @@ After acquisition finishes, run:
 python scripts/build-imerg-history.py
 npm run imerg:history:build
 python scripts/independent-combined-oracle.py
+python scripts/independent-interpretation.py
 npm run history:build
 npm run check
 ```
@@ -66,6 +67,7 @@ python -m pip install -r requirements-validation.txt
 python scripts/independent-oracle.py
 python scripts/independent-imerg-oracle.py
 python scripts/independent-combined-oracle.py
+python scripts/independent-interpretation.py
 npm run check
 ```
 

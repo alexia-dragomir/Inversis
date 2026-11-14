@@ -225,7 +225,7 @@ export type DecisionResult = DecisionBasis & (
 export type DecisionEvaluation =
   | { readonly state: 'invalid-input'; readonly issues: NonEmpty<string> }
   | { readonly state: 'evaluated'; readonly result: DecisionResult };
-export type SensitivityAxis = 'preference' | 'eligibility' | 'crop-window' | 'normalization' | 'indicator-omission' | 'cyclic-phase';
+export type SensitivityAxis = 'preference' | 'eligibility' | 'crop-window' | 'normalization' | 'indicator-omission' | 'cyclic-phase' | 'historical-replay';
 export interface SensitivityResult {
   readonly axis: SensitivityAxis;
   readonly sampledConfigurations: readonly { readonly id: string; readonly description: string; readonly decision: DecisionResult }[];
@@ -267,6 +267,7 @@ export interface NextEvidenceItem {
   readonly actionText: string;
 }
 export interface DecisionCertificate {
+  readonly processingHashes: Readonly<Record<string, string>>;
   readonly schemaVersion: string;
   readonly modelVersion: string;
   readonly dataRevision: string;

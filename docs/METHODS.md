@@ -90,3 +90,23 @@ JSON canonicalization preserves array order, finite numbers and normalized -0, t
 hashes UTF-8 with SHA-256. Only top-level fingerprint and generation timestamp are
 excluded. Verify with `npm run certificate:verify -- PATH`. Integrity does not imply
 NASA endorsement, field validation or agricultural certification.
+
+## Phase 2 interpretation and secondary diagnostics
+
+The primary min/max model is unchanged. A separate nearest-rank empirical P10/P90
+normalization uses sorted positions 4 and 36 of each fixed forty-member unshifted
+reference population, with clipping and the same refusal policy. It never interpolates
+observations. Its bounds and outputs are retained alongside the primary result in
+the certificate. Replay omission removes one complete scenario for every active plan,
+keeps references fixed, and enforces the same minimum common-scenario count.
+
+The interpretation layer distinguishes missing evidence, sole eligibility, identical
+scenario–indicator exposures, minimax ties, pointwise exposure dominance and sampled
+preferred-set invariance/change. Scenario-best sets, pairwise exposure counts, and
+second-lowest minus lowest worst-regret margins come directly from the current
+comparison. No threshold translates a score gap into agricultural confidence.
+
+Independent tests cover all 105 preference/calendar pairs under each of two reference
+protocols and six nominal replay omissions. The UI shows 21 weights at the currently
+selected calendar; its separate five-shift table uses the current preference. Phases
+remain separate. Certificates also carry the exact processing-code hashes.

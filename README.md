@@ -16,6 +16,10 @@ available and passes its original tests. Missing rainfall still refuses combined
 The actual default result and every declared preference/shift/phase test retain the
 Baseline preferred set. No reversal or continuous stability boundary is invented.
 These are historical environmental-exposure comparisons, not field recommendations.
+Phase 2 adds scenario-loss charts, regret profiles, exact margins, structural/dominance
+interpretation, alternate-reference and replay-omission diagnostics. Read the
+[empirical findings](docs/PHASE_2_FINDINGS.md) before interpreting unchanged results
+as robustness.
 See the [combined checkpoint](docs/COMBINED_CHECKPOINT.md),
 [reproducible NASA access](docs/REPRODUCE_IMERG.md), and historical
 [Stage 1 report](docs/STAGE_1_REPORT.md).
@@ -81,11 +85,12 @@ crop/disease history and management remain unknown. A and B share crop compositi
 ## Repository and deployment
 
 The sole intended remote is https://github.com/alexia-dragomir/Inversis.
-Vercel is not configured or verified. To deploy, create a **new Inversis project**,
-authorize only this repository, select Vite, build with `npm run check`, and publish
-`dist`. No environment variables are needed. See the execution report for actual
-Git publication status. GitHub Actions is configured; local passing checks do not
-imply that the remote workflow has run.
+GitHub Pages is the selected public static host. The owner enabled GitHub Actions
+as its publishing source. The workflow deploys only after the complete scientific
+verification job succeeds on `stage-1/evidence`. Relative asset/evidence URLs support
+the repository subpath and all four hash routes. No runtime credentials, backend or
+new dependencies are required. Public browser verification is recorded in
+[deployment and submission readiness](docs/DEPLOYMENT_AND_SUBMISSION.md).
 
 ## Scope and license
 
