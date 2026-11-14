@@ -2,24 +2,37 @@
 
 ## Actual readiness
 
-The static application builds locally and has no backend, API key or NASA-login
-dependency at runtime. `vercel.json` builds only after the complete `npm run check`
-pipeline passes and publishes `dist`. It adds standard response headers. No public
-deployment is claimed: there is no linked Vercel project or verified public demo URL.
+The static Vite/React application has no backend, runtime NASA login, API key or
+new hosting dependency. GitHub Pages is selected for the existing public Inversis
+repository. The owner enabled GitHub Actions as the Pages source. Workflow
+`.github/workflows/ci.yml` runs all independent readers/arithmetic and `npm run check`,
+uploads only `dist`, then deploys through a dependent Pages job. The deploy job has
+only Pages-write and OIDC permissions; source access remains read-only. No NASA
+credential is available or needed in CI or the deployed app.
 
-Create a **new Inversis-only** Vercel project connected only to
-`alexia-dragomir/Inversis`, using the verified checkpoint branch `stage-1/evidence`.
-Do not attach this workspace to another project's hosting configuration. No environment
-variables are required. Never upload `.local`, credentials or temporary signed URLs.
-The four hash routes need no history fallback rewrite. After deployment, check all
-four routes, NASA source archives, combined/fallback controls and downloaded certificate.
-Run `npm run certificate:verify -- EXPORT.json` against the download.
+Phase 2's scientific job and static upload passed for `b538001` in run
+`43594362237`. Its first deployment was rejected before execution because the
+`github-pages` environment did not allow branch `stage-1/evidence`. The owner subsequently permitted only that branch while preserving other protections.
+The connector could not rerun jobs (Actions-write permission unavailable, HTTP 403);
+a normal authorized documentation push triggers a fresh gated workflow. Public URL
+verification is pending the deployment result. Do not weaken all branch restrictions
+or claim a successful deployment from the artifact upload alone.
 
-The user-supplied deadline is November 15, 2026, 23:59 Europe/Bucharest. A public
-demo link and final submission form are still outstanding. Check the live form and
-terms at submission; no form has been submitted by this agent. See SUBMISSION_RULES.md
-for the earlier official-guide review. Do not claim that source publication equals
-submission or public application deployment.
+Relative asset/evidence URLs and four hash routes support the repository subpath,
+refresh and direct links without server rewrites. Local desktop/mobile (390px)
+checks passed, including settings keyboard activation, source coverage, charts and
+heat-only fallback. Public checks must still cover those behaviors and a downloaded
+certificate. Verify with `npm run certificate:verify -- EXPORT.json`.
+
+The retained `vercel.json` is an unused alternative configuration, not a second
+hosting project. No Vercel account/project was created. No other repository was
+accessed or modified. Never upload `.local`, credentials or signed URLs.
+
+The user-supplied deadline is November 15, 2026, 23:59 Europe/Bucharest. Final
+submission and separate demo materials remain outstanding. Recheck the live form
+and terms at submission; no form has been submitted here. See SUBMISSION_RULES.md
+for the earlier official-guide review, and SUBMISSION_TECHNICAL_HANDOFF.md for
+transferable numerical results and claims.
 
 ## Submission text draft — current verified scope
 
@@ -37,6 +50,8 @@ uses 3,653 real NASA POWER daily maximum temperatures and 3,653 IMERG Final V07B
 precipitation cells for 2015–2024. Six common five-year replays support a provisional
 rainfall-and-heat comparison. A 21-point preference grid, calendar/phase diagnostics,
 hypothetical crop exclusions and recomputed Next Evidence expose the assumptions.
+Phase 2 adds exact replay-loss charts, regret-margin profiles, pointwise-dominance
+checks, alternate normalization and historical replay-omission diagnostics.
 The explicit heat-only fallback remains available. The certificate includes source
 hashes, physical exposures, references, matrices, diagnostics and limitations.
 
