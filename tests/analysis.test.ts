@@ -40,6 +40,10 @@ it('never converts one IMERG winter day into historical rainfall coverage', asyn
   expect(a.evaluation).toMatchObject({state:'evaluated',result:{status:'INSUFFICIENT_EVIDENCE',preferredSet:[],validScenarioIds:[]}});
   if(a.evaluation.state==='evaluated')expect(a.evaluation.result.computation).toBeUndefined();
   expect(a.scenarios.every(s=>s.validity==='excluded')).toBe(true);
+  const audit=await certificate(evidence,a,[]);
+  expect(audit.context.historicalPeriod.status).toBe('requested');
+  expect(audit.dataRevision).toBe('power-2015-2024-imerg-unavailable');
+  expect(audit.limitations).toContain('Historical precipitation is unavailable; combined comparison is refused.');
 });
 
 it('checks no-eligible and sole-candidate outcomes without claiming competitive superiority',async()=>{

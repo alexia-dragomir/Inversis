@@ -14,8 +14,10 @@ const directory = `.local/history/harmony/${job}`;
 await mkdir(directory, { recursive: true });
 let token = '';
 if (!process.argv.includes('--catalog-only')) {
-  try { token = (await readFile('.local/earthdata-token.txt', 'utf8')).trim(); }
-  catch { throw new Error('Bulk download needs an owner-provided Earthdata bearer token in ignored .local/earthdata-token.txt. Do not paste it into chat or commit it. --catalog-only requires no token.'); }
+  const tokenPath = process.env.INVERSIS_EARTHDATA_TOKEN_FILE;
+  requireCondition(tokenPath, 'Set INVERSIS_EARTHDATA_TOKEN_FILE to the owner-provided token file outside the repository');
+  try { token = (await readFile(tokenPath, 'utf8')).trim(); }
+  catch { throw new Error('Bulk download needs the owner-provided Earthdata token file. Do not paste it into chat or commit it. --catalog-only requires no token.'); }
   requireCondition(token.length > 20 && !/\s/.test(token), 'Malformed local Earthdata token');
 }
 

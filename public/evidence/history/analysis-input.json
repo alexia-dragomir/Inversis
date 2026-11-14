@@ -20305,21 +20305,22 @@
     }
   ],
   "processingHashes": {
-    "scripts/build-analysis-evidence.ts": "de9e3129995f17b9625abb8bf82a2096aa191c6b8f04990f2996fc771aa75962",
+    "scripts/build-analysis-evidence.ts": "da6fd3cca3106b64ba8facda47bbfe9e3b6e009db7bc284dc4b7e0ebdea0bd63",
     "scripts/verify-capture.ts": "095d207ba065c344b0353725c17966c3a9408cf7a9dbab27e05f33eee755afef",
     "src/data/ingestion/power.ts": "2879341880fe3e879568cff18c3cbe679ec95bf281534b5fa775089bea008c10",
     "src/data/ingestion/validation.ts": "d5382c89c7d1fb07dd27f8773458b60bd8641e66591ef7b5350a0d42cf267961",
     "src/data/foundation.ts": "bc72e9a75b40ce305170b86f8eafacc0cb621a13b9c561d3c7038a2e3c67edd0",
     "src/domain/contracts.ts": "ea86e40fefab48b67329d78ec36655eccb9b610d70f4bc205157ed1206729de4",
+    "src/data/analysis-contract.ts": "ff26be16fc5b63a9aef2427e861c74dd4e485d886334f7cfcfd4eebea7acb165",
     "src/engine/exposures.ts": "5df67fe7d4571b9ff7440f461bb12d93436126bf549ed9249acc2185b6868a74",
     "src/engine/decision.ts": "1e481a45ccf1f7cd4bfa8be53979ce4c42e1b10609fdd30dd4e2d480ff609016",
     "src/engine/canonical.ts": "b79509cef190ea44ac8657d95542b47e58ea674e52ee20f042e866aa2b4b1787",
-    "src/engine/analysis.ts": "2f7aa91383dece34cf556373e0eeea0df9a2cac9f404cdc6694a7ac46e7f08d6",
+    "src/engine/analysis.ts": "d94f889a4813c728ae8d9bb578e22d6056b3e7953b5e43f419337d5837c3f3c2",
     "src/engine/stability.ts": "96e7c6240347548635556ba1f0ea174f04c2e15c9f738171dcced9626a64df23",
     "package-lock.json": "c3d67615e56910b1468e534cb3fbe22839c3d4583f2adffe0239f46431ed109f"
   },
   "limitations": [
-    "Reduced heat-only model: precipitation history is unavailable; no drought or combined climate recommendation.",
+    "Reduced heat-only model: precipitation is omitted from this calculation; no drought or combined climate recommendation.",
     "Illustrative ≥35°C threshold and provisional crop windows, not crop-specific damage calibration.",
     "Equal weight to each of five crop positions; not area-, yield- or profit-weighted.",
     "Six overlapping windows are historical replays, not independent statistical samples.",

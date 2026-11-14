@@ -1,0 +1,3880 @@
+{
+  "method": "Independent Python arithmetic from every original POWER response and IMERG NetCDF; no TS imports",
+  "sourceHashes": {
+    "power-2015": "7d52fabbfa0fb5688b33c172cc05ff836625909d258ef35e6e71c54f958dbc06",
+    "imerg-2015": "679c927ea05e6fe6072edfe15afcfa96b57ab0e38a2568055996f9706dc6248a",
+    "power-2016": "487a9c125fd1b1910ec11f1ec1f016c6d9758befe1361b85c9f0674ec42b3594",
+    "imerg-2016": "70cf61180a5768bd6ca61eff54a88153842eaac466a70f2a2aedef02a09dd09f",
+    "power-2017": "339dd77c21061ac2f964e73f68fc273d9d375d0e93655692ac28c0dce318ed78",
+    "imerg-2017": "571d78dbe07c4dcbef0c296acfde6213aeabf8290f57f920d0432ab5736e6318",
+    "power-2018": "1317c7c258e26aba6731b250e2b147c5c7dcbd5657eaee4486cf5b8da8f64a69",
+    "imerg-2018": "10320702db13c5aaaf1edb587faac9d5eee0dffe7772f03ddcd44dcdae8e5c88",
+    "power-2019": "0659e4ca741076bd99b16e63be6fa71451cb50dcb3e5b2b79c46e06846aa798f",
+    "imerg-2019": "a94b7f9db522a4b8eddeb61cefb5ed7f1e0df6913b3ab6d5c6ffe350116cfeae",
+    "power-2020": "503f692ba0bb6efca9a951c96b8fddcefd960de2d0a7321001dc48ee7140445a",
+    "imerg-2020": "255679b21d7852ab3b98c8b3787adcab4a4b17a5c97a5ec62af2e9ed7fb481ee",
+    "power-2021": "fe930c42bea4b2cd125c112cdee9e14c8e4bee0f9345a10a25975295e95dd730",
+    "imerg-2021": "d8e453efd1e5f4f49119941742be28f67493cd0dcd3fa28e28d1815716cf3b6b",
+    "power-2022": "21ee95999ddc49b8155faa955db3678a82d2fe401630decf65342c2b08baa2c7",
+    "imerg-2022": "5548c210ee65d988a14ed532229785348cfe112cb4bdad850f29f395400c172e",
+    "power-2023": "767513aeb11212ac6785da20e63cb51e778e6dcab3933734b692e521be9772e2",
+    "imerg-2023": "fd2c81f0f6a8fe6ae95cabba2ccb1bad1bf9630389c8e2acf89a6c8d1c194e98",
+    "power-2024": "10255bc7e2897600e365b88545cf9c1c0ddc1a5c441e27df48d8e9201824a3ad",
+    "imerg-2024": "c1cd87493641bcadfd2dd7f44f8f27d643e6fa90f61955d155ad63b7a9f595f8"
+  },
+  "referenceBounds": {
+    "heat": {
+      "lower": 0.0,
+      "upper": 0.6612903225806451
+    },
+    "dry": {
+      "lower": 5,
+      "upper": 27
+    }
+  },
+  "dailyCoverage": {
+    "expected": 3653,
+    "rainValid": 3653,
+    "heatValid": 3653
+  },
+  "physical": [
+    {
+      "crop": "wheat",
+      "year": 2015,
+      "shift": -14,
+      "heat": 0.01639344262295082,
+      "dry": 16,
+      "hotDays": 1,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2015,
+      "shift": -14,
+      "heat": 0.46774193548387094,
+      "dry": 16,
+      "hotDays": 29,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2015,
+      "shift": -14,
+      "heat": 0.25,
+      "dry": 13,
+      "hotDays": 13,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2015,
+      "shift": -14,
+      "heat": 0.38461538461538464,
+      "dry": 16,
+      "hotDays": 30,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2016,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 6,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2016,
+      "shift": -14,
+      "heat": 0.3064516129032258,
+      "dry": 15,
+      "hotDays": 19,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2016,
+      "shift": -14,
+      "heat": 0.17307692307692307,
+      "dry": 10,
+      "hotDays": 9,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2016,
+      "shift": -14,
+      "heat": 0.24358974358974358,
+      "dry": 15,
+      "hotDays": 19,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2017,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 7,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2017,
+      "shift": -14,
+      "heat": 0.3064516129032258,
+      "dry": 15,
+      "hotDays": 19,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2017,
+      "shift": -14,
+      "heat": 0.19230769230769232,
+      "dry": 9,
+      "hotDays": 10,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2017,
+      "shift": -14,
+      "heat": 0.24358974358974358,
+      "dry": 15,
+      "hotDays": 19,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2018,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 15,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2018,
+      "shift": -14,
+      "heat": 0.016129032258064516,
+      "dry": 9,
+      "hotDays": 1,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2018,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 14,
+      "hotDays": 0,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2018,
+      "shift": -14,
+      "heat": 0.01282051282051282,
+      "dry": 14,
+      "hotDays": 1,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2019,
+      "shift": -14,
+      "heat": 0.03278688524590164,
+      "dry": 5,
+      "hotDays": 2,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2019,
+      "shift": -14,
+      "heat": 0.25806451612903225,
+      "dry": 13,
+      "hotDays": 16,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2019,
+      "shift": -14,
+      "heat": 0.21153846153846154,
+      "dry": 9,
+      "hotDays": 11,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2019,
+      "shift": -14,
+      "heat": 0.23076923076923078,
+      "dry": 13,
+      "hotDays": 18,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2020,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 11,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2020,
+      "shift": -14,
+      "heat": 0.12903225806451613,
+      "dry": 18,
+      "hotDays": 8,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2020,
+      "shift": -14,
+      "heat": 0.038461538461538464,
+      "dry": 6,
+      "hotDays": 2,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2020,
+      "shift": -14,
+      "heat": 0.10256410256410256,
+      "dry": 18,
+      "hotDays": 8,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2021,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 15,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2021,
+      "shift": -14,
+      "heat": 0.24193548387096775,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2021,
+      "shift": -14,
+      "heat": 0.07692307692307693,
+      "dry": 9,
+      "hotDays": 4,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2021,
+      "shift": -14,
+      "heat": 0.19230769230769232,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2022,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 11,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2022,
+      "shift": -14,
+      "heat": 0.3548387096774194,
+      "dry": 18,
+      "hotDays": 22,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2022,
+      "shift": -14,
+      "heat": 0.28846153846153844,
+      "dry": 18,
+      "hotDays": 15,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2022,
+      "shift": -14,
+      "heat": 0.28205128205128205,
+      "dry": 18,
+      "hotDays": 22,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2023,
+      "shift": -14,
+      "heat": 0.0,
+      "dry": 17,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2023,
+      "shift": -14,
+      "heat": 0.3548387096774194,
+      "dry": 11,
+      "hotDays": 22,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2023,
+      "shift": -14,
+      "heat": 0.3076923076923077,
+      "dry": 9,
+      "hotDays": 16,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2023,
+      "shift": -14,
+      "heat": 0.28205128205128205,
+      "dry": 14,
+      "hotDays": 22,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2024,
+      "shift": -14,
+      "heat": 0.08196721311475409,
+      "dry": 8,
+      "hotDays": 5,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2024,
+      "shift": -14,
+      "heat": 0.6612903225806451,
+      "dry": 15,
+      "hotDays": 41,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2024,
+      "shift": -14,
+      "heat": 0.6153846153846154,
+      "dry": 18,
+      "hotDays": 32,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2024,
+      "shift": -14,
+      "heat": 0.5897435897435898,
+      "dry": 18,
+      "hotDays": 46,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2015,
+      "shift": -7,
+      "heat": 0.01639344262295082,
+      "dry": 16,
+      "hotDays": 1,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2015,
+      "shift": -7,
+      "heat": 0.46774193548387094,
+      "dry": 16,
+      "hotDays": 29,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2015,
+      "shift": -7,
+      "heat": 0.3269230769230769,
+      "dry": 16,
+      "hotDays": 17,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2015,
+      "shift": -7,
+      "heat": 0.38461538461538464,
+      "dry": 16,
+      "hotDays": 30,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2016,
+      "shift": -7,
+      "heat": 0.08196721311475409,
+      "dry": 6,
+      "hotDays": 5,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2016,
+      "shift": -7,
+      "heat": 0.25806451612903225,
+      "dry": 15,
+      "hotDays": 16,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2016,
+      "shift": -7,
+      "heat": 0.28846153846153844,
+      "dry": 15,
+      "hotDays": 15,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2016,
+      "shift": -7,
+      "heat": 0.2692307692307692,
+      "dry": 15,
+      "hotDays": 21,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2017,
+      "shift": -7,
+      "heat": 0.0,
+      "dry": 7,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2017,
+      "shift": -7,
+      "heat": 0.3225806451612903,
+      "dry": 15,
+      "hotDays": 20,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2017,
+      "shift": -7,
+      "heat": 0.23076923076923078,
+      "dry": 9,
+      "hotDays": 12,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2017,
+      "shift": -7,
+      "heat": 0.2564102564102564,
+      "dry": 15,
+      "hotDays": 20,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2018,
+      "shift": -7,
+      "heat": 0.0,
+      "dry": 14,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2018,
+      "shift": -7,
+      "heat": 0.04838709677419355,
+      "dry": 9,
+      "hotDays": 3,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2018,
+      "shift": -7,
+      "heat": 0.0,
+      "dry": 8,
+      "hotDays": 0,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2018,
+      "shift": -7,
+      "heat": 0.038461538461538464,
+      "dry": 13,
+      "hotDays": 3,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2019,
+      "shift": -7,
+      "heat": 0.06557377049180328,
+      "dry": 5,
+      "hotDays": 4,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2019,
+      "shift": -7,
+      "heat": 0.2903225806451613,
+      "dry": 20,
+      "hotDays": 18,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2019,
+      "shift": -7,
+      "heat": 0.23076923076923078,
+      "dry": 9,
+      "hotDays": 12,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2019,
+      "shift": -7,
+      "heat": 0.28205128205128205,
+      "dry": 20,
+      "hotDays": 22,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2020,
+      "shift": -7,
+      "heat": 0.0,
+      "dry": 11,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2020,
+      "shift": -7,
+      "heat": 0.12903225806451613,
+      "dry": 18,
+      "hotDays": 8,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2020,
+      "shift": -7,
+      "heat": 0.11538461538461539,
+      "dry": 7,
+      "hotDays": 6,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2020,
+      "shift": -7,
+      "heat": 0.10256410256410256,
+      "dry": 18,
+      "hotDays": 8,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2021,
+      "shift": -7,
+      "heat": 0.0,
+      "dry": 15,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2021,
+      "shift": -7,
+      "heat": 0.24193548387096775,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2021,
+      "shift": -7,
+      "heat": 0.19230769230769232,
+      "dry": 9,
+      "hotDays": 10,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2021,
+      "shift": -7,
+      "heat": 0.19230769230769232,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2022,
+      "shift": -7,
+      "heat": 0.01639344262295082,
+      "dry": 11,
+      "hotDays": 1,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2022,
+      "shift": -7,
+      "heat": 0.3709677419354839,
+      "dry": 18,
+      "hotDays": 23,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2022,
+      "shift": -7,
+      "heat": 0.34615384615384615,
+      "dry": 18,
+      "hotDays": 18,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2022,
+      "shift": -7,
+      "heat": 0.3076923076923077,
+      "dry": 18,
+      "hotDays": 24,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2023,
+      "shift": -7,
+      "heat": 0.01639344262295082,
+      "dry": 17,
+      "hotDays": 1,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2023,
+      "shift": -7,
+      "heat": 0.45161290322580644,
+      "dry": 11,
+      "hotDays": 28,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2023,
+      "shift": -7,
+      "heat": 0.36538461538461536,
+      "dry": 7,
+      "hotDays": 19,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2023,
+      "shift": -7,
+      "heat": 0.3717948717948718,
+      "dry": 11,
+      "hotDays": 29,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2024,
+      "shift": -7,
+      "heat": 0.18032786885245902,
+      "dry": 10,
+      "hotDays": 11,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2024,
+      "shift": -7,
+      "heat": 0.6774193548387096,
+      "dry": 12,
+      "hotDays": 42,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2024,
+      "shift": -7,
+      "heat": 0.6538461538461539,
+      "dry": 18,
+      "hotDays": 34,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2024,
+      "shift": -7,
+      "heat": 0.6666666666666666,
+      "dry": 18,
+      "hotDays": 52,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2015,
+      "shift": 0,
+      "heat": 0.01639344262295082,
+      "dry": 16,
+      "hotDays": 1,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2015,
+      "shift": 0,
+      "heat": 0.5161290322580645,
+      "dry": 16,
+      "hotDays": 32,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2015,
+      "shift": 0,
+      "heat": 0.4230769230769231,
+      "dry": 16,
+      "hotDays": 22,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2015,
+      "shift": 0,
+      "heat": 0.4230769230769231,
+      "dry": 16,
+      "hotDays": 33,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2016,
+      "shift": 0,
+      "heat": 0.09836065573770492,
+      "dry": 6,
+      "hotDays": 6,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2016,
+      "shift": 0,
+      "heat": 0.24193548387096775,
+      "dry": 15,
+      "hotDays": 15,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2016,
+      "shift": 0,
+      "heat": 0.3076923076923077,
+      "dry": 15,
+      "hotDays": 16,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2016,
+      "shift": 0,
+      "heat": 0.2692307692307692,
+      "dry": 15,
+      "hotDays": 21,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2017,
+      "shift": 0,
+      "heat": 0.04918032786885246,
+      "dry": 7,
+      "hotDays": 3,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2017,
+      "shift": 0,
+      "heat": 0.27419354838709675,
+      "dry": 15,
+      "hotDays": 17,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2017,
+      "shift": 0,
+      "heat": 0.3076923076923077,
+      "dry": 13,
+      "hotDays": 16,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2017,
+      "shift": 0,
+      "heat": 0.2564102564102564,
+      "dry": 15,
+      "hotDays": 20,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2018,
+      "shift": 0,
+      "heat": 0.0,
+      "dry": 14,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2018,
+      "shift": 0,
+      "heat": 0.04838709677419355,
+      "dry": 12,
+      "hotDays": 3,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2018,
+      "shift": 0,
+      "heat": 0.0,
+      "dry": 5,
+      "hotDays": 0,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2018,
+      "shift": 0,
+      "heat": 0.038461538461538464,
+      "dry": 12,
+      "hotDays": 3,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2019,
+      "shift": 0,
+      "heat": 0.08196721311475409,
+      "dry": 5,
+      "hotDays": 5,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2019,
+      "shift": 0,
+      "heat": 0.3387096774193548,
+      "dry": 27,
+      "hotDays": 21,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2019,
+      "shift": 0,
+      "heat": 0.21153846153846154,
+      "dry": 9,
+      "hotDays": 11,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2019,
+      "shift": 0,
+      "heat": 0.32051282051282054,
+      "dry": 27,
+      "hotDays": 25,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2020,
+      "shift": 0,
+      "heat": 0.0,
+      "dry": 11,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2020,
+      "shift": 0,
+      "heat": 0.16129032258064516,
+      "dry": 18,
+      "hotDays": 10,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2020,
+      "shift": 0,
+      "heat": 0.15384615384615385,
+      "dry": 14,
+      "hotDays": 8,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2020,
+      "shift": 0,
+      "heat": 0.1282051282051282,
+      "dry": 18,
+      "hotDays": 10,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2021,
+      "shift": 0,
+      "heat": 0.0,
+      "dry": 12,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2021,
+      "shift": 0,
+      "heat": 0.24193548387096775,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2021,
+      "shift": 0,
+      "heat": 0.25,
+      "dry": 9,
+      "hotDays": 13,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2021,
+      "shift": 0,
+      "heat": 0.19230769230769232,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2022,
+      "shift": 0,
+      "heat": 0.04918032786885246,
+      "dry": 9,
+      "hotDays": 3,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2022,
+      "shift": 0,
+      "heat": 0.3870967741935484,
+      "dry": 15,
+      "hotDays": 24,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2022,
+      "shift": 0,
+      "heat": 0.40384615384615385,
+      "dry": 18,
+      "hotDays": 21,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2022,
+      "shift": 0,
+      "heat": 0.34615384615384615,
+      "dry": 18,
+      "hotDays": 27,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2023,
+      "shift": 0,
+      "heat": 0.03278688524590164,
+      "dry": 17,
+      "hotDays": 2,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2023,
+      "shift": 0,
+      "heat": 0.5161290322580645,
+      "dry": 14,
+      "hotDays": 32,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2023,
+      "shift": 0,
+      "heat": 0.40384615384615385,
+      "dry": 11,
+      "hotDays": 21,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2023,
+      "shift": 0,
+      "heat": 0.4358974358974359,
+      "dry": 14,
+      "hotDays": 34,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2024,
+      "shift": 0,
+      "heat": 0.22950819672131148,
+      "dry": 17,
+      "hotDays": 14,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2024,
+      "shift": 0,
+      "heat": 0.6612903225806451,
+      "dry": 12,
+      "hotDays": 41,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2024,
+      "shift": 0,
+      "heat": 0.5961538461538461,
+      "dry": 12,
+      "hotDays": 31,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2024,
+      "shift": 0,
+      "heat": 0.6410256410256411,
+      "dry": 17,
+      "hotDays": 50,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2015,
+      "shift": 7,
+      "heat": 0.03278688524590164,
+      "dry": 16,
+      "hotDays": 2,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2015,
+      "shift": 7,
+      "heat": 0.5645161290322581,
+      "dry": 16,
+      "hotDays": 35,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2015,
+      "shift": 7,
+      "heat": 0.5576923076923077,
+      "dry": 16,
+      "hotDays": 29,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2015,
+      "shift": 7,
+      "heat": 0.46153846153846156,
+      "dry": 16,
+      "hotDays": 36,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2016,
+      "shift": 7,
+      "heat": 0.09836065573770492,
+      "dry": 8,
+      "hotDays": 6,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2016,
+      "shift": 7,
+      "heat": 0.24193548387096775,
+      "dry": 15,
+      "hotDays": 15,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2016,
+      "shift": 7,
+      "heat": 0.25,
+      "dry": 15,
+      "hotDays": 13,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2016,
+      "shift": 7,
+      "heat": 0.23076923076923078,
+      "dry": 15,
+      "hotDays": 18,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2017,
+      "shift": 7,
+      "heat": 0.06557377049180328,
+      "dry": 7,
+      "hotDays": 4,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2017,
+      "shift": 7,
+      "heat": 0.25806451612903225,
+      "dry": 15,
+      "hotDays": 16,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2017,
+      "shift": 7,
+      "heat": 0.34615384615384615,
+      "dry": 15,
+      "hotDays": 18,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2017,
+      "shift": 7,
+      "heat": 0.2564102564102564,
+      "dry": 15,
+      "hotDays": 20,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2018,
+      "shift": 7,
+      "heat": 0.0,
+      "dry": 14,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2018,
+      "shift": 7,
+      "heat": 0.06451612903225806,
+      "dry": 19,
+      "hotDays": 4,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2018,
+      "shift": 7,
+      "heat": 0.019230769230769232,
+      "dry": 9,
+      "hotDays": 1,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2018,
+      "shift": 7,
+      "heat": 0.05128205128205128,
+      "dry": 19,
+      "hotDays": 4,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2019,
+      "shift": 7,
+      "heat": 0.14754098360655737,
+      "dry": 9,
+      "hotDays": 9,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2019,
+      "shift": 7,
+      "heat": 0.27419354838709675,
+      "dry": 34,
+      "hotDays": 17,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2019,
+      "shift": 7,
+      "heat": 0.2692307692307692,
+      "dry": 13,
+      "hotDays": 14,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2019,
+      "shift": 7,
+      "heat": 0.2948717948717949,
+      "dry": 34,
+      "hotDays": 23,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2020,
+      "shift": 7,
+      "heat": 0.03278688524590164,
+      "dry": 10,
+      "hotDays": 2,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2020,
+      "shift": 7,
+      "heat": 0.16129032258064516,
+      "dry": 18,
+      "hotDays": 10,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2020,
+      "shift": 7,
+      "heat": 0.15384615384615385,
+      "dry": 18,
+      "hotDays": 8,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2020,
+      "shift": 7,
+      "heat": 0.15384615384615385,
+      "dry": 18,
+      "hotDays": 12,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2021,
+      "shift": 7,
+      "heat": 0.0,
+      "dry": 6,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2021,
+      "shift": 7,
+      "heat": 0.24193548387096775,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2021,
+      "shift": 7,
+      "heat": 0.28846153846153844,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2021,
+      "shift": 7,
+      "heat": 0.19230769230769232,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2022,
+      "shift": 7,
+      "heat": 0.13114754098360656,
+      "dry": 10,
+      "hotDays": 8,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2022,
+      "shift": 7,
+      "heat": 0.3064516129032258,
+      "dry": 12,
+      "hotDays": 19,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2022,
+      "shift": 7,
+      "heat": 0.40384615384615385,
+      "dry": 18,
+      "hotDays": 21,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2022,
+      "shift": 7,
+      "heat": 0.3333333333333333,
+      "dry": 18,
+      "hotDays": 26,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2023,
+      "shift": 7,
+      "heat": 0.08196721311475409,
+      "dry": 17,
+      "hotDays": 5,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2023,
+      "shift": 7,
+      "heat": 0.46774193548387094,
+      "dry": 14,
+      "hotDays": 29,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2023,
+      "shift": 7,
+      "heat": 0.38461538461538464,
+      "dry": 11,
+      "hotDays": 20,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2023,
+      "shift": 7,
+      "heat": 0.4358974358974359,
+      "dry": 14,
+      "hotDays": 34,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2024,
+      "shift": 7,
+      "heat": 0.29508196721311475,
+      "dry": 18,
+      "hotDays": 18,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2024,
+      "shift": 7,
+      "heat": 0.6129032258064516,
+      "dry": 10,
+      "hotDays": 38,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2024,
+      "shift": 7,
+      "heat": 0.6538461538461539,
+      "dry": 12,
+      "hotDays": 34,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2024,
+      "shift": 7,
+      "heat": 0.6025641025641025,
+      "dry": 12,
+      "hotDays": 47,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2015,
+      "shift": 14,
+      "heat": 0.06557377049180328,
+      "dry": 16,
+      "hotDays": 4,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2015,
+      "shift": 14,
+      "heat": 0.532258064516129,
+      "dry": 17,
+      "hotDays": 33,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2015,
+      "shift": 14,
+      "heat": 0.5576923076923077,
+      "dry": 16,
+      "hotDays": 29,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2015,
+      "shift": 14,
+      "heat": 0.46153846153846156,
+      "dry": 17,
+      "hotDays": 36,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2016,
+      "shift": 14,
+      "heat": 0.11475409836065574,
+      "dry": 8,
+      "hotDays": 7,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2016,
+      "shift": 14,
+      "heat": 0.22580645161290322,
+      "dry": 15,
+      "hotDays": 14,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2016,
+      "shift": 14,
+      "heat": 0.28846153846153844,
+      "dry": 15,
+      "hotDays": 15,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2016,
+      "shift": 14,
+      "heat": 0.19230769230769232,
+      "dry": 15,
+      "hotDays": 15,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2017,
+      "shift": 14,
+      "heat": 0.09836065573770492,
+      "dry": 8,
+      "hotDays": 6,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2017,
+      "shift": 14,
+      "heat": 0.22580645161290322,
+      "dry": 15,
+      "hotDays": 14,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2017,
+      "shift": 14,
+      "heat": 0.3076923076923077,
+      "dry": 15,
+      "hotDays": 16,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2017,
+      "shift": 14,
+      "heat": 0.24358974358974358,
+      "dry": 15,
+      "hotDays": 19,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2018,
+      "shift": 14,
+      "heat": 0.0,
+      "dry": 14,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2018,
+      "shift": 14,
+      "heat": 0.06451612903225806,
+      "dry": 25,
+      "hotDays": 4,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2018,
+      "shift": 14,
+      "heat": 0.057692307692307696,
+      "dry": 9,
+      "hotDays": 3,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2018,
+      "shift": 14,
+      "heat": 0.05128205128205128,
+      "dry": 25,
+      "hotDays": 4,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2019,
+      "shift": 14,
+      "heat": 0.14754098360655737,
+      "dry": 9,
+      "hotDays": 9,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2019,
+      "shift": 14,
+      "heat": 0.27419354838709675,
+      "dry": 41,
+      "hotDays": 17,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2019,
+      "shift": 14,
+      "heat": 0.2692307692307692,
+      "dry": 20,
+      "hotDays": 14,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2019,
+      "shift": 14,
+      "heat": 0.2692307692307692,
+      "dry": 41,
+      "hotDays": 21,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2020,
+      "shift": 14,
+      "heat": 0.03278688524590164,
+      "dry": 7,
+      "hotDays": 2,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2020,
+      "shift": 14,
+      "heat": 0.16129032258064516,
+      "dry": 18,
+      "hotDays": 10,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2020,
+      "shift": 14,
+      "heat": 0.15384615384615385,
+      "dry": 18,
+      "hotDays": 8,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2020,
+      "shift": 14,
+      "heat": 0.15384615384615385,
+      "dry": 18,
+      "hotDays": 12,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2021,
+      "shift": 14,
+      "heat": 0.0,
+      "dry": 5,
+      "hotDays": 0,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2021,
+      "shift": 14,
+      "heat": 0.24193548387096775,
+      "dry": 15,
+      "hotDays": 15,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2021,
+      "shift": 14,
+      "heat": 0.28846153846153844,
+      "dry": 13,
+      "hotDays": 15,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2021,
+      "shift": 14,
+      "heat": 0.19230769230769232,
+      "dry": 15,
+      "hotDays": 15,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2022,
+      "shift": 14,
+      "heat": 0.13114754098360656,
+      "dry": 17,
+      "hotDays": 8,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2022,
+      "shift": 14,
+      "heat": 0.3064516129032258,
+      "dry": 12,
+      "hotDays": 19,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2022,
+      "shift": 14,
+      "heat": 0.36538461538461536,
+      "dry": 12,
+      "hotDays": 19,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2022,
+      "shift": 14,
+      "heat": 0.3333333333333333,
+      "dry": 17,
+      "hotDays": 26,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2023,
+      "shift": 14,
+      "heat": 0.11475409836065574,
+      "dry": 17,
+      "hotDays": 7,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2023,
+      "shift": 14,
+      "heat": 0.43548387096774194,
+      "dry": 14,
+      "hotDays": 27,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2023,
+      "shift": 14,
+      "heat": 0.5192307692307693,
+      "dry": 11,
+      "hotDays": 27,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2023,
+      "shift": 14,
+      "heat": 0.41025641025641024,
+      "dry": 14,
+      "hotDays": 32,
+      "expectedDays": 78
+    },
+    {
+      "crop": "wheat",
+      "year": 2024,
+      "shift": 14,
+      "heat": 0.4098360655737705,
+      "dry": 18,
+      "hotDays": 25,
+      "expectedDays": 61
+    },
+    {
+      "crop": "maize",
+      "year": 2024,
+      "shift": 14,
+      "heat": 0.5,
+      "dry": 10,
+      "hotDays": 31,
+      "expectedDays": 62
+    },
+    {
+      "crop": "sunflower",
+      "year": 2024,
+      "shift": 14,
+      "heat": 0.7115384615384616,
+      "dry": 12,
+      "hotDays": 37,
+      "expectedDays": 52
+    },
+    {
+      "crop": "soybean",
+      "year": 2024,
+      "shift": 14,
+      "heat": 0.5641025641025641,
+      "dry": 12,
+      "hotDays": 44,
+      "expectedDays": 78
+    }
+  ],
+  "cases": [
+    {
+      "heatWeight": 0.0,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.5454545454545455,
+          "fixed-2016-2020": 0.21818181818181817,
+          "fixed-2017-2021": 0.24545454545454545,
+          "fixed-2018-2022": 0.5181818181818182,
+          "fixed-2019-2023": 0.27272727272727276,
+          "fixed-2020-2024": 0.41818181818181815
+        },
+        "a": {
+          "fixed-2015-2019": 0.4818181818181818,
+          "fixed-2016-2020": 0.3181818181818182,
+          "fixed-2017-2021": 0.4363636363636364,
+          "fixed-2018-2022": 0.5272727272727273,
+          "fixed-2019-2023": 0.39090909090909093,
+          "fixed-2020-2024": 0.3363636363636363
+        },
+        "b": {
+          "fixed-2015-2019": 0.5454545454545455,
+          "fixed-2016-2020": 0.4636363636363637,
+          "fixed-2017-2021": 0.40909090909090906,
+          "fixed-2018-2022": 0.4,
+          "fixed-2019-2023": 0.3545454545454546,
+          "fixed-2020-2024": 0.32727272727272727
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.06363636363636371,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.11818181818181817,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.09090909090909088
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.1,
+          "fixed-2017-2021": 0.19090909090909094,
+          "fixed-2018-2022": 0.12727272727272732,
+          "fixed-2019-2023": 0.11818181818181817,
+          "fixed-2020-2024": 0.009090909090909038
+        },
+        "b": {
+          "fixed-2015-2019": 0.06363636363636371,
+          "fixed-2016-2020": 0.2454545454545455,
+          "fixed-2017-2021": 0.1636363636363636,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08181818181818185,
+          "fixed-2020-2024": 0.0
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.11818181818181817,
+        "a": 0.19090909090909094,
+        "b": 0.2454545454545455
+      },
+      "averageLoss": {
+        "baseline": 0.3696969696969697,
+        "a": 0.4151515151515152,
+        "b": 0.4166666666666667
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.05,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.5318631148939026,
+          "fixed-2016-2020": 0.21658500236269124,
+          "fixed-2017-2021": 0.24151463889968486,
+          "fixed-2018-2022": 0.5055747910625958,
+          "fixed-2019-2023": 0.2750985060521246,
+          "fixed-2020-2024": 0.4175340073760705
+        },
+        "a": {
+          "fixed-2015-2019": 0.4713147608089631,
+          "fixed-2016-2020": 0.31400716170408294,
+          "fixed-2017-2021": 0.42697771241153887,
+          "fixed-2018-2022": 0.5178290408778214,
+          "fixed-2019-2023": 0.39211220872956176,
+          "fixed-2020-2024": 0.34441412246290287
+        },
+        "b": {
+          "fixed-2015-2019": 0.5329325332803941,
+          "fixed-2016-2020": 0.45461236950441264,
+          "fixed-2017-2021": 0.40009926565504333,
+          "fixed-2018-2022": 0.3943996247654784,
+          "fixed-2019-2023": 0.35708207626040495,
+          "fixed-2020-2024": 0.3371348570129058
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.06054835408493947,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.11117516629711743,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0803991503631647
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0974221593413917,
+          "fixed-2017-2021": 0.185463073511854,
+          "fixed-2018-2022": 0.12342941611234304,
+          "fixed-2019-2023": 0.11701370267743716,
+          "fixed-2020-2024": 0.007279265449997074
+        },
+        "b": {
+          "fixed-2015-2019": 0.06161777247143102,
+          "fixed-2016-2020": 0.2380273671417214,
+          "fixed-2017-2021": 0.15858462675535848,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08198357020828034,
+          "fixed-2020-2024": 0.0
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.11117516629711743,
+        "a": 0.185463073511854,
+        "b": 0.2380273671417214
+      },
+      "averageLoss": {
+        "baseline": 0.36469501010784494,
+        "a": 0.41110916783247853,
+        "b": 0.41271012107977323
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.1,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.5182716843332598,
+          "fixed-2016-2020": 0.21498818654356439,
+          "fixed-2017-2021": 0.2375747323448243,
+          "fixed-2018-2022": 0.49296776394337377,
+          "fixed-2019-2023": 0.27746973937697655,
+          "fixed-2020-2024": 0.4168861965703229
+        },
+        "a": {
+          "fixed-2015-2019": 0.46081133979974453,
+          "fixed-2016-2020": 0.3098325052263477,
+          "fixed-2017-2021": 0.41759178845944145,
+          "fixed-2018-2022": 0.5083853544829156,
+          "fixed-2019-2023": 0.3933153265500327,
+          "fixed-2020-2024": 0.3524646085621695
+        },
+        "b": {
+          "fixed-2015-2019": 0.520410521106243,
+          "fixed-2016-2020": 0.44558837537246176,
+          "fixed-2017-2021": 0.3911076222191776,
+          "fixed-2018-2022": 0.38879924953095685,
+          "fixed-2019-2023": 0.3596186979753554,
+          "fixed-2020-2024": 0.3469969867530843
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.05746034453351523,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.10416851441241692,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.06988920981723856
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.09484431868278331,
+          "fixed-2017-2021": 0.18001705611461716,
+          "fixed-2018-2022": 0.1195861049519587,
+          "fixed-2019-2023": 0.11584558717305615,
+          "fixed-2020-2024": 0.005467621809085166
+        },
+        "b": {
+          "fixed-2015-2019": 0.05959918130649844,
+          "fixed-2016-2020": 0.23060018882889738,
+          "fixed-2017-2021": 0.15353288987435332,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08214895859837884,
+          "fixed-2020-2024": 0.0
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.10416851441241692,
+        "a": 0.18001705611461716,
+        "b": 0.23060018882889738
+      },
+      "averageLoss": {
+        "baseline": 0.3596930505187203,
+        "a": 0.40706682051344195,
+        "b": 0.4087535754928798
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.15,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.5046802537726168,
+          "fixed-2016-2020": 0.21339137072443748,
+          "fixed-2017-2021": 0.23363482578996375,
+          "fixed-2018-2022": 0.4803607368241514,
+          "fixed-2019-2023": 0.2798409727018284,
+          "fixed-2020-2024": 0.4162383857645752
+        },
+        "a": {
+          "fixed-2015-2019": 0.45030791879052573,
+          "fixed-2016-2020": 0.30565784874861235,
+          "fixed-2017-2021": 0.408205864507344,
+          "fixed-2018-2022": 0.4989416680880096,
+          "fixed-2019-2023": 0.39451844437050354,
+          "fixed-2020-2024": 0.3605150946614361
+        },
+        "b": {
+          "fixed-2015-2019": 0.5078885089320916,
+          "fixed-2016-2020": 0.4365643812405108,
+          "fixed-2017-2021": 0.3821159787833118,
+          "fixed-2018-2022": 0.38319887429643523,
+          "fixed-2019-2023": 0.36215531969030573,
+          "fixed-2020-2024": 0.35685911649326285
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.0543723349820911,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.09716186252771619,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.059379269271312374
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.09226647802417487,
+          "fixed-2017-2021": 0.17457103871738022,
+          "fixed-2018-2022": 0.11574279379157437,
+          "fixed-2019-2023": 0.11467747166867515,
+          "fixed-2020-2024": 0.0036559781681732573
+        },
+        "b": {
+          "fixed-2015-2019": 0.05758059014156586,
+          "fixed-2016-2020": 0.2231730105160733,
+          "fixed-2017-2021": 0.14848115299334808,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08231434698847734,
+          "fixed-2020-2024": 0.0
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.09716186252771619,
+        "a": 0.17457103871738022,
+        "b": 0.2231730105160733
+      },
+      "averageLoss": {
+        "baseline": 0.3546910909295955,
+        "a": 0.4030244731944052,
+        "b": 0.40479702990598637
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.2,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.491088823211974,
+          "fixed-2016-2020": 0.21179455490531057,
+          "fixed-2017-2021": 0.22969491923510318,
+          "fixed-2018-2022": 0.46775370970492924,
+          "fixed-2019-2023": 0.2822122060266803,
+          "fixed-2020-2024": 0.41559057495882773
+        },
+        "a": {
+          "fixed-2015-2019": 0.4398044977813071,
+          "fixed-2016-2020": 0.30148319227087716,
+          "fixed-2017-2021": 0.3988199405552465,
+          "fixed-2018-2022": 0.4894979816931037,
+          "fixed-2019-2023": 0.39572156219097443,
+          "fixed-2020-2024": 0.3685655807607027
+        },
+        "b": {
+          "fixed-2015-2019": 0.4953664967579402,
+          "fixed-2016-2020": 0.4275403871085599,
+          "fixed-2017-2021": 0.3731243353474461,
+          "fixed-2018-2022": 0.37759849906191373,
+          "fixed-2019-2023": 0.3646919414052562,
+          "fixed-2020-2024": 0.3667212462334414
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.05128432543066691,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.09015521064301552,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.04886932872538635
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.08968863736556659,
+          "fixed-2017-2021": 0.16912502132014332,
+          "fixed-2018-2022": 0.11189948263118998,
+          "fixed-2019-2023": 0.11350935616429414,
+          "fixed-2020-2024": 0.0018443345272613487
+        },
+        "b": {
+          "fixed-2015-2019": 0.05556199897663311,
+          "fixed-2016-2020": 0.21574583220324933,
+          "fixed-2017-2021": 0.14342941611234292,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08247973537857589,
+          "fixed-2020-2024": 0.0
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.09015521064301552,
+        "a": 0.16912502132014332,
+        "b": 0.21574583220324933
+      },
+      "averageLoss": {
+        "baseline": 0.34968913134047086,
+        "a": 0.3989821258753686,
+        "b": 0.4008404843190929
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.25,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.4774973926513312,
+          "fixed-2016-2020": 0.21019773908618372,
+          "fixed-2017-2021": 0.2257550126802426,
+          "fixed-2018-2022": 0.45514668258570695,
+          "fixed-2019-2023": 0.2845834393515322,
+          "fixed-2020-2024": 0.41494276415308
+        },
+        "a": {
+          "fixed-2015-2019": 0.4293010767720884,
+          "fixed-2016-2020": 0.2973085357931419,
+          "fixed-2017-2021": 0.389434016603149,
+          "fixed-2018-2022": 0.48005429529819776,
+          "fixed-2019-2023": 0.3969246800114453,
+          "fixed-2020-2024": 0.3766160668599693
+        },
+        "b": {
+          "fixed-2015-2019": 0.4828444845837889,
+          "fixed-2016-2020": 0.4185163929766089,
+          "fixed-2017-2021": 0.3641326919115804,
+          "fixed-2018-2022": 0.3719981238273921,
+          "fixed-2019-2023": 0.36722856312020646,
+          "fixed-2020-2024": 0.37658337597361985
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.04819631587924278,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.08314855875831484,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.03835938817946016
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0871107967069582,
+          "fixed-2017-2021": 0.16367900392290644,
+          "fixed-2018-2022": 0.10805617147080565,
+          "fixed-2019-2023": 0.11234124065991313,
+          "fixed-2020-2024": 3.2690886349440174e-05
+        },
+        "b": {
+          "fixed-2015-2019": 0.05354340781170053,
+          "fixed-2016-2020": 0.2083186538904252,
+          "fixed-2017-2021": 0.13837767923133779,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08264512376867428,
+          "fixed-2020-2024": 0.0
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.08314855875831484,
+        "a": 0.16367900392290644,
+        "b": 0.2083186538904252
+      },
+      "averageLoss": {
+        "baseline": 0.34468717175134606,
+        "a": 0.39493977855633194,
+        "b": 0.3968839387321994
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.3,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.46390596209068824,
+          "fixed-2016-2020": 0.2086009232670568,
+          "fixed-2017-2021": 0.22181510612538202,
+          "fixed-2018-2022": 0.44253965546648466,
+          "fixed-2019-2023": 0.28695467267638397,
+          "fixed-2020-2024": 0.41429495334733235
+        },
+        "a": {
+          "fixed-2015-2019": 0.41879765576286965,
+          "fixed-2016-2020": 0.2931338793154067,
+          "fixed-2017-2021": 0.3800480926510515,
+          "fixed-2018-2022": 0.4706106089032918,
+          "fixed-2019-2023": 0.3981277978319162,
+          "fixed-2020-2024": 0.3846665529592358
+        },
+        "b": {
+          "fixed-2015-2019": 0.47032247240963754,
+          "fixed-2016-2020": 0.409492398844658,
+          "fixed-2017-2021": 0.3551410484757146,
+          "fixed-2018-2022": 0.36639774859287055,
+          "fixed-2019-2023": 0.36976518483515686,
+          "fixed-2020-2024": 0.3864455057137984
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.04510830632781859,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0761419068736141,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.029628400388096554
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0845329560483499,
+          "fixed-2017-2021": 0.15823298652566947,
+          "fixed-2018-2022": 0.10421286031042126,
+          "fixed-2019-2023": 0.11117312515553224,
+          "fixed-2020-2024": 0.0
+        },
+        "b": {
+          "fixed-2015-2019": 0.05152481664676789,
+          "fixed-2016-2020": 0.2008914755776012,
+          "fixed-2017-2021": 0.13332594235033257,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08281051215877289,
+          "fixed-2020-2024": 0.0017789527545625794
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.0761419068736141,
+        "a": 0.15823298652566947,
+        "b": 0.2008914755776012
+      },
+      "averageLoss": {
+        "baseline": 0.33968521216222136,
+        "a": 0.39089743123729526,
+        "b": 0.39292739314530595
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.35,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.4503145315300454,
+          "fixed-2016-2020": 0.2070041074479299,
+          "fixed-2017-2021": 0.21787519957052143,
+          "fixed-2018-2022": 0.4299326283472624,
+          "fixed-2019-2023": 0.28932590600123587,
+          "fixed-2020-2024": 0.4136471425415848
+        },
+        "a": {
+          "fixed-2015-2019": 0.40829423475365095,
+          "fixed-2016-2020": 0.2889592228376715,
+          "fixed-2017-2021": 0.3706621686989541,
+          "fixed-2018-2022": 0.461166922508386,
+          "fixed-2019-2023": 0.3993309156523871,
+          "fixed-2020-2024": 0.3927170390585024
+        },
+        "b": {
+          "fixed-2015-2019": 0.45780046023548626,
+          "fixed-2016-2020": 0.400468404712707,
+          "fixed-2017-2021": 0.34614940503984887,
+          "fixed-2018-2022": 0.360797373358349,
+          "fixed-2019-2023": 0.37230180655010725,
+          "fixed-2020-2024": 0.39630763545397685
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.04202029677639446,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.06913525498891343,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.020930103483082385
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0819551153897416,
+          "fixed-2017-2021": 0.15278696912843265,
+          "fixed-2018-2022": 0.10036954915003699,
+          "fixed-2019-2023": 0.11000500965115123,
+          "fixed-2020-2024": 0.0
+        },
+        "b": {
+          "fixed-2015-2019": 0.04950622548183531,
+          "fixed-2016-2020": 0.1934642972647771,
+          "fixed-2017-2021": 0.12827420546932744,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08297590054887138,
+          "fixed-2020-2024": 0.0035905963954744324
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.06913525498891343,
+        "a": 0.15278696912843265,
+        "b": 0.1934642972647771
+      },
+      "averageLoss": {
+        "baseline": 0.33468325257309667,
+        "a": 0.3868550839182587,
+        "b": 0.38897084755841255
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.4,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.4367231009694025,
+          "fixed-2016-2020": 0.205407291628803,
+          "fixed-2017-2021": 0.2139352930156609,
+          "fixed-2018-2022": 0.41732560122804024,
+          "fixed-2019-2023": 0.29169713932608776,
+          "fixed-2020-2024": 0.41299933173583714
+        },
+        "a": {
+          "fixed-2015-2019": 0.3977908137444323,
+          "fixed-2016-2020": 0.2847845663599362,
+          "fixed-2017-2021": 0.36127624474685655,
+          "fixed-2018-2022": 0.4517232361134801,
+          "fixed-2019-2023": 0.400534033472858,
+          "fixed-2020-2024": 0.40076752515776903
+        },
+        "b": {
+          "fixed-2015-2019": 0.44527844806133493,
+          "fixed-2016-2020": 0.3914444105807561,
+          "fixed-2017-2021": 0.33715776160398314,
+          "fixed-2018-2022": 0.3551969981238274,
+          "fixed-2019-2023": 0.37483842826505764,
+          "fixed-2020-2024": 0.40616976519415543
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.038932287224970163,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.062128603104212865,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.012231806578068105
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.07937727473113321,
+          "fixed-2017-2021": 0.14734095173119566,
+          "fixed-2018-2022": 0.09652623798965271,
+          "fixed-2019-2023": 0.10883689414677022,
+          "fixed-2020-2024": 0.0
+        },
+        "b": {
+          "fixed-2015-2019": 0.047487634316902616,
+          "fixed-2016-2020": 0.18603711895195307,
+          "fixed-2017-2021": 0.12322246858832225,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08314128893896988,
+          "fixed-2020-2024": 0.0054022400363863965
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.062128603104212865,
+        "a": 0.14734095173119566,
+        "b": 0.18603711895195307
+      },
+      "averageLoss": {
+        "baseline": 0.3296812929839719,
+        "a": 0.382812736599222,
+        "b": 0.3850143019715191
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.45,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.42313167040875965,
+          "fixed-2016-2020": 0.20381047580967612,
+          "fixed-2017-2021": 0.20999538646080032,
+          "fixed-2018-2022": 0.40471857410881806,
+          "fixed-2019-2023": 0.29406837265093966,
+          "fixed-2020-2024": 0.41235152093008953
+        },
+        "a": {
+          "fixed-2015-2019": 0.3872873927352136,
+          "fixed-2016-2020": 0.2806099098822009,
+          "fixed-2017-2021": 0.3518903207947591,
+          "fixed-2018-2022": 0.4422795497185742,
+          "fixed-2019-2023": 0.4017371512933289,
+          "fixed-2020-2024": 0.40881801125703565
+        },
+        "b": {
+          "fixed-2015-2019": 0.43275643588718365,
+          "fixed-2016-2020": 0.3824204164488051,
+          "fixed-2017-2021": 0.32816611816811736,
+          "fixed-2018-2022": 0.3495966228893058,
+          "fixed-2019-2023": 0.37737504998000804,
+          "fixed-2020-2024": 0.416031894934334
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.03584427767354603,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.055121951219512244,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0035335096730538806
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.07679943407252479,
+          "fixed-2017-2021": 0.1418949343339588,
+          "fixed-2018-2022": 0.09268292682926838,
+          "fixed-2019-2023": 0.10766877864238922,
+          "fixed-2020-2024": 0.0
+        },
+        "b": {
+          "fixed-2015-2019": 0.045469043151970034,
+          "fixed-2016-2020": 0.17860994063912897,
+          "fixed-2017-2021": 0.11817073170731704,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08330667732906838,
+          "fixed-2020-2024": 0.0072138836772983606
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.055121951219512244,
+        "a": 0.1418949343339588,
+        "b": 0.17860994063912897
+      },
+      "averageLoss": {
+        "baseline": 0.3246793333948472,
+        "a": 0.3787703892801854,
+        "b": 0.38105775638462563
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.4095402398481167,
+          "fixed-2016-2020": 0.20221365999054924,
+          "fixed-2017-2021": 0.20605547990593973,
+          "fixed-2018-2022": 0.39211154698959577,
+          "fixed-2019-2023": 0.29643960597579155,
+          "fixed-2020-2024": 0.41170371012434187
+        },
+        "a": {
+          "fixed-2015-2019": 0.37678397172599487,
+          "fixed-2016-2020": 0.27643525340446573,
+          "fixed-2017-2021": 0.34250439684266154,
+          "fixed-2018-2022": 0.43283586332366825,
+          "fixed-2019-2023": 0.40294026911379976,
+          "fixed-2020-2024": 0.41686849735630216
+        },
+        "b": {
+          "fixed-2015-2019": 0.4202344237130323,
+          "fixed-2016-2020": 0.3733964223168542,
+          "fixed-2017-2021": 0.3191744747322516,
+          "fixed-2018-2022": 0.34399624765478426,
+          "fixed-2019-2023": 0.37991167169495843,
+          "fixed-2020-2024": 0.4258940246745125
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.032756268122121845,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.04811529933481151,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.07422159341391649,
+          "fixed-2017-2021": 0.13644891693672181,
+          "fixed-2018-2022": 0.08883961566888399,
+          "fixed-2019-2023": 0.10650066313800821,
+          "fixed-2020-2024": 0.005164787231960288
+        },
+        "b": {
+          "fixed-2015-2019": 0.04345045198703745,
+          "fixed-2016-2020": 0.17118276232630497,
+          "fixed-2017-2021": 0.11311899482631185,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08347206571916688,
+          "fixed-2020-2024": 0.014190314550170613
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.04811529933481151,
+        "a": 0.13644891693672181,
+        "b": 0.17118276232630497
+      },
+      "averageLoss": {
+        "baseline": 0.3196773738057225,
+        "a": 0.37472804196114873,
+        "b": 0.37710121079773223
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.55,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.39594880928747384,
+          "fixed-2016-2020": 0.20061684417142234,
+          "fixed-2017-2021": 0.20211557335107916,
+          "fixed-2018-2022": 0.37950451987037354,
+          "fixed-2019-2023": 0.2988108393006434,
+          "fixed-2020-2024": 0.4110558993185943
+        },
+        "a": {
+          "fixed-2015-2019": 0.36628055071677623,
+          "fixed-2016-2020": 0.27226059692673044,
+          "fixed-2017-2021": 0.33311847289056407,
+          "fixed-2018-2022": 0.4233921769287623,
+          "fixed-2019-2023": 0.4041433869342706,
+          "fixed-2020-2024": 0.4249189834555688
+        },
+        "b": {
+          "fixed-2015-2019": 0.40771241153888094,
+          "fixed-2016-2020": 0.36437242818490323,
+          "fixed-2017-2021": 0.31018283129638585,
+          "fixed-2018-2022": 0.3383958724202627,
+          "fixed-2019-2023": 0.3824482934099088,
+          "fixed-2020-2024": 0.43575615441469095
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.029668258570697603,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.041108647450110836,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0716437527553081,
+          "fixed-2017-2021": 0.1310028995394849,
+          "fixed-2018-2022": 0.0849963045084996,
+          "fixed-2019-2023": 0.1053325476336272,
+          "fixed-2020-2024": 0.013863084136974457
+        },
+        "b": {
+          "fixed-2015-2019": 0.041431860822104705,
+          "fixed-2016-2020": 0.1637555840134809,
+          "fixed-2017-2021": 0.1080672579453067,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08363745410926543,
+          "fixed-2020-2024": 0.024700255096096635
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.041108647450110836,
+        "a": 0.1310028995394849,
+        "b": 0.1637555840134809
+      },
+      "averageLoss": {
+        "baseline": 0.3146754142165978,
+        "a": 0.37068569464211204,
+        "b": 0.3731446652108388
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.6,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.38235737872683095,
+          "fixed-2016-2020": 0.19902002835229543,
+          "fixed-2017-2021": 0.19817566679621856,
+          "fixed-2018-2022": 0.3668974927511513,
+          "fixed-2019-2023": 0.30118207262549523,
+          "fixed-2020-2024": 0.4104080885128466
+        },
+        "a": {
+          "fixed-2015-2019": 0.35577712970755754,
+          "fixed-2016-2020": 0.2680859404489952,
+          "fixed-2017-2021": 0.32373254893846665,
+          "fixed-2018-2022": 0.4139484905338564,
+          "fixed-2019-2023": 0.4053465047547415,
+          "fixed-2020-2024": 0.4329694695548354
+        },
+        "b": {
+          "fixed-2015-2019": 0.39519039936472966,
+          "fixed-2016-2020": 0.35534843405295224,
+          "fixed-2017-2021": 0.3011911878605201,
+          "fixed-2018-2022": 0.3327954971857411,
+          "fixed-2019-2023": 0.3849849151248592,
+          "fixed-2020-2024": 0.44561828415486954
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.026580249019273416,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.034101995565410215,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.06906591209669977,
+          "fixed-2017-2021": 0.12555688214224808,
+          "fixed-2018-2022": 0.08115299334811532,
+          "fixed-2019-2023": 0.10416443212924625,
+          "fixed-2020-2024": 0.022561381041988793
+        },
+        "b": {
+          "fixed-2015-2019": 0.03941326965717212,
+          "fixed-2016-2020": 0.15632840570065681,
+          "fixed-2017-2021": 0.10301552106430156,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08380284249936398,
+          "fixed-2020-2024": 0.035210195642022935
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.034101995565410215,
+        "a": 0.12555688214224808,
+        "b": 0.15632840570065681
+      },
+      "averageLoss": {
+        "baseline": 0.30967345462747303,
+        "a": 0.36664334732307546,
+        "b": 0.3691881196239453
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.65,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.36876594816618813,
+          "fixed-2016-2020": 0.19742321253316852,
+          "fixed-2017-2021": 0.19423576024135802,
+          "fixed-2018-2022": 0.354290465631929,
+          "fixed-2019-2023": 0.30355330595034713,
+          "fixed-2020-2024": 0.409760277707099
+        },
+        "a": {
+          "fixed-2015-2019": 0.34527370869833884,
+          "fixed-2016-2020": 0.26391128397125996,
+          "fixed-2017-2021": 0.3143466249863691,
+          "fixed-2018-2022": 0.4045048041389505,
+          "fixed-2019-2023": 0.4065496225752123,
+          "fixed-2020-2024": 0.441019955654102
+        },
+        "b": {
+          "fixed-2015-2019": 0.38266838719057833,
+          "fixed-2016-2020": 0.34632443992100137,
+          "fixed-2017-2021": 0.29219954442465434,
+          "fixed-2018-2022": 0.32719512195121947,
+          "fixed-2019-2023": 0.38752153683980956,
+          "fixed-2020-2024": 0.455480413895048
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.023492239467849285,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.027095343680709538,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.06648807143809143,
+          "fixed-2017-2021": 0.12011086474501109,
+          "fixed-2018-2022": 0.07730968218773104,
+          "fixed-2019-2023": 0.10299631662486519,
+          "fixed-2020-2024": 0.03125967794700302
+        },
+        "b": {
+          "fixed-2015-2019": 0.037394678492239486,
+          "fixed-2016-2020": 0.14890122738783285,
+          "fixed-2017-2021": 0.09796378418329632,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08396823088946243,
+          "fixed-2020-2024": 0.04572013618794901
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.027095343680709538,
+        "a": 0.12011086474501109,
+        "b": 0.14890122738783285
+      },
+      "averageLoss": {
+        "baseline": 0.3046714950383483,
+        "a": 0.3626010000040388,
+        "b": 0.3652315740370518
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.7,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.3551745176055452,
+          "fixed-2016-2020": 0.19582639671404165,
+          "fixed-2017-2021": 0.19029585368649743,
+          "fixed-2018-2022": 0.34168343851270677,
+          "fixed-2019-2023": 0.305924539275199,
+          "fixed-2020-2024": 0.4091124669013514
+        },
+        "a": {
+          "fixed-2015-2019": 0.3347702876891202,
+          "fixed-2016-2020": 0.2597366274935247,
+          "fixed-2017-2021": 0.30496070103427164,
+          "fixed-2018-2022": 0.3950611177440446,
+          "fixed-2019-2023": 0.4077527403956832,
+          "fixed-2020-2024": 0.4490704417533685
+        },
+        "b": {
+          "fixed-2015-2019": 0.370146375016427,
+          "fixed-2016-2020": 0.3373004457890504,
+          "fixed-2017-2021": 0.2832079009887887,
+          "fixed-2018-2022": 0.32159474671669797,
+          "fixed-2019-2023": 0.39005815855475995,
+          "fixed-2020-2024": 0.46534254363522654
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.020404229916424987,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.020088691796008806,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.06391023077948307,
+          "fixed-2017-2021": 0.11466484734777421,
+          "fixed-2018-2022": 0.07346637102734666,
+          "fixed-2019-2023": 0.10182820112048419,
+          "fixed-2020-2024": 0.03995797485201713
+        },
+        "b": {
+          "fixed-2015-2019": 0.03537608732730679,
+          "fixed-2016-2020": 0.14147404907500874,
+          "fixed-2017-2021": 0.09291204730229125,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08413361927956092,
+          "fixed-2020-2024": 0.056230076733875145
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.020404229916424987,
+        "a": 0.11466484734777421,
+        "b": 0.14147404907500874
+      },
+      "averageLoss": {
+        "baseline": 0.2996695354492236,
+        "a": 0.35855865268500214,
+        "b": 0.3612750284501584
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.75,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.34158308704490237,
+          "fixed-2016-2020": 0.19422958089491474,
+          "fixed-2017-2021": 0.18635594713163686,
+          "fixed-2018-2022": 0.32907641139348454,
+          "fixed-2019-2023": 0.30829577260005087,
+          "fixed-2020-2024": 0.40846465609560373
+        },
+        "a": {
+          "fixed-2015-2019": 0.32426686667990146,
+          "fixed-2016-2020": 0.2555619710157895,
+          "fixed-2017-2021": 0.29557477708217417,
+          "fixed-2018-2022": 0.3856174313491387,
+          "fixed-2019-2023": 0.4089558582161541,
+          "fixed-2020-2024": 0.45712092785263514
+        },
+        "b": {
+          "fixed-2015-2019": 0.3576243628422757,
+          "fixed-2016-2020": 0.3282764516570994,
+          "fixed-2017-2021": 0.2742162575529229,
+          "fixed-2018-2022": 0.31599437148217635,
+          "fixed-2019-2023": 0.3925947802697104,
+          "fixed-2020-2024": 0.47520467337540506
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.01731622036500091,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.013082039911308185,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.06133239012087474,
+          "fixed-2017-2021": 0.1092188299505373,
+          "fixed-2018-2022": 0.06962305986696232,
+          "fixed-2019-2023": 0.10066008561610323,
+          "fixed-2020-2024": 0.04865627175703141
+        },
+        "b": {
+          "fixed-2015-2019": 0.03335749616237427,
+          "fixed-2016-2020": 0.13404687076218466,
+          "fixed-2017-2021": 0.08786031042128603,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08429900766965953,
+          "fixed-2020-2024": 0.06674001727980133
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.01731622036500091,
+        "a": 0.1092188299505373,
+        "b": 0.13404687076218466
+      },
+      "averageLoss": {
+        "baseline": 0.29466757586009884,
+        "a": 0.3545163053659655,
+        "b": 0.35731848286326495
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.8,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.32799165648425943,
+          "fixed-2016-2020": 0.19263276507578786,
+          "fixed-2017-2021": 0.1824160405767763,
+          "fixed-2018-2022": 0.3164693842742623,
+          "fixed-2019-2023": 0.3106670059249028,
+          "fixed-2020-2024": 0.4078168452898561
+        },
+        "a": {
+          "fixed-2015-2019": 0.3137634456706827,
+          "fixed-2016-2020": 0.25138731453805424,
+          "fixed-2017-2021": 0.2861888531300767,
+          "fixed-2018-2022": 0.3761737449542327,
+          "fixed-2019-2023": 0.410158976036625,
+          "fixed-2020-2024": 0.46517141395190176
+        },
+        "b": {
+          "fixed-2015-2019": 0.3451023506681244,
+          "fixed-2016-2020": 0.31925245752514847,
+          "fixed-2017-2021": 0.26522461411705717,
+          "fixed-2018-2022": 0.3103939962476548,
+          "fixed-2019-2023": 0.3951314019846608,
+          "fixed-2020-2024": 0.4850668031155836
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.014228210813576725,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.006075388026607509,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.05875454946226638,
+          "fixed-2017-2021": 0.1037728125533004,
+          "fixed-2018-2022": 0.06577974870657793,
+          "fixed-2019-2023": 0.09949197011172217,
+          "fixed-2020-2024": 0.057354568662045635
+        },
+        "b": {
+          "fixed-2015-2019": 0.031338904997441686,
+          "fixed-2016-2020": 0.1266196924493606,
+          "fixed-2017-2021": 0.08280857354028087,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.08446439605975797,
+          "fixed-2020-2024": 0.07724995782572747
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.014228210813576725,
+        "a": 0.1037728125533004,
+        "b": 0.1266196924493606
+      },
+      "averageLoss": {
+        "baseline": 0.28966561627097415,
+        "a": 0.3504739580469289,
+        "b": 0.3533619372763715
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.85,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.3144002259236166,
+          "fixed-2016-2020": 0.19103594925666095,
+          "fixed-2017-2021": 0.1784761340219157,
+          "fixed-2018-2022": 0.30386235715504006,
+          "fixed-2019-2023": 0.3130382392497546,
+          "fixed-2020-2024": 0.40716903448410846
+        },
+        "a": {
+          "fixed-2015-2019": 0.30326002466146407,
+          "fixed-2016-2020": 0.24721265806031897,
+          "fixed-2017-2021": 0.2768029291779792,
+          "fixed-2018-2022": 0.36673005855932683,
+          "fixed-2019-2023": 0.4113620938570959,
+          "fixed-2020-2024": 0.4732219000511684
+        },
+        "b": {
+          "fixed-2015-2019": 0.3325803384939731,
+          "fixed-2016-2020": 0.31022846339319754,
+          "fixed-2017-2021": 0.25623297068119144,
+          "fixed-2018-2022": 0.30479362101313323,
+          "fixed-2019-2023": 0.3976680236996112,
+          "fixed-2020-2024": 0.4949289328557621
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.011140201262152538,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.05617670880365802,
+          "fixed-2017-2021": 0.09832679515606352,
+          "fixed-2018-2022": 0.06286770140428677,
+          "fixed-2019-2023": 0.09832385460734128,
+          "fixed-2020-2024": 0.06605286556705992
+        },
+        "b": {
+          "fixed-2015-2019": 0.02932031383250905,
+          "fixed-2016-2020": 0.11919251413653659,
+          "fixed-2017-2021": 0.07775683665927574,
+          "fixed-2018-2022": 0.0009312638580931676,
+          "fixed-2019-2023": 0.08462978444985658,
+          "fixed-2020-2024": 0.08775989837165366
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.011140201262152538,
+        "a": 0.09832679515606352,
+        "b": 0.11919251413653659
+      },
+      "averageLoss": {
+        "baseline": 0.2846636566818494,
+        "a": 0.3464316107278922,
+        "b": 0.3494053916894781
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.9,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.3008087953629737,
+          "fixed-2016-2020": 0.18943913343753407,
+          "fixed-2017-2021": 0.17453622746705516,
+          "fixed-2018-2022": 0.2912553300358178,
+          "fixed-2019-2023": 0.3154094725746065,
+          "fixed-2020-2024": 0.40652122367836085
+        },
+        "a": {
+          "fixed-2015-2019": 0.2927566036522454,
+          "fixed-2016-2020": 0.2430380015825837,
+          "fixed-2017-2021": 0.26741700522588174,
+          "fixed-2018-2022": 0.35728637216442094,
+          "fixed-2019-2023": 0.41256521167756677,
+          "fixed-2020-2024": 0.48127238615043494
+        },
+        "b": {
+          "fixed-2015-2019": 0.3200583263198218,
+          "fixed-2016-2020": 0.30120446926124655,
+          "fixed-2017-2021": 0.24724132724532566,
+          "fixed-2018-2022": 0.2991932457786116,
+          "fixed-2019-2023": 0.4002046454145615,
+          "fixed-2020-2024": 0.5047910625959406
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.008052191710728351,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.05359886814504963,
+          "fixed-2017-2021": 0.09288077775882658,
+          "fixed-2018-2022": 0.06603104212860311,
+          "fixed-2019-2023": 0.09715573910296027,
+          "fixed-2020-2024": 0.07475116247207408
+        },
+        "b": {
+          "fixed-2015-2019": 0.02730172266757641,
+          "fixed-2016-2020": 0.11176533582371248,
+          "fixed-2017-2021": 0.0727050997782705,
+          "fixed-2018-2022": 0.007937915742793789,
+          "fixed-2019-2023": 0.08479517283995502,
+          "fixed-2020-2024": 0.09826983891757979
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.008052191710728351,
+        "a": 0.09715573910296027,
+        "b": 0.11176533582371248
+      },
+      "averageLoss": {
+        "baseline": 0.2796616970927247,
+        "a": 0.3423892634088556,
+        "b": 0.34544884610258464
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.95,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.28721736480233084,
+          "fixed-2016-2020": 0.1878423176184072,
+          "fixed-2017-2021": 0.1705963209121946,
+          "fixed-2018-2022": 0.2786483029165956,
+          "fixed-2019-2023": 0.3177807058994584,
+          "fixed-2020-2024": 0.4058734128726132
+        },
+        "a": {
+          "fixed-2015-2019": 0.2822531826430267,
+          "fixed-2016-2020": 0.2388633451048485,
+          "fixed-2017-2021": 0.2580310812737842,
+          "fixed-2018-2022": 0.34784268576951505,
+          "fixed-2019-2023": 0.41376832949803766,
+          "fixed-2020-2024": 0.4893228722497015
+        },
+        "b": {
+          "fixed-2015-2019": 0.30753631414567045,
+          "fixed-2016-2020": 0.2921804751292956,
+          "fixed-2017-2021": 0.23824968380945993,
+          "fixed-2018-2022": 0.2935928705440901,
+          "fixed-2019-2023": 0.4027412671295119,
+          "fixed-2020-2024": 0.5146531923361192
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.004964182159304165,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0510210274864413,
+          "fixed-2017-2021": 0.08743476036158962,
+          "fixed-2018-2022": 0.06919438285291946,
+          "fixed-2019-2023": 0.09598762359857926,
+          "fixed-2020-2024": 0.08344945937708831
+        },
+        "b": {
+          "fixed-2015-2019": 0.025283131502643774,
+          "fixed-2016-2020": 0.10433815751088843,
+          "fixed-2017-2021": 0.06765336289726534,
+          "fixed-2018-2022": 0.01494456762749452,
+          "fixed-2019-2023": 0.08496056123005352,
+          "fixed-2020-2024": 0.10877977946350598
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.004964182159304165,
+        "a": 0.09598762359857926,
+        "b": 0.10877977946350598
+      },
+      "averageLoss": {
+        "baseline": 0.27465973750359995,
+        "a": 0.3383469160898189,
+        "b": 0.3414923005156912
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 1.0,
+      "shift": 0,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.27362593424168796,
+          "fixed-2016-2020": 0.1862455017992803,
+          "fixed-2017-2021": 0.166656414357334,
+          "fixed-2018-2022": 0.26604127579737336,
+          "fixed-2019-2023": 0.3201519392243103,
+          "fixed-2020-2024": 0.4052256020668656
+        },
+        "a": {
+          "fixed-2015-2019": 0.271749761633808,
+          "fixed-2016-2020": 0.23468868862711326,
+          "fixed-2017-2021": 0.24864515732168674,
+          "fixed-2018-2022": 0.33839899937460916,
+          "fixed-2019-2023": 0.41497144731850855,
+          "fixed-2020-2024": 0.49737335834896806
+        },
+        "b": {
+          "fixed-2015-2019": 0.2950143019715191,
+          "fixed-2016-2020": 0.2831564809973447,
+          "fixed-2017-2021": 0.22925804037359415,
+          "fixed-2018-2022": 0.2879924953095685,
+          "fixed-2019-2023": 0.40527788884446225,
+          "fixed-2020-2024": 0.5245153220762977
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.0018761726078799779,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.04844318682783297,
+          "fixed-2017-2021": 0.08198874296435274,
+          "fixed-2018-2022": 0.0723577235772358,
+          "fixed-2019-2023": 0.09481950809419826,
+          "fixed-2020-2024": 0.09214775628210248
+        },
+        "b": {
+          "fixed-2015-2019": 0.023264540337711137,
+          "fixed-2016-2020": 0.0969109791980644,
+          "fixed-2017-2021": 0.06260162601626015,
+          "fixed-2018-2022": 0.02195121951219514,
+          "fixed-2019-2023": 0.08512594962015196,
+          "fixed-2020-2024": 0.11928972000943211
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.0018761726078799779,
+        "a": 0.09481950809419826,
+        "b": 0.11928972000943211
+      },
+      "averageLoss": {
+        "baseline": 0.26965777791447526,
+        "a": 0.33430456877078224,
+        "b": 0.3375357549287978
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": -14,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.31238008293186226,
+          "fixed-2016-2020": 0.22081167532986806,
+          "fixed-2017-2021": 0.18010404229916427,
+          "fixed-2018-2022": 0.289408152822787,
+          "fixed-2019-2023": 0.22157920048763713,
+          "fixed-2020-2024": 0.40293365171413953
+        },
+        "a": {
+          "fixed-2015-2019": 0.34286220243837195,
+          "fixed-2016-2020": 0.23623003013246915,
+          "fixed-2017-2021": 0.21063733014952526,
+          "fixed-2018-2022": 0.3378816305645574,
+          "fixed-2019-2023": 0.3361508077421712,
+          "fixed-2020-2024": 0.4156319290465632
+        },
+        "b": {
+          "fixed-2015-2019": 0.3114107270844576,
+          "fixed-2016-2020": 0.22229234180453694,
+          "fixed-2017-2021": 0.27293763147421685,
+          "fixed-2018-2022": 0.3524219682756268,
+          "fixed-2019-2023": 0.2709424388752657,
+          "fixed-2020-2024": 0.39885155494911595
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.0009693558474046515,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0040820967650235795
+        },
+        "a": {
+          "fixed-2015-2019": 0.03145147535391435,
+          "fixed-2016-2020": 0.015418354802601092,
+          "fixed-2017-2021": 0.030533287850360996,
+          "fixed-2018-2022": 0.04847347774177041,
+          "fixed-2019-2023": 0.11457160725453408,
+          "fixed-2020-2024": 0.01678037409744726
+        },
+        "b": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0014806664746688791,
+          "fixed-2017-2021": 0.09283358917505258,
+          "fixed-2018-2022": 0.0630138154528398,
+          "fixed-2019-2023": 0.04936323838762857,
+          "fixed-2020-2024": 0.0
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.0040820967650235795,
+        "a": 0.11457160725453408,
+        "b": 0.09283358917505258
+      },
+      "averageLoss": {
+        "baseline": 0.2712028009309097,
+        "a": 0.31323232167894305,
+        "b": 0.30480944374387
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": -7,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.3430299208987734,
+          "fixed-2016-2020": 0.2133310312238741,
+          "fixed-2017-2021": 0.18789015862186592,
+          "fixed-2018-2022": 0.34017567798055603,
+          "fixed-2019-2023": 0.26109877727230785,
+          "fixed-2020-2024": 0.4005004991010589
+        },
+        "a": {
+          "fixed-2015-2019": 0.35860215354417674,
+          "fixed-2016-2020": 0.2583499001331868,
+          "fixed-2017-2021": 0.26284325430666894,
+          "fixed-2018-2022": 0.3927966342600489,
+          "fixed-2019-2023": 0.36446717350355895,
+          "fixed-2020-2024": 0.40406788333617605
+        },
+        "b": {
+          "fixed-2015-2019": 0.39005362889809114,
+          "fixed-2016-2020": 0.2849545962500781,
+          "fixed-2017-2021": 0.2823611348001592,
+          "fixed-2018-2022": 0.3532236056626301,
+          "fixed-2019-2023": 0.3105897501139404,
+          "fixed-2020-2024": 0.40503723918358064
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.015572232645403361,
+          "fixed-2016-2020": 0.045018868909312726,
+          "fixed-2017-2021": 0.07495309568480302,
+          "fixed-2018-2022": 0.05262095627949287,
+          "fixed-2019-2023": 0.1033683962312511,
+          "fixed-2020-2024": 0.0035673842351171547
+        },
+        "b": {
+          "fixed-2015-2019": 0.047023707999317765,
+          "fixed-2016-2020": 0.07162356502620398,
+          "fixed-2017-2021": 0.09447097617829325,
+          "fixed-2018-2022": 0.013047927682074079,
+          "fixed-2019-2023": 0.04949097284163256,
+          "fixed-2020-2024": 0.004536740082521751
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.0,
+        "a": 0.1033683962312511,
+        "b": 0.09447097617829325
+      },
+      "averageLoss": {
+        "baseline": 0.2910043441830727,
+        "a": 0.34018783318063606,
+        "b": 0.33770332581807994
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": 7,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.4171701948591193,
+          "fixed-2016-2020": 0.25805328218363005,
+          "fixed-2017-2021": 0.2701102775672948,
+          "fixed-2018-2022": 0.347433054750128,
+          "fixed-2019-2023": 0.3581588343683506,
+          "fixed-2020-2024": 0.4031453153004533
+        },
+        "a": {
+          "fixed-2015-2019": 0.3823416088110211,
+          "fixed-2016-2020": 0.34668938951226036,
+          "fixed-2017-2021": 0.38716601937313655,
+          "fixed-2018-2022": 0.4271249076127125,
+          "fixed-2019-2023": 0.42759847110107013,
+          "fixed-2020-2024": 0.37213352421269263
+        },
+        "b": {
+          "fixed-2015-2019": 0.43555100104480354,
+          "fixed-2016-2020": 0.42777415840190736,
+          "fixed-2017-2021": 0.336864694681568,
+          "fixed-2018-2022": 0.34507078287566095,
+          "fixed-2019-2023": 0.4169355567796192,
+          "fixed-2020-2024": 0.4080650723393626
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.03482858604809824,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0023622718744670257,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.031011791087760643
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.08863610732863031,
+          "fixed-2017-2021": 0.11705574180584177,
+          "fixed-2018-2022": 0.08205412473705154,
+          "fixed-2019-2023": 0.06943963673271952,
+          "fixed-2020-2024": 0.0
+        },
+        "b": {
+          "fixed-2015-2019": 0.05320939223378246,
+          "fixed-2016-2020": 0.1697208762182773,
+          "fixed-2017-2021": 0.06675441711427321,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.05877672241126858,
+          "fixed-2020-2024": 0.03593154812666999
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.03482858604809824,
+        "a": 0.11705574180584177,
+        "b": 0.1697208762182773
+      },
+      "averageLoss": {
+        "baseline": 0.34234515983816266,
+        "a": 0.39050898677048224,
+        "b": 0.3950435443538203
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": 14,
+      "phase": 0,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.41387305217773035,
+          "fixed-2016-2020": 0.2614703768842114,
+          "fixed-2017-2021": 0.33415920345148653,
+          "fixed-2018-2022": 0.3428876002046734,
+          "fixed-2019-2023": 0.38509896740604455,
+          "fixed-2020-2024": 0.3533958444594191
+        },
+        "a": {
+          "fixed-2015-2019": 0.38242157682381595,
+          "fixed-2016-2020": 0.4063205953050015,
+          "fixed-2017-2021": 0.4330331270755101,
+          "fixed-2018-2022": 0.423247484223094,
+          "fixed-2019-2023": 0.39872246905433634,
+          "fixed-2020-2024": 0.3708713717310279
+        },
+        "b": {
+          "fixed-2015-2019": 0.4687198314147535,
+          "fixed-2016-2020": 0.4478323355972296,
+          "fixed-2017-2021": 0.361275210195642,
+          "fixed-2018-2022": 0.38597987378475185,
+          "fixed-2019-2023": 0.4166029625445859,
+          "fixed-2020-2024": 0.3734781145816731
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.031451475353914404,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.1448502184207901,
+          "fixed-2017-2021": 0.09887392362402359,
+          "fixed-2018-2022": 0.08035988401842059,
+          "fixed-2019-2023": 0.013623501648291791,
+          "fixed-2020-2024": 0.017475527271608837
+        },
+        "b": {
+          "fixed-2015-2019": 0.08629825459093754,
+          "fixed-2016-2020": 0.18636195871301825,
+          "fixed-2017-2021": 0.027116006744155485,
+          "fixed-2018-2022": 0.043092273580078444,
+          "fixed-2019-2023": 0.03150399513854135,
+          "fixed-2020-2024": 0.020082270122254053
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.031451475353914404,
+        "a": 0.1448502184207901,
+        "b": 0.18636195871301825
+      },
+      "averageLoss": {
+        "baseline": 0.34848084076392755,
+        "a": 0.4024361040354643,
+        "b": 0.40898138801977263
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": 0,
+      "phase": 1,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.28809063787072586,
+          "fixed-2016-2020": 0.3843339587242026,
+          "fixed-2017-2021": 0.21461233688342846,
+          "fixed-2018-2022": 0.2151463889968488,
+          "fixed-2019-2023": 0.41070592741924217,
+          "fixed-2020-2024": 0.37329613609101814
+        },
+        "a": {
+          "fixed-2015-2019": 0.3304404112480882,
+          "fixed-2016-2020": 0.3515776906020809,
+          "fixed-2017-2021": 0.28883393029734494,
+          "fixed-2018-2022": 0.3515953059335706,
+          "fixed-2019-2023": 0.4514302437533145,
+          "fixed-2020-2024": 0.47979679922902635
+        },
+        "b": {
+          "fixed-2015-2019": 0.33177647355976025,
+          "fixed-2016-2020": 0.3950281425891182,
+          "fixed-2017-2021": 0.38579509920973337,
+          "fixed-2018-2022": 0.32826538382316073,
+          "fixed-2019-2023": 0.36259062808443054,
+          "fixed-2020-2024": 0.45676820181018507
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.032756268122121734,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.04811529933481162,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.04234977337736234,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.07422159341391649,
+          "fixed-2018-2022": 0.1364489169367218,
+          "fixed-2019-2023": 0.08883961566888393,
+          "fixed-2020-2024": 0.10650066313800821
+        },
+        "b": {
+          "fixed-2015-2019": 0.04368583568903439,
+          "fixed-2016-2020": 0.04345045198703734,
+          "fixed-2017-2021": 0.17118276232630492,
+          "fixed-2018-2022": 0.11311899482631194,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.08347206571916693
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.04811529933481162,
+        "a": 0.1364489169367218,
+        "b": 0.17118276232630492
+      },
+      "averageLoss": {
+        "baseline": 0.31436423099757765,
+        "a": 0.37561239684390424,
+        "b": 0.37670398817939804
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": 0,
+      "phase": 2,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.4124435540469127,
+          "fixed-2016-2020": 0.24352301037626908,
+          "fixed-2017-2021": 0.3752430496332936,
+          "fixed-2018-2022": 0.2316855076151358,
+          "fixed-2019-2023": 0.29496900540483106,
+          "fixed-2020-2024": 0.3913045970423019
+        },
+        "a": {
+          "fixed-2015-2019": 0.49632724998578664,
+          "fixed-2016-2020": 0.2949409513583844,
+          "fixed-2017-2021": 0.3308545113423162,
+          "fixed-2018-2022": 0.3160412757973734,
+          "fixed-2019-2023": 0.4207862775635667,
+          "fixed-2020-2024": 0.45444349066900047
+        },
+        "b": {
+          "fixed-2015-2019": 0.39221388367729837,
+          "fixed-2016-2020": 0.2819726188778568,
+          "fixed-2017-2021": 0.35903121268974925,
+          "fixed-2018-2022": 0.4230627096480756,
+          "fixed-2019-2023": 0.41660752948237956,
+          "fixed-2020-2024": 0.43438834256507186
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.020229670369614317,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.044388538290977386,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.10411336630848828,
+          "fixed-2016-2020": 0.0514179409821153,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.08435576818223761,
+          "fixed-2019-2023": 0.12581727215873562,
+          "fixed-2020-2024": 0.06313889362669856
+        },
+        "b": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.03844960850158771,
+          "fixed-2017-2021": 0.028176701347433053,
+          "fixed-2018-2022": 0.19137720203293979,
+          "fixed-2019-2023": 0.1216385240775485,
+          "fixed-2020-2024": 0.043083745522769945
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.044388538290977386,
+        "a": 0.12581727215873562,
+        "b": 0.19137720203293979
+      },
+      "averageLoss": {
+        "baseline": 0.32486145401979066,
+        "a": 0.38556562611940465,
+        "b": 0.3845460494900719
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": 0,
+      "phase": 3,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.2403526701207629,
+          "fixed-2016-2020": 0.3626396993650093,
+          "fixed-2017-2021": 0.20752608047690016,
+          "fixed-2018-2022": 0.4125106600716357,
+          "fixed-2019-2023": 0.32002765327435456,
+          "fixed-2020-2024": 0.3667667198854724
+        },
+        "a": {
+          "fixed-2015-2019": 0.4013991606154741,
+          "fixed-2016-2020": 0.45175962249132984,
+          "fixed-2017-2021": 0.28585004226747535,
+          "fixed-2018-2022": 0.3479276820740235,
+          "fixed-2019-2023": 0.3958638922053556,
+          "fixed-2020-2024": 0.40138494718662654
+        },
+        "b": {
+          "fixed-2015-2019": 0.3637648437128645,
+          "fixed-2016-2020": 0.3476462561828415,
+          "fixed-2017-2021": 0.2728817097869477,
+          "fixed-2018-2022": 0.3761043834214566,
+          "fixed-2019-2023": 0.5028853260560577,
+          "fixed-2020-2024": 0.3972061991054394
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.014993443182167776,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.0645829779976122,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.1610464904947112,
+          "fixed-2016-2020": 0.10411336630848833,
+          "fixed-2017-2021": 0.07832396179057519,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.07583623893100105,
+          "fixed-2020-2024": 0.03461822730115416
+        },
+        "b": {
+          "fixed-2015-2019": 0.1234121735921016,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.06535562931004754,
+          "fixed-2018-2022": 0.028176701347433053,
+          "fixed-2019-2023": 0.18285767278170317,
+          "fixed-2020-2024": 0.030439479219967036
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.0645829779976122,
+        "a": 0.1610464904947112,
+        "b": 0.18285767278170317
+      },
+      "averageLoss": {
+        "baseline": 0.3183039138656892,
+        "a": 0.38069755780671416,
+        "b": 0.3767481197109346
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    },
+    {
+      "heatWeight": 0.5,
+      "shift": 0,
+      "phase": 4,
+      "lossMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.24678128748500602,
+          "fixed-2016-2020": 0.2151463889968488,
+          "fixed-2017-2021": 0.3750383762578885,
+          "fixed-2018-2022": 0.21661698956780923,
+          "fixed-2019-2023": 0.43110504050128196,
+          "fixed-2020-2024": 0.3968841833895812
+        },
+        "a": {
+          "fixed-2015-2019": 0.3210028808989225,
+          "fixed-2016-2020": 0.3515953059335707,
+          "fixed-2017-2021": 0.4157626925919609,
+          "fixed-2018-2022": 0.32311765270581744,
+          "fixed-2019-2023": 0.4362698277332424,
+          "fixed-2020-2024": 0.467661606685997
+        },
+        "b": {
+          "fixed-2015-2019": 0.41796404981131097,
+          "fixed-2016-2020": 0.32826538382316073,
+          "fixed-2017-2021": 0.3269230769230769,
+          "fixed-2018-2022": 0.30008905528697616,
+          "fixed-2019-2023": 0.4452953550514527,
+          "fixed-2020-2024": 0.5058985729717437
+        }
+      },
+      "regretMatrix": {
+        "baseline": {
+          "fixed-2015-2019": 0.0,
+          "fixed-2016-2020": 0.0,
+          "fixed-2017-2021": 0.04811529933481157,
+          "fixed-2018-2022": 0.0,
+          "fixed-2019-2023": 0.0,
+          "fixed-2020-2024": 0.0
+        },
+        "a": {
+          "fixed-2015-2019": 0.07422159341391646,
+          "fixed-2016-2020": 0.1364489169367219,
+          "fixed-2017-2021": 0.08883961566888399,
+          "fixed-2018-2022": 0.10650066313800821,
+          "fixed-2019-2023": 0.005164787231960455,
+          "fixed-2020-2024": 0.07077742329641579
+        },
+        "b": {
+          "fixed-2015-2019": 0.17118276232630494,
+          "fixed-2016-2020": 0.11311899482631194,
+          "fixed-2017-2021": 0.0,
+          "fixed-2018-2022": 0.08347206571916693,
+          "fixed-2019-2023": 0.014190314550170724,
+          "fixed-2020-2024": 0.10901438958216247
+        }
+      },
+      "worstRegrets": {
+        "baseline": 0.04811529933481157,
+        "a": 0.1364489169367219,
+        "b": 0.17118276232630494
+      },
+      "averageLoss": {
+        "baseline": 0.31359537769973594,
+        "a": 0.38590166109158514,
+        "b": 0.3874059156446202
+      },
+      "preferredSet": [
+        "baseline"
+      ]
+    }
+  ],
+  "oracleCodeSha256": "902e3486ba6394fff4b5a7d54dff62bf7c4aa8f288dbfcf217f7e1f4394e5db3",
+  "reader": {
+    "h5py": "3.15.1",
+    "hdf5": "1.14.6",
+    "numpy": "2.3.5"
+  }
+}

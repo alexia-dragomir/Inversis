@@ -38,3 +38,12 @@ real daily precipitation subsets, implemented receipt-preserving import and seri
 validation, and cross-checked the files with independent h5py extraction. It also
 implemented preference-grid adjacency/tie tests, deployment configuration and draft
 submission text. The browser-origin denial on Harmony was not bypassed.
+
+Historical rainfall integration: Codex assisted authenticated, bounded NASA OPeNDAP
+acquisition using an owner-supplied token kept outside the repository, deterministic
+annual archives, two-reader validation, combined rainfall/heat calculations, preference
+stability, additional adversarial tests and submission preparation. The independent
+Python oracle and TypeScript implementation are both AI-assisted; independent here
+means separate readers and arithmetic, not independent human scientific review.
+No runtime AI, invented observations, inferred farmer preferences or synthetic
+reversal claims are introduced. The retained heat-only mode is an explicit fallback.

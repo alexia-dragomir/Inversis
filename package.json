@@ -20,9 +20,11 @@
     "history:build": "node --experimental-strip-types scripts/build-analysis-evidence.ts",
     "imerg:build": "node --experimental-strip-types scripts/build-imerg-series.ts",
     "imerg:verify": "node --experimental-strip-types scripts/build-imerg-series.ts --verify",
+    "imerg:history:build": "node --experimental-strip-types scripts/build-imerg-analysis-evidence.ts",
+    "imerg:history:verify": "node --experimental-strip-types scripts/build-imerg-analysis-evidence.ts --verify",
     "history:verify": "node --experimental-strip-types scripts/acquire-power-history.ts --verify && node --experimental-strip-types scripts/build-analysis-evidence.ts --verify",
     "certificate:verify": "node --experimental-strip-types scripts/verify-certificate.ts",
-    "check": "npm run lint && npm run typecheck && npm test && npm run evidence:verify && npm run history:verify && npm run imerg:verify && npm run build"
+    "check": "npm run lint && npm run typecheck && npm test && npm run evidence:verify && npm run history:verify && npm run imerg:verify && npm run imerg:history:verify && npm run build"
   },
   "dependencies": {
     "react": "19.3.1",

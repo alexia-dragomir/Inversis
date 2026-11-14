@@ -17,7 +17,9 @@ const sourceLinks=metadata.items.flatMap(v=>{
   const umm=record(record(v,'item').umm,'UMM');requireCondition(Array.isArray(umm.RelatedUrls),'Missing CMR URLs');
   return umm.RelatedUrls.map(v=>record(v,'URL')).filter(v=>v.Subtype==='OPENDAP DATA').map(v=>text(v.URL,'source URL'));
 });
-const token=(await readFile('.local/earthdata-token.txt','utf8')).trim();
+const tokenPath=process.env.INVERSIS_EARTHDATA_TOKEN_FILE;
+requireCondition(tokenPath,'Set INVERSIS_EARTHDATA_TOKEN_FILE to the owner-provided token file outside the repository');
+const token=(await readFile(tokenPath,'utf8')).trim();
 requireCondition(token.length>20&&!/\s/.test(token),'Local NASA token is absent or malformed');
 const query='/lon[2072:2074];/time;/precipitation_cnt[][2072:2074][1344:1346];/time_bnds;/lat[1344:1346];/precipitation[][2072:2074][1344:1346]';
 const root='.local/imerg-dap4/downloads';await mkdir(root,{recursive:true});

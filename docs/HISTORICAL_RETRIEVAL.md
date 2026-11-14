@@ -1,5 +1,20 @@
 # Historical NASA retrieval and recovery
 
+## Current update: complete authorized DAP4 history
+
+The external owner-supplied token path was resolved without moving the token into
+the repository. The official bearer-authenticated OPeNDAP route succeeded for all
+2015–2024 daily granules. Seven existing browser captures were reused; 3,646 further
+daily files were retained locally, yielding 3,653 complete daily observations.
+Every selected cell has 48 valid half-hours, and h5py/h5wasm agree exactly. Ten
+original-byte archives and receipts are published with the checkpoint. No Harmony
+security check was bypassed and no Harmony output is claimed as ingested.
+
+See [exact reproducible steps](REPRODUCE_IMERG.md) and
+[the combined checkpoint](COMBINED_CHECKPOINT.md). The sections below retain
+**earlier checkpoint states**, including the original token-path and Harmony blockers;
+their incomplete-coverage statements are historical, not the current state.
+
 ## Update after fc80643: successful DAP4 recovery
 
 On 2026-11-14 the owner authorized investigating reuse of the successful original

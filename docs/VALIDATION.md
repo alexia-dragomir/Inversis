@@ -1,5 +1,26 @@
 # Validation record
 
+## Complete rainfall-and-heat checkpoint, 2026-11-14
+
+`npm run check` passed **101 tests in 13 files**, lint, strict TypeScript, every
+source/sample/history verifier, deterministic full IMERG regeneration and production
+build. Both source families have 3,653 valid UTC days. Independent h5py/h5wasm readers
+agree on every IMERG cell/count/status/source URL. A separate raw-source Python oracle
+agrees with all physical exposures and 29 distinct comparison configurations to 12
+decimals. Tests explicitly preserve the heat fallback and refuse missing/shared-domain,
+unit, calendar, provenance and archive-corruption failures.
+
+Browser smoke checks passed all four routes, combined physical exposures, weight/shift
+controls, sole/no-eligible outcomes, reset, heat fallback, 21-point preference grid,
+Next Evidence and certificate download. No captured console warnings/errors. Export
+SHA-256: `dadc84b99fe032d45a78564e2fde14c345ac1584cdaa433e26ef176053bcee5f`.
+Desktop visual inspection passed; current mobile rendering remains unverified.
+Production JavaScript is 323.58 kB (90.41 kB gzip). Remote CI success is not claimed.
+See [full evidence, results and limitations](COMBINED_CHECKPOINT.md).
+
+The sections below are historical checkpoints; their earlier acquisition blockers
+and incomplete-rainfall states have been superseded by the complete DAP4 archive.
+
 ## Seven-day precipitation recovery checkpoint
 
 After fc80643, `npm run check` passed **89 tests in ten files**, lint, TypeScript,

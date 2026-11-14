@@ -9,4 +9,14 @@ export interface AnalysisEvidence {
   readonly references: readonly NormalizationReference[];
   readonly processingHashes: Readonly<Record<string, string>>;
   readonly limitations: readonly string[];
+  readonly precipitation?: PrecipitationEvidence;
+}
+export interface PrecipitationEvidence {
+  readonly schemaVersion: 'inversis-precipitation-history-v1';
+  readonly dailyCoverage: {readonly expected: number; readonly available: number; readonly valid: number; readonly missing: number};
+  readonly sourceManifest: readonly ProvenanceRecord[];
+  readonly cropYearExposures: readonly CropYearExposure[];
+  readonly references: readonly NormalizationReference[];
+  readonly processingHashes: Readonly<Record<string,string>>;
+  readonly limitations: readonly string[];
 }

@@ -5,17 +5,20 @@
 A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
 *Field Shift: Adapting Farms with NASA Data*.
 
-**Working reduced-model checkpoint.** All 3,653 NASA POWER T2M_MAX daily values for
-2015–2024 are retained and validated in UTC and °C. The interactive four-screen
-workflow computes a clearly labeled, provisional **heat-only** comparison across six
-common historical five-year windows. It includes hypothetical crop exclusions,
-window/phase sensitivity, recomputed Next Evidence and downloadable audit records.
-IMERG Final V07B now has **seven independently validated days**, January 1–7, 2024,
-each with 48 valid half-hours. Historical precipitation remains incomplete, and
-the combined rainfall/heat model refuses to rank candidates.
-See the [precipitation recovery checkpoint](docs/PRECIPITATION_CHECKPOINT.md),
-[implementation checkpoint](docs/IMPLEMENTATION_CHECKPOINT.md) and historical
-[Stage 1 evidence report](docs/STAGE_1_REPORT.md).
+**Validated rainfall + heat checkpoint.** All **3,653 NASA POWER T2M_MAX daily
+values and 3,653 GPM IMERG Final V07B daily cells for 2015–2024** are retained and
+validated in UTC. The four-screen workflow computes a conditional comparison across
+six common five-year historical windows, with physical heat/dry-spell exposures,
+21 sampled preferences, window/phase diagnostics, hypothetical exclusions, recomputed
+Next Evidence and downloadable audit records. The explicit heat-only fallback remains
+available and passes its original tests. Missing rainfall still refuses combined results.
+
+The actual default result and every declared preference/shift/phase test retain the
+Baseline preferred set. No reversal or continuous stability boundary is invented.
+These are historical environmental-exposure comparisons, not field recommendations.
+See the [combined checkpoint](docs/COMBINED_CHECKPOINT.md),
+[reproducible NASA access](docs/REPRODUCE_IMERG.md), and historical
+[Stage 1 report](docs/STAGE_1_REPORT.md).
 
 ## Run locally
 
@@ -60,12 +63,12 @@ system sans fallback; no font is downloaded.
 
 Proposed location: Bărăgan Plain, Romania, 44.565° N, 27.335° E. This is not a measured
 farm. Three fixed-start five-year crop sequences are configured, all conditional.
-2015–2024 temperature coverage is validated; precipitation history is incomplete. Field soil,
+2015–2024 temperature and precipitation coverage are validated. Field soil,
 crop/disease history and management remain unknown. A and B share crop composition.
 
 ## Documentation
 
-- [Methods and Stage 1 boundary](docs/METHODS.md)
+- [Implemented scientific methods](docs/METHODS.md)
 - [Shared data contracts](docs/CONTRACTS.md)
 - [Data sources and provenance](docs/DATA_SOURCES.md)
 - [Validation](docs/VALIDATION.md)
@@ -79,14 +82,14 @@ crop/disease history and management remain unknown. A and B share crop compositi
 
 The sole intended remote is https://github.com/alexia-dragomir/Inversis.
 Vercel is not configured or verified. To deploy, create a **new Inversis project**,
-authorize only this repository, select Vite, build with `npm run build`, and publish
+authorize only this repository, select Vite, build with `npm run check`, and publish
 `dist`. No environment variables are needed. See the execution report for actual
 Git publication status. GitHub Actions is configured; local passing checks do not
 imply that the remote workflow has run.
 
 ## Scope and license
 
-Results are conditional historical heat-exposure comparisons, never yield,
+Results are conditional historical rainfall-and-heat exposure comparisons, never yield,
 soil-health, disease-probability or future-climate predictions. A certificate is an
 audit record, not agricultural certification or NASA endorsement.
 

@@ -1,10 +1,12 @@
 # Data sources and acquisition status
 
-**Current checkpoint:** POWER has 3,653 validated daily values for 2015–2024,
-in addition to the retained seven-day access sample. IMERG has a validated
-January 1, 2024 native-cell sample: 0 mm/day with 48 valid half-hours; an authenticated
-repeat reproduced its value/count/grid. SMAP remains optional and unacquired.
-See [the Stage 1 report](STAGE_1_REPORT.md) for raw captures, receipts and remaining gaps.
+**Current checkpoint (2026-11-14):** 3,653/3,653 POWER daily maximum temperatures
+and 3,653/3,653 IMERG Final V07B daily selected-cell precipitation values, January 1,
+2015 through December 31, 2024. Both use explicit UTC days. IMERG has no missing
+selected values and all 48 half-hours on every day; two independent readers agree.
+See [combined checkpoint](COMBINED_CHECKPOINT.md) and [reproduction](REPRODUCE_IMERG.md).
+Older access samples and reports remain historical evidence, not the coverage limit.
+SMAP remains optional and unacquired.
 
 | Target | Intended role | Verification required |
 | --- | --- | --- |
@@ -39,10 +41,24 @@ overlap with IMERG. Validate dependency details and test indicator omission late
 External sources inspected in Stage 0 were software documentation and official
 competition guides only; see `SUBMISSION_RULES.md` and `THIRD_PARTY_NOTICES.md`.
 
-Update after fc80643: **seven real daily DAP4 subsets (January 1–7, 2024)** now pass
-both the existing parser and an independent Python/HDF5 reader. Exact values and
-provenance are retained in `public/evidence/imerg-dap4/manifest.json`. The earlier
-one-day Stage 1 report remains a historical checkpoint. Historical acquisition is
-**not complete**. Harmony generated seven NetCDF
-outputs preserving precipitation and counts, but those binaries were not downloaded
-or scientifically validated. See [retrieval and recovery](HISTORICAL_RETRIEVAL.md).
+Historical IMERG is retained in ten annual original-byte NetCDF archives under
+`public/evidence/history/imerg`, each with a daily manifest. The files preserve
+precipitation, counts, native axes, UTC time/bounds and NASA source history. The
+containing cell is 44.55° N, 27.350000381469727° E, with native 0.1° support; the 3×3
+subset is archived without spatial averaging or interpolation. The exact requests,
+HTTP receipts and byte hashes are retained. For the seven original browser samples,
+exact retrieval time was not captured and remains null; registration time is not
+misrepresented as download completion. Later bearer-authenticated HTTP captures
+retain observed completion times and status 200.
+
+NASA CMR collection: `C2723754864-GES_DISC`; product `GPM_3IMERGDF/07`;
+science version V07B; DOI `10.5067/GPM/IMERGDF/DAY/07`. Original numeric inclusive
+day bounds are retained and mapped explicitly to an exclusive next-midnight end.
+The daily source fill is -9999.900390625; valid zero is never treated as missing.
+
+`imerg-analysis-input.json` contains 200 physical dry-spell records and fixed bounds
+5–27 days from the predeclared 40 unshifted crop-years. The heat reference is
+0–41/62. Neither reference depends on candidate exclusion or preferences. The
+independent combined oracle reparses all original archives and checks the arithmetic.
+Earlier Harmony outputs were not ingested; successful DAP4 access is a separate,
+authorized route. See the exact earlier blocker in HISTORICAL_RETRIEVAL.md.

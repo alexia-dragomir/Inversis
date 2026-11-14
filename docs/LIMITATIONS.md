@@ -1,12 +1,18 @@
 # Limitations and specification reconciliation
 
-POWER now has complete 2015–2024 daily coverage; IMERG has seven validated days,
-including independent Python/HDF5 extraction and the original authenticated repeat. The engine and
-four-screen workflow implement a clearly labeled heat-only model, conditional comparisons,
-finite sensitivity diagnostics, hypothetical counterfactuals and audit exports.
-No drought or combined-climate result is supported. Full historical precipitation,
-locally applicable agronomic rules and independent field validation remain unavailable.
-Automated checks and independent arithmetic do not establish agricultural usefulness.
+POWER and IMERG now both have complete validated 2015–2024 daily coverage at the
+demonstration point. The combined rainfall-and-heat model and explicit heat-only
+fallback are implemented. This completes the declared two-indicator historical
+evidence domain, **not** independent field or agronomic validation. No SMAP moisture,
+soil/disease measurement, calibrated crop damage function, yield model or future
+climate prediction is provided. Automated checks and independent arithmetic do not
+establish agricultural usefulness.
+
+The actual Baseline set is unchanged across the 21 declared preference weights and
+five separate calendar/phase tests. No decision boundary or reversal is claimed.
+These finite samples do not prove robustness outside the tested domain. Hypothetical
+farmer constraints can change eligibility or leave no eligible candidate; those
+outcomes must not be promoted as evidence-driven crop recommendations.
 
 Resolved specification conflicts:
 
@@ -32,7 +38,7 @@ Current author conventions are explicit in METHODS.md: at least two common scena
 references under shifts. These policies were coded before running the real comparison;
 they were not tuned to obtain a preferred result or reversal. SMAP aggregation/QC
 and locally applicable agronomic exclusions remain open. Latest user authorization
-permits the explicitly labeled reduced model while precipitation remains unavailable.
+preserves the explicitly labeled reduced model as a working fallback.
 
 Raw dry-run length may reflect differing crop-window lengths. Normalized exposure
 does not establish equal crop vulnerability. Crop-year weather allocation can drive

@@ -1,3 +1,6 @@
+> Historical seven-day checkpoint, commit 6391a80. Superseded for current coverage
+> by [the complete combined checkpoint](COMBINED_CHECKPOINT.md); original evidence is preserved.
+
 # Independently validated IMERG sample checkpoint
 
 Work resumed from clean commit `fc80643` on `stage-1/evidence`. No later changes

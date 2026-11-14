@@ -22,7 +22,7 @@ export function App() {
       <nav aria-label="Decision workflow">{steps.map((item, index) => <a href={`#${item}`} key={item} aria-current={step === item ? 'page' : undefined}><span className="nav-number" aria-hidden="true">0{index + 1}</span>{item}</a>)}</nav>
       <span className="stage-label">Evidence / Assumptions / Consequences</span>
     </header>
-    <div className="workspace"><div className="evidence-notice"><span className="notice-dot" aria-hidden="true" />Reduced model · provisional <span className="notice-detail">Heat history validated. Historical precipitation and field suitability remain unresolved.</span></div>
+    <div className="workspace"><div className="evidence-notice"><span className="notice-dot" aria-hidden="true" />Historical model · provisional <span className="notice-detail">Source coverage determines which comparisons can run. Field suitability remains unresolved.</span></div>
       <main id="main" ref={main} tabIndex={-1}><AnalysisWorkspace step={step}/></main>
       <footer><span>Inversis · Know what would change the decision.</span><span>Historical exposure ≠ future prediction</span></footer>
     </div>
