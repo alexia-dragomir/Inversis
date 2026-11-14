@@ -1,5 +1,16 @@
 # Validation record
 
+## Product redesign and public verification, 2026-11-14
+
+The presentation release `6103347` passed **109 tests in 15 files**, full source/history
+checks, all four independent Python scripts, lint, TypeScript and production build.
+[Actions run 43600238875](https://github.com/alexia-dragomir/Inversis/actions/runs/43600238875)
+passed scientific check and Pages deployment. Desktop/mobile verification passed on
+the actual public application. The downloaded custom-state certificate matched the
+pre-redesign export in every field except generation timestamp. Scientific source,
+engine, data and verification-script contents are unchanged. See
+[the complete product verification record](PRODUCT_DESIGN_CHECKPOINT.md).
+
 ## Phase 2 and public deployment, 2026-11-14
 
 `npm run check` passed **107 tests in 14 files**, lint, TypeScript, source/history

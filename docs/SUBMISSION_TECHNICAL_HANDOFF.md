@@ -47,6 +47,11 @@ AI-assisted; their independence is computational. The app has no runtime AI.
 
 ## Evidence and verification links
 
+- Current presentation release: `6103347`; [CI and deployment passed](https://github.com/alexia-dragomir/Inversis/actions/runs/43600238875).
+  All four redesigned public screens were verified on desktop/mobile. **109 tests
+  in 15 files** pass; original scientific inputs and calculations are unchanged.
+  Full public certificate equality with the pre-redesign record was verified,
+  excluding only generation timestamp. See PRODUCT_DESIGN_CHECKPOINT.md.
 - Live application: https://alexia-dragomir.github.io/Inversis/
 - Repository: https://github.com/alexia-dragomir/Inversis/tree/stage-1/evidence
 - Scientific findings: https://github.com/alexia-dragomir/Inversis/blob/stage-1/evidence/docs/PHASE_2_FINDINGS.md

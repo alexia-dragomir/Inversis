@@ -59,7 +59,22 @@ Canonical verification passed. **The entire JSON record equals the pre-redesign
 verified export, excluding only generation timestamp**, including all matrices,
 source provenance, diagnostic branches, assumptions and limitations.
 
-Publishing uses the existing gated GitHub Actions → Pages workflow. A release is
-verified publicly only after its scientific check and deploy jobs succeed and the
-live application is inspected. The original scientific interpretation and all
-submission qualifications in PHASE_2_FINDINGS.md remain applicable.
+## Verified public release
+
+Presentation implementation: `6103347b3aab4d383b1a39698c9d13ff6232d020`.
+[GitHub Actions run 43600238875](https://github.com/alexia-dragomir/Inversis/actions/runs/43600238875)
+passed both scientific check and Pages deployment. The actual public application was
+then tested on desktop and at 390px: all four routes, source coverage, crop history,
+replay selection, keyboard preference changes, hypothetical sunflower branch,
+heat-only fallback, reset, certificate download and refresh. No captured console
+warnings/errors or horizontal page overflow. Refresh resets assumptions to defaults.
+
+Seven public assets (HTML, JS, CSS, both historical inputs, sample NetCDF and one
+annual archive) matched the production build byte for byte. All twenty annual
+archive/manifest links returned HTTP 200. The public export at the configuration
+above verified successfully and matched the entire pre-redesign certificate except
+generation timestamp. The supplied branding rendered successfully on desktop/mobile.
+
+The original scientific interpretation and all submission qualifications in
+PHASE_2_FINDINGS.md remain applicable. Final slides/video and submission remain the
+separate submission-materials workstream; no submission form was sent here.
