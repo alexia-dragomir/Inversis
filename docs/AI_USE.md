@@ -32,3 +32,9 @@ counterfactual branches, certificate export and documentation. Browser smoke che
 used the computer-use tool. Both implementation and oracle are AI-assisted code;
 independence here means separate arithmetic implementations, not independent human
 scientific review. No credentials or temporary signed NASA URLs are published.
+
+Post-fc80643: Codex reused official NASA DAP4 browser access to retrieve six additional
+real daily precipitation subsets, implemented receipt-preserving import and series
+validation, and cross-checked the files with independent h5py extraction. It also
+implemented preference-grid adjacency/tie tests, deployment configuration and draft
+submission text. The browser-origin denial on Harmony was not bypassed.

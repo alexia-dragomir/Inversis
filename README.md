@@ -10,9 +10,11 @@ A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
 workflow computes a clearly labeled, provisional **heat-only** comparison across six
 common historical five-year windows. It includes hypothetical crop exclusions,
 window/phase sensitivity, recomputed Next Evidence and downloadable audit records.
-IMERG Final V07B coverage remains **one validated day** (January 1, 2024; 0 mm/day,
-48 valid half-hours). The combined rainfall/heat model refuses to rank candidates.
-See the [implementation checkpoint](docs/IMPLEMENTATION_CHECKPOINT.md) and historical
+IMERG Final V07B now has **seven independently validated days**, January 1–7, 2024,
+each with 48 valid half-hours. Historical precipitation remains incomplete, and
+the combined rainfall/heat model refuses to rank candidates.
+See the [precipitation recovery checkpoint](docs/PRECIPITATION_CHECKPOINT.md),
+[implementation checkpoint](docs/IMPLEMENTATION_CHECKPOINT.md) and historical
 [Stage 1 evidence report](docs/STAGE_1_REPORT.md).
 
 ## Run locally

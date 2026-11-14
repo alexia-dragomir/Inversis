@@ -1,7 +1,7 @@
 # Limitations and specification reconciliation
 
-POWER now has complete 2015–2024 daily coverage; IMERG remains one validated day,
-including NetCDF extraction and an independent authenticated repeat. The engine and
+POWER now has complete 2015–2024 daily coverage; IMERG has seven validated days,
+including independent Python/HDF5 extraction and the original authenticated repeat. The engine and
 four-screen workflow implement a clearly labeled heat-only model, conditional comparisons,
 finite sensitivity diagnostics, hypothetical counterfactuals and audit exports.
 No drought or combined-climate result is supported. Full historical precipitation,

@@ -39,6 +39,10 @@ overlap with IMERG. Validate dependency details and test indicator omission late
 External sources inspected in Stage 0 were software documentation and official
 competition guides only; see `SUBMISSION_RULES.md` and `THIRD_PARTY_NOTICES.md`.
 
-Historical IMERG acquisition is **not complete**. Harmony generated seven NetCDF
+Update after fc80643: **seven real daily DAP4 subsets (January 1–7, 2024)** now pass
+both the existing parser and an independent Python/HDF5 reader. Exact values and
+provenance are retained in `public/evidence/imerg-dap4/manifest.json`. The earlier
+one-day Stage 1 report remains a historical checkpoint. Historical acquisition is
+**not complete**. Harmony generated seven NetCDF
 outputs preserving precipitation and counts, but those binaries were not downloaded
 or scientifically validated. See [retrieval and recovery](HISTORICAL_RETRIEVAL.md).

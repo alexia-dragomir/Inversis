@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+  "sha256": "d6a03ccbf50e9d6d6e44e3810631d725e4b741ce760107c87599d7b207415745",
+  "bytes": 39187,
+  "registeredAtUTC": "2026-11-14T10:14:17.435Z",
+  "retrievalTimeUTC": null,
+  "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+  "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+}

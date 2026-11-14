@@ -20305,7 +20305,7 @@
     }
   ],
   "processingHashes": {
-    "scripts/build-analysis-evidence.ts": "3a13aef6e6e571cf7e31ba692d99c1bca8ef66826a4af88fb64a7fee2f70744c",
+    "scripts/build-analysis-evidence.ts": "de9e3129995f17b9625abb8bf82a2096aa191c6b8f04990f2996fc771aa75962",
     "scripts/verify-capture.ts": "095d207ba065c344b0353725c17966c3a9408cf7a9dbab27e05f33eee755afef",
     "src/data/ingestion/power.ts": "2879341880fe3e879568cff18c3cbe679ec95bf281534b5fa775089bea008c10",
     "src/data/ingestion/validation.ts": "d5382c89c7d1fb07dd27f8773458b60bd8641e66591ef7b5350a0d42cf267961",
@@ -20315,6 +20315,7 @@
     "src/engine/decision.ts": "1e481a45ccf1f7cd4bfa8be53979ce4c42e1b10609fdd30dd4e2d480ff609016",
     "src/engine/canonical.ts": "b79509cef190ea44ac8657d95542b47e58ea674e52ee20f042e866aa2b4b1787",
     "src/engine/analysis.ts": "2f7aa91383dece34cf556373e0eeea0df9a2cac9f404cdc6694a7ac46e7f08d6",
+    "src/engine/stability.ts": "96e7c6240347548635556ba1f0ea174f04c2e15c9f738171dcced9626a64df23",
     "package-lock.json": "c3d67615e56910b1468e534cb3fbe22839c3d4583f2adffe0239f46431ed109f"
   },
   "limitations": [

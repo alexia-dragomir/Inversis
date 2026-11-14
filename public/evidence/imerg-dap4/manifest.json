@@ -1,0 +1,1104 @@
+{
+  "schemaVersion": "inversis-imerg-series-v1",
+  "collection": "GPM_3IMERGDF",
+  "version": "07",
+  "scienceVersion": "V07B",
+  "timeStandard": "UTC",
+  "unit": "mm/day",
+  "sampleCoverage": {
+    "start": "2024-01-01",
+    "end": "2024-01-07",
+    "expectedDays": 7,
+    "validDays": 7,
+    "missingOrUnverifiedDays": []
+  },
+  "historicalCoverage": {
+    "start": "2015-01-01",
+    "end": "2024-12-31",
+    "expectedDays": 3653,
+    "validDays": 7,
+    "complete": false
+  },
+  "eligibleForHistoricalComparison": false,
+  "processingHashes": {
+    "scripts/build-imerg-series.ts": "547a161e468785e021523182a3e37e6f1cd1d77c15f11191ecdce956eb598b3d",
+    "scripts/read-imerg.ts": "f78588456c899b35472ee13e98ebfcd45f677ca092dbe223e3672ffc247563c2",
+    "scripts/verify-capture.ts": "095d207ba065c344b0353725c17966c3a9408cf7a9dbab27e05f33eee755afef",
+    "src/data/ingestion/imerg.ts": "290265c169d44ef4ceac464d8a0d785e740381529f1935b1601d854b0af06e36",
+    "src/data/ingestion/validation.ts": "d5382c89c7d1fb07dd27f8773458b60bd8641e66591ef7b5350a0d42cf267961",
+    "package-lock.json": "c3d67615e56910b1468e534cb3fbe22839c3d4583f2adffe0239f46431ed109f"
+  },
+  "samples": [
+    {
+      "kind": "validated-access-sample",
+      "eligibleForCropComparison": false,
+      "observation": {
+        "id": "IMERG.precipitation.UTC.2024-01-01",
+        "provenanceId": "IMERG-f305cb218e5cdccf45b3cc0c8b1d1c34e1a957c82ff565959d2b1cd599be372f",
+        "timeStartUTC": "2024-01-01T00:00:00.000Z",
+        "timeEndUTC": "2024-01-02T00:00:00.000Z",
+        "rawValue": 0,
+        "validHalfHourlySamples": 48,
+        "qualityPolicy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "measurement": {
+          "status": "valid",
+          "quantity": {
+            "value": 0,
+            "unit": "mm/day"
+          },
+          "flags": [
+            "full-48-sample-support",
+            "daily-mean-rate-not-automatically-accumulation"
+          ]
+        }
+      },
+      "sha256": "f305cb218e5cdccf45b3cc0c8b1d1c34e1a957c82ff565959d2b1cd599be372f",
+      "bytes": 39155,
+      "product": {
+        "collection": "GPM_3IMERGDF",
+        "version": "07",
+        "scienceVersion": "V07B",
+        "doi": "10.5067/GPM/IMERGDF/DAY/07",
+        "title": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree (GPM_3IMERGDF)",
+        "sourceType": "satellite-gauge-merged precipitation estimate"
+      },
+      "spatialSupport": {
+        "requested": {
+          "latitude": 44.565,
+          "longitude": 27.335
+        },
+        "selected": {
+          "latitude": 44.55,
+          "longitude": 27.350000381469727
+        },
+        "nativeResolutionDegrees": 0.1,
+        "subsetAxes": {
+          "lat": [
+            44.45,
+            44.55,
+            44.64999999999999
+          ],
+          "lon": [
+            27.25,
+            27.350000381469727,
+            27.450000762939453
+          ]
+        },
+        "selectedIndices": {
+          "time": 0,
+          "lon": 1,
+          "lat": 1
+        },
+        "method": "Containing native cell, no spatial interpolation or averaging"
+      },
+      "temporalSupport": {
+        "rawTime": [
+          16066
+        ],
+        "rawTimeBounds": [
+          16066,
+          16066.999988426236
+        ],
+        "rawTimeUnit": "days since 1980-01-06 00:00:00Z",
+        "rawEndMarkerUTC": "2024-01-01T23:59:59.000Z",
+        "globalEndUTC": "2024-01-01T23:59:59.999Z",
+        "convention": "Inclusive source end-of-day markers mapped to exclusive next-midnight UTC; numeric bounds retained"
+      },
+      "sourceMetadata": {
+        "inputPointers": [
+          "3B-HHR.MS.MRG.3IMERG.20240101-S000000-E002959.0000.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S003000-E005959.0030.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S010000-E012959.0060.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S013000-E015959.0090.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S020000-E022959.0120.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S023000-E025959.0150.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S030000-E032959.0180.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S033000-E035959.0210.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S040000-E042959.0240.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S043000-E045959.0270.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S050000-E052959.0300.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S053000-E055959.0330.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S060000-E062959.0360.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S063000-E065959.0390.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S070000-E072959.0420.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S073000-E075959.0450.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S080000-E082959.0480.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S083000-E085959.0510.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S090000-E092959.0540.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S093000-E095959.0570.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S100000-E102959.0600.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S103000-E105959.0630.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S110000-E112959.0660.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S113000-E115959.0690.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S120000-E122959.0720.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S123000-E125959.0750.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S130000-E132959.0780.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S133000-E135959.0810.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S140000-E142959.0840.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S143000-E145959.0870.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S150000-E152959.0900.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S153000-E155959.0930.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S160000-E162959.0960.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S163000-E165959.0990.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S170000-E172959.1020.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S173000-E175959.1050.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S180000-E182959.1080.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S183000-E185959.1110.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S190000-E192959.1140.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S193000-E195959.1170.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S200000-E202959.1200.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S203000-E205959.1230.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S210000-E212959.1260.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S213000-E215959.1290.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S220000-E222959.1320.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S223000-E225959.1350.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S230000-E232959.1380.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240101-S233000-E235959.1410.V07B.HDF5"
+        ],
+        "productionTime": "2024-06-12T14:19:57.862Z",
+        "transformHistory": "2026-11-14 08:30:27 GMT hyrax-1.18.0-166 https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D\n",
+        "transformUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D"
+      },
+      "quality": {
+        "rawFill": -9999.900390625,
+        "validHalfHourlySamples": 48,
+        "policy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "unit": "mm/day",
+        "accumulationConversion": "none"
+      },
+      "limitations": [
+        "One day does not validate historical crop windows.",
+        "Gridded satellite/gauge estimate, not field measurement.",
+        "48 valid half-hours establish temporal support, not independent rainfall accuracy."
+      ],
+      "receipt": {
+        "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+        "sha256": "f305cb218e5cdccf45b3cc0c8b1d1c34e1a957c82ff565959d2b1cd599be372f",
+        "bytes": 39155,
+        "registeredAtUTC": "2026-11-14T10:14:16.822Z",
+        "retrievalTimeUTC": null,
+        "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+        "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+      },
+      "rawPath": "/evidence/imerg-dap4/2024-01-01.nc4"
+    },
+    {
+      "kind": "validated-access-sample",
+      "eligibleForCropComparison": false,
+      "observation": {
+        "id": "IMERG.precipitation.UTC.2024-01-02",
+        "provenanceId": "IMERG-32d965d44a73255700a5aa361c1c5de5478a6a2b917c3678d0b487dbc2bea7c6",
+        "timeStartUTC": "2024-01-02T00:00:00.000Z",
+        "timeEndUTC": "2024-01-03T00:00:00.000Z",
+        "rawValue": 3.0799999237060547,
+        "validHalfHourlySamples": 48,
+        "qualityPolicy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "measurement": {
+          "status": "valid",
+          "quantity": {
+            "value": 3.0799999237060547,
+            "unit": "mm/day"
+          },
+          "flags": [
+            "full-48-sample-support",
+            "daily-mean-rate-not-automatically-accumulation"
+          ]
+        }
+      },
+      "sha256": "32d965d44a73255700a5aa361c1c5de5478a6a2b917c3678d0b487dbc2bea7c6",
+      "bytes": 39193,
+      "product": {
+        "collection": "GPM_3IMERGDF",
+        "version": "07",
+        "scienceVersion": "V07B",
+        "doi": "10.5067/GPM/IMERGDF/DAY/07",
+        "title": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree (GPM_3IMERGDF)",
+        "sourceType": "satellite-gauge-merged precipitation estimate"
+      },
+      "spatialSupport": {
+        "requested": {
+          "latitude": 44.565,
+          "longitude": 27.335
+        },
+        "selected": {
+          "latitude": 44.55,
+          "longitude": 27.350000381469727
+        },
+        "nativeResolutionDegrees": 0.1,
+        "subsetAxes": {
+          "lat": [
+            44.45,
+            44.55,
+            44.64999999999999
+          ],
+          "lon": [
+            27.25,
+            27.350000381469727,
+            27.450000762939453
+          ]
+        },
+        "selectedIndices": {
+          "time": 0,
+          "lon": 1,
+          "lat": 1
+        },
+        "method": "Containing native cell, no spatial interpolation or averaging"
+      },
+      "temporalSupport": {
+        "rawTime": [
+          16067
+        ],
+        "rawTimeBounds": [
+          16067,
+          16067.999988426236
+        ],
+        "rawTimeUnit": "days since 1980-01-06 00:00:00Z",
+        "rawEndMarkerUTC": "2024-01-02T23:59:59.000Z",
+        "globalEndUTC": "2024-01-02T23:59:59.999Z",
+        "convention": "Inclusive source end-of-day markers mapped to exclusive next-midnight UTC; numeric bounds retained"
+      },
+      "sourceMetadata": {
+        "inputPointers": [
+          "3B-HHR.MS.MRG.3IMERG.20240102-S000000-E002959.0000.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S003000-E005959.0030.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S010000-E012959.0060.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S013000-E015959.0090.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S020000-E022959.0120.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S023000-E025959.0150.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S030000-E032959.0180.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S033000-E035959.0210.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S040000-E042959.0240.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S043000-E045959.0270.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S050000-E052959.0300.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S053000-E055959.0330.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S060000-E062959.0360.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S063000-E065959.0390.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S070000-E072959.0420.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S073000-E075959.0450.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S080000-E082959.0480.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S083000-E085959.0510.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S090000-E092959.0540.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S093000-E095959.0570.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S100000-E102959.0600.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S103000-E105959.0630.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S110000-E112959.0660.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S113000-E115959.0690.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S120000-E122959.0720.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S123000-E125959.0750.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S130000-E132959.0780.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S133000-E135959.0810.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S140000-E142959.0840.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S143000-E145959.0870.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S150000-E152959.0900.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S153000-E155959.0930.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S160000-E162959.0960.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S163000-E165959.0990.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S170000-E172959.1020.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S173000-E175959.1050.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S180000-E182959.1080.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S183000-E185959.1110.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S190000-E192959.1140.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S193000-E195959.1170.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S200000-E202959.1200.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S203000-E205959.1230.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S210000-E212959.1260.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S213000-E215959.1290.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S220000-E222959.1320.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S223000-E225959.1350.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S230000-E232959.1380.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240102-S233000-E235959.1410.V07B.HDF5"
+        ],
+        "productionTime": "2024-06-12T14:21:31.811Z",
+        "transformHistory": "2026-11-14 10:08:00 GMT hyrax-1.18.0-166 https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D\n",
+        "transformUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D"
+      },
+      "quality": {
+        "rawFill": -9999.900390625,
+        "validHalfHourlySamples": 48,
+        "policy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "unit": "mm/day",
+        "accumulationConversion": "none"
+      },
+      "limitations": [
+        "One day does not validate historical crop windows.",
+        "Gridded satellite/gauge estimate, not field measurement.",
+        "48 valid half-hours establish temporal support, not independent rainfall accuracy."
+      ],
+      "receipt": {
+        "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+        "sha256": "32d965d44a73255700a5aa361c1c5de5478a6a2b917c3678d0b487dbc2bea7c6",
+        "bytes": 39193,
+        "registeredAtUTC": "2026-11-14T10:14:17.150Z",
+        "retrievalTimeUTC": null,
+        "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+        "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+      },
+      "rawPath": "/evidence/imerg-dap4/2024-01-02.nc4"
+    },
+    {
+      "kind": "validated-access-sample",
+      "eligibleForCropComparison": false,
+      "observation": {
+        "id": "IMERG.precipitation.UTC.2024-01-03",
+        "provenanceId": "IMERG-d6a03ccbf50e9d6d6e44e3810631d725e4b741ce760107c87599d7b207415745",
+        "timeStartUTC": "2024-01-03T00:00:00.000Z",
+        "timeEndUTC": "2024-01-04T00:00:00.000Z",
+        "rawValue": 5.649999618530273,
+        "validHalfHourlySamples": 48,
+        "qualityPolicy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "measurement": {
+          "status": "valid",
+          "quantity": {
+            "value": 5.649999618530273,
+            "unit": "mm/day"
+          },
+          "flags": [
+            "full-48-sample-support",
+            "daily-mean-rate-not-automatically-accumulation"
+          ]
+        }
+      },
+      "sha256": "d6a03ccbf50e9d6d6e44e3810631d725e4b741ce760107c87599d7b207415745",
+      "bytes": 39187,
+      "product": {
+        "collection": "GPM_3IMERGDF",
+        "version": "07",
+        "scienceVersion": "V07B",
+        "doi": "10.5067/GPM/IMERGDF/DAY/07",
+        "title": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree (GPM_3IMERGDF)",
+        "sourceType": "satellite-gauge-merged precipitation estimate"
+      },
+      "spatialSupport": {
+        "requested": {
+          "latitude": 44.565,
+          "longitude": 27.335
+        },
+        "selected": {
+          "latitude": 44.55,
+          "longitude": 27.350000381469727
+        },
+        "nativeResolutionDegrees": 0.1,
+        "subsetAxes": {
+          "lat": [
+            44.45,
+            44.55,
+            44.64999999999999
+          ],
+          "lon": [
+            27.25,
+            27.350000381469727,
+            27.450000762939453
+          ]
+        },
+        "selectedIndices": {
+          "time": 0,
+          "lon": 1,
+          "lat": 1
+        },
+        "method": "Containing native cell, no spatial interpolation or averaging"
+      },
+      "temporalSupport": {
+        "rawTime": [
+          16068
+        ],
+        "rawTimeBounds": [
+          16068,
+          16068.999988426236
+        ],
+        "rawTimeUnit": "days since 1980-01-06 00:00:00Z",
+        "rawEndMarkerUTC": "2024-01-03T23:59:59.000Z",
+        "globalEndUTC": "2024-01-03T23:59:59.999Z",
+        "convention": "Inclusive source end-of-day markers mapped to exclusive next-midnight UTC; numeric bounds retained"
+      },
+      "sourceMetadata": {
+        "inputPointers": [
+          "3B-HHR.MS.MRG.3IMERG.20240103-S000000-E002959.0000.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S003000-E005959.0030.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S010000-E012959.0060.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S013000-E015959.0090.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S020000-E022959.0120.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S023000-E025959.0150.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S030000-E032959.0180.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S033000-E035959.0210.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S040000-E042959.0240.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S043000-E045959.0270.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S050000-E052959.0300.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S053000-E055959.0330.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S060000-E062959.0360.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S063000-E065959.0390.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S070000-E072959.0420.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S073000-E075959.0450.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S080000-E082959.0480.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S083000-E085959.0510.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S090000-E092959.0540.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S093000-E095959.0570.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S100000-E102959.0600.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S103000-E105959.0630.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S110000-E112959.0660.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S113000-E115959.0690.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S120000-E122959.0720.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S123000-E125959.0750.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S130000-E132959.0780.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S133000-E135959.0810.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S140000-E142959.0840.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S143000-E145959.0870.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S150000-E152959.0900.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S153000-E155959.0930.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S160000-E162959.0960.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S163000-E165959.0990.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S170000-E172959.1020.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S173000-E175959.1050.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S180000-E182959.1080.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S183000-E185959.1110.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S190000-E192959.1140.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S193000-E195959.1170.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S200000-E202959.1200.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S203000-E205959.1230.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S210000-E212959.1260.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S213000-E215959.1290.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S220000-E222959.1320.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S223000-E225959.1350.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S230000-E232959.1380.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240103-S233000-E235959.1410.V07B.HDF5"
+        ],
+        "productionTime": "2024-06-12T14:22:58.180Z",
+        "transformHistory": "2026-11-14 10:09:25 GMT hyrax-1.18.0-166 https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D\n",
+        "transformUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D"
+      },
+      "quality": {
+        "rawFill": -9999.900390625,
+        "validHalfHourlySamples": 48,
+        "policy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "unit": "mm/day",
+        "accumulationConversion": "none"
+      },
+      "limitations": [
+        "One day does not validate historical crop windows.",
+        "Gridded satellite/gauge estimate, not field measurement.",
+        "48 valid half-hours establish temporal support, not independent rainfall accuracy."
+      ],
+      "receipt": {
+        "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+        "sha256": "d6a03ccbf50e9d6d6e44e3810631d725e4b741ce760107c87599d7b207415745",
+        "bytes": 39187,
+        "registeredAtUTC": "2026-11-14T10:14:17.435Z",
+        "retrievalTimeUTC": null,
+        "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+        "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+      },
+      "rawPath": "/evidence/imerg-dap4/2024-01-03.nc4"
+    },
+    {
+      "kind": "validated-access-sample",
+      "eligibleForCropComparison": false,
+      "observation": {
+        "id": "IMERG.precipitation.UTC.2024-01-04",
+        "provenanceId": "IMERG-2381698c38f02b77f7c07db414102e6dde1c3b1b7d5180f6c6d1fed91bb4f45c",
+        "timeStartUTC": "2024-01-04T00:00:00.000Z",
+        "timeEndUTC": "2024-01-05T00:00:00.000Z",
+        "rawValue": 0.029999999329447746,
+        "validHalfHourlySamples": 48,
+        "qualityPolicy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "measurement": {
+          "status": "valid",
+          "quantity": {
+            "value": 0.029999999329447746,
+            "unit": "mm/day"
+          },
+          "flags": [
+            "full-48-sample-support",
+            "daily-mean-rate-not-automatically-accumulation"
+          ]
+        }
+      },
+      "sha256": "2381698c38f02b77f7c07db414102e6dde1c3b1b7d5180f6c6d1fed91bb4f45c",
+      "bytes": 39189,
+      "product": {
+        "collection": "GPM_3IMERGDF",
+        "version": "07",
+        "scienceVersion": "V07B",
+        "doi": "10.5067/GPM/IMERGDF/DAY/07",
+        "title": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree (GPM_3IMERGDF)",
+        "sourceType": "satellite-gauge-merged precipitation estimate"
+      },
+      "spatialSupport": {
+        "requested": {
+          "latitude": 44.565,
+          "longitude": 27.335
+        },
+        "selected": {
+          "latitude": 44.55,
+          "longitude": 27.350000381469727
+        },
+        "nativeResolutionDegrees": 0.1,
+        "subsetAxes": {
+          "lat": [
+            44.45,
+            44.55,
+            44.64999999999999
+          ],
+          "lon": [
+            27.25,
+            27.350000381469727,
+            27.450000762939453
+          ]
+        },
+        "selectedIndices": {
+          "time": 0,
+          "lon": 1,
+          "lat": 1
+        },
+        "method": "Containing native cell, no spatial interpolation or averaging"
+      },
+      "temporalSupport": {
+        "rawTime": [
+          16069
+        ],
+        "rawTimeBounds": [
+          16069,
+          16069.999988426236
+        ],
+        "rawTimeUnit": "days since 1980-01-06 00:00:00Z",
+        "rawEndMarkerUTC": "2024-01-04T23:59:59.000Z",
+        "globalEndUTC": "2024-01-04T23:59:59.999Z",
+        "convention": "Inclusive source end-of-day markers mapped to exclusive next-midnight UTC; numeric bounds retained"
+      },
+      "sourceMetadata": {
+        "inputPointers": [
+          "3B-HHR.MS.MRG.3IMERG.20240104-S000000-E002959.0000.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S003000-E005959.0030.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S010000-E012959.0060.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S013000-E015959.0090.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S020000-E022959.0120.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S023000-E025959.0150.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S030000-E032959.0180.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S033000-E035959.0210.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S040000-E042959.0240.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S043000-E045959.0270.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S050000-E052959.0300.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S053000-E055959.0330.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S060000-E062959.0360.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S063000-E065959.0390.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S070000-E072959.0420.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S073000-E075959.0450.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S080000-E082959.0480.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S083000-E085959.0510.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S090000-E092959.0540.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S093000-E095959.0570.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S100000-E102959.0600.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S103000-E105959.0630.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S110000-E112959.0660.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S113000-E115959.0690.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S120000-E122959.0720.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S123000-E125959.0750.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S130000-E132959.0780.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S133000-E135959.0810.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S140000-E142959.0840.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S143000-E145959.0870.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S150000-E152959.0900.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S153000-E155959.0930.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S160000-E162959.0960.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S163000-E165959.0990.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S170000-E172959.1020.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S173000-E175959.1050.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S180000-E182959.1080.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S183000-E185959.1110.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S190000-E192959.1140.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S193000-E195959.1170.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S200000-E202959.1200.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S203000-E205959.1230.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S210000-E212959.1260.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S213000-E215959.1290.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S220000-E222959.1320.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S223000-E225959.1350.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S230000-E232959.1380.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240104-S233000-E235959.1410.V07B.HDF5"
+        ],
+        "productionTime": "2024-06-12T14:24:27.701Z",
+        "transformHistory": "2026-11-14 10:13:14 GMT hyrax-1.18.0-166 https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240104-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D\n",
+        "transformUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240104-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D"
+      },
+      "quality": {
+        "rawFill": -9999.900390625,
+        "validHalfHourlySamples": 48,
+        "policy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "unit": "mm/day",
+        "accumulationConversion": "none"
+      },
+      "limitations": [
+        "One day does not validate historical crop windows.",
+        "Gridded satellite/gauge estimate, not field measurement.",
+        "48 valid half-hours establish temporal support, not independent rainfall accuracy."
+      ],
+      "receipt": {
+        "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240104-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+        "sha256": "2381698c38f02b77f7c07db414102e6dde1c3b1b7d5180f6c6d1fed91bb4f45c",
+        "bytes": 39189,
+        "registeredAtUTC": "2026-11-14T10:14:17.754Z",
+        "retrievalTimeUTC": null,
+        "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+        "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+      },
+      "rawPath": "/evidence/imerg-dap4/2024-01-04.nc4"
+    },
+    {
+      "kind": "validated-access-sample",
+      "eligibleForCropComparison": false,
+      "observation": {
+        "id": "IMERG.precipitation.UTC.2024-01-05",
+        "provenanceId": "IMERG-2af4090965bf45d302d7846719fbca9d293f6bfa907dfdc250ec1695fdac6cef",
+        "timeStartUTC": "2024-01-05T00:00:00.000Z",
+        "timeEndUTC": "2024-01-06T00:00:00.000Z",
+        "rawValue": 0,
+        "validHalfHourlySamples": 48,
+        "qualityPolicy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "measurement": {
+          "status": "valid",
+          "quantity": {
+            "value": 0,
+            "unit": "mm/day"
+          },
+          "flags": [
+            "full-48-sample-support",
+            "daily-mean-rate-not-automatically-accumulation"
+          ]
+        }
+      },
+      "sha256": "2af4090965bf45d302d7846719fbca9d293f6bfa907dfdc250ec1695fdac6cef",
+      "bytes": 39155,
+      "product": {
+        "collection": "GPM_3IMERGDF",
+        "version": "07",
+        "scienceVersion": "V07B",
+        "doi": "10.5067/GPM/IMERGDF/DAY/07",
+        "title": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree (GPM_3IMERGDF)",
+        "sourceType": "satellite-gauge-merged precipitation estimate"
+      },
+      "spatialSupport": {
+        "requested": {
+          "latitude": 44.565,
+          "longitude": 27.335
+        },
+        "selected": {
+          "latitude": 44.55,
+          "longitude": 27.350000381469727
+        },
+        "nativeResolutionDegrees": 0.1,
+        "subsetAxes": {
+          "lat": [
+            44.45,
+            44.55,
+            44.64999999999999
+          ],
+          "lon": [
+            27.25,
+            27.350000381469727,
+            27.450000762939453
+          ]
+        },
+        "selectedIndices": {
+          "time": 0,
+          "lon": 1,
+          "lat": 1
+        },
+        "method": "Containing native cell, no spatial interpolation or averaging"
+      },
+      "temporalSupport": {
+        "rawTime": [
+          16070
+        ],
+        "rawTimeBounds": [
+          16070,
+          16070.999988426236
+        ],
+        "rawTimeUnit": "days since 1980-01-06 00:00:00Z",
+        "rawEndMarkerUTC": "2024-01-05T23:59:59.000Z",
+        "globalEndUTC": "2024-01-05T23:59:59.999Z",
+        "convention": "Inclusive source end-of-day markers mapped to exclusive next-midnight UTC; numeric bounds retained"
+      },
+      "sourceMetadata": {
+        "inputPointers": [
+          "3B-HHR.MS.MRG.3IMERG.20240105-S000000-E002959.0000.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S003000-E005959.0030.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S010000-E012959.0060.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S013000-E015959.0090.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S020000-E022959.0120.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S023000-E025959.0150.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S030000-E032959.0180.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S033000-E035959.0210.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S040000-E042959.0240.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S043000-E045959.0270.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S050000-E052959.0300.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S053000-E055959.0330.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S060000-E062959.0360.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S063000-E065959.0390.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S070000-E072959.0420.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S073000-E075959.0450.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S080000-E082959.0480.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S083000-E085959.0510.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S090000-E092959.0540.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S093000-E095959.0570.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S100000-E102959.0600.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S103000-E105959.0630.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S110000-E112959.0660.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S113000-E115959.0690.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S120000-E122959.0720.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S123000-E125959.0750.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S130000-E132959.0780.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S133000-E135959.0810.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S140000-E142959.0840.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S143000-E145959.0870.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S150000-E152959.0900.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S153000-E155959.0930.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S160000-E162959.0960.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S163000-E165959.0990.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S170000-E172959.1020.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S173000-E175959.1050.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S180000-E182959.1080.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S183000-E185959.1110.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S190000-E192959.1140.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S193000-E195959.1170.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S200000-E202959.1200.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S203000-E205959.1230.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S210000-E212959.1260.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S213000-E215959.1290.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S220000-E222959.1320.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S223000-E225959.1350.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S230000-E232959.1380.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240105-S233000-E235959.1410.V07B.HDF5"
+        ],
+        "productionTime": "2024-06-12T14:25:59.142Z",
+        "transformHistory": "2026-11-14 10:17:38 GMT hyrax-1.18.0-166 https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240105-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D\n",
+        "transformUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240105-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D"
+      },
+      "quality": {
+        "rawFill": -9999.900390625,
+        "validHalfHourlySamples": 48,
+        "policy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "unit": "mm/day",
+        "accumulationConversion": "none"
+      },
+      "limitations": [
+        "One day does not validate historical crop windows.",
+        "Gridded satellite/gauge estimate, not field measurement.",
+        "48 valid half-hours establish temporal support, not independent rainfall accuracy."
+      ],
+      "receipt": {
+        "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240105-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+        "sha256": "2af4090965bf45d302d7846719fbca9d293f6bfa907dfdc250ec1695fdac6cef",
+        "bytes": 39155,
+        "registeredAtUTC": "2026-11-14T10:21:22.902Z",
+        "retrievalTimeUTC": null,
+        "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+        "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+      },
+      "rawPath": "/evidence/imerg-dap4/2024-01-05.nc4"
+    },
+    {
+      "kind": "validated-access-sample",
+      "eligibleForCropComparison": false,
+      "observation": {
+        "id": "IMERG.precipitation.UTC.2024-01-06",
+        "provenanceId": "IMERG-f0d4d68c501dd2718478ad3bfe191163f1b0196994fccb51fcd9e2a770ce86a1",
+        "timeStartUTC": "2024-01-06T00:00:00.000Z",
+        "timeEndUTC": "2024-01-07T00:00:00.000Z",
+        "rawValue": 0.009999999776482582,
+        "validHalfHourlySamples": 48,
+        "qualityPolicy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "measurement": {
+          "status": "valid",
+          "quantity": {
+            "value": 0.009999999776482582,
+            "unit": "mm/day"
+          },
+          "flags": [
+            "full-48-sample-support",
+            "daily-mean-rate-not-automatically-accumulation"
+          ]
+        }
+      },
+      "sha256": "f0d4d68c501dd2718478ad3bfe191163f1b0196994fccb51fcd9e2a770ce86a1",
+      "bytes": 39182,
+      "product": {
+        "collection": "GPM_3IMERGDF",
+        "version": "07",
+        "scienceVersion": "V07B",
+        "doi": "10.5067/GPM/IMERGDF/DAY/07",
+        "title": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree (GPM_3IMERGDF)",
+        "sourceType": "satellite-gauge-merged precipitation estimate"
+      },
+      "spatialSupport": {
+        "requested": {
+          "latitude": 44.565,
+          "longitude": 27.335
+        },
+        "selected": {
+          "latitude": 44.55,
+          "longitude": 27.350000381469727
+        },
+        "nativeResolutionDegrees": 0.1,
+        "subsetAxes": {
+          "lat": [
+            44.45,
+            44.55,
+            44.64999999999999
+          ],
+          "lon": [
+            27.25,
+            27.350000381469727,
+            27.450000762939453
+          ]
+        },
+        "selectedIndices": {
+          "time": 0,
+          "lon": 1,
+          "lat": 1
+        },
+        "method": "Containing native cell, no spatial interpolation or averaging"
+      },
+      "temporalSupport": {
+        "rawTime": [
+          16071
+        ],
+        "rawTimeBounds": [
+          16071,
+          16071.999988426236
+        ],
+        "rawTimeUnit": "days since 1980-01-06 00:00:00Z",
+        "rawEndMarkerUTC": "2024-01-06T23:59:59.000Z",
+        "globalEndUTC": "2024-01-06T23:59:59.999Z",
+        "convention": "Inclusive source end-of-day markers mapped to exclusive next-midnight UTC; numeric bounds retained"
+      },
+      "sourceMetadata": {
+        "inputPointers": [
+          "3B-HHR.MS.MRG.3IMERG.20240106-S000000-E002959.0000.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S003000-E005959.0030.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S010000-E012959.0060.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S013000-E015959.0090.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S020000-E022959.0120.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S023000-E025959.0150.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S030000-E032959.0180.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S033000-E035959.0210.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S040000-E042959.0240.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S043000-E045959.0270.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S050000-E052959.0300.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S053000-E055959.0330.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S060000-E062959.0360.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S063000-E065959.0390.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S070000-E072959.0420.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S073000-E075959.0450.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S080000-E082959.0480.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S083000-E085959.0510.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S090000-E092959.0540.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S093000-E095959.0570.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S100000-E102959.0600.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S103000-E105959.0630.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S110000-E112959.0660.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S113000-E115959.0690.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S120000-E122959.0720.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S123000-E125959.0750.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S130000-E132959.0780.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S133000-E135959.0810.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S140000-E142959.0840.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S143000-E145959.0870.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S150000-E152959.0900.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S153000-E155959.0930.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S160000-E162959.0960.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S163000-E165959.0990.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S170000-E172959.1020.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S173000-E175959.1050.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S180000-E182959.1080.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S183000-E185959.1110.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S190000-E192959.1140.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S193000-E195959.1170.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S200000-E202959.1200.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S203000-E205959.1230.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S210000-E212959.1260.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S213000-E215959.1290.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S220000-E222959.1320.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S223000-E225959.1350.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S230000-E232959.1380.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240106-S233000-E235959.1410.V07B.HDF5"
+        ],
+        "productionTime": "2024-06-12T14:27:53.019Z",
+        "transformHistory": "2026-11-14 10:19:03 GMT hyrax-1.18.0-166 https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240106-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D\n",
+        "transformUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240106-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D"
+      },
+      "quality": {
+        "rawFill": -9999.900390625,
+        "validHalfHourlySamples": 48,
+        "policy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "unit": "mm/day",
+        "accumulationConversion": "none"
+      },
+      "limitations": [
+        "One day does not validate historical crop windows.",
+        "Gridded satellite/gauge estimate, not field measurement.",
+        "48 valid half-hours establish temporal support, not independent rainfall accuracy."
+      ],
+      "receipt": {
+        "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240106-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+        "sha256": "f0d4d68c501dd2718478ad3bfe191163f1b0196994fccb51fcd9e2a770ce86a1",
+        "bytes": 39182,
+        "registeredAtUTC": "2026-11-14T10:21:23.171Z",
+        "retrievalTimeUTC": null,
+        "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+        "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+      },
+      "rawPath": "/evidence/imerg-dap4/2024-01-06.nc4"
+    },
+    {
+      "kind": "validated-access-sample",
+      "eligibleForCropComparison": false,
+      "observation": {
+        "id": "IMERG.precipitation.UTC.2024-01-07",
+        "provenanceId": "IMERG-ce8dc970f31d64e5d2f3da0e79763ececf5be26ba841313f61c4f009f03f8aa9",
+        "timeStartUTC": "2024-01-07T00:00:00.000Z",
+        "timeEndUTC": "2024-01-08T00:00:00.000Z",
+        "rawValue": 15.739999771118164,
+        "validHalfHourlySamples": 48,
+        "qualityPolicy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "measurement": {
+          "status": "valid",
+          "quantity": {
+            "value": 15.739999771118164,
+            "unit": "mm/day"
+          },
+          "flags": [
+            "full-48-sample-support",
+            "daily-mean-rate-not-automatically-accumulation"
+          ]
+        }
+      },
+      "sha256": "ce8dc970f31d64e5d2f3da0e79763ececf5be26ba841313f61c4f009f03f8aa9",
+      "bytes": 39186,
+      "product": {
+        "collection": "GPM_3IMERGDF",
+        "version": "07",
+        "scienceVersion": "V07B",
+        "doi": "10.5067/GPM/IMERGDF/DAY/07",
+        "title": "GPM IMERG Final Precipitation L3 1 day 0.1 degree x 0.1 degree (GPM_3IMERGDF)",
+        "sourceType": "satellite-gauge-merged precipitation estimate"
+      },
+      "spatialSupport": {
+        "requested": {
+          "latitude": 44.565,
+          "longitude": 27.335
+        },
+        "selected": {
+          "latitude": 44.55,
+          "longitude": 27.350000381469727
+        },
+        "nativeResolutionDegrees": 0.1,
+        "subsetAxes": {
+          "lat": [
+            44.45,
+            44.55,
+            44.64999999999999
+          ],
+          "lon": [
+            27.25,
+            27.350000381469727,
+            27.450000762939453
+          ]
+        },
+        "selectedIndices": {
+          "time": 0,
+          "lon": 1,
+          "lat": 1
+        },
+        "method": "Containing native cell, no spatial interpolation or averaging"
+      },
+      "temporalSupport": {
+        "rawTime": [
+          16072
+        ],
+        "rawTimeBounds": [
+          16072,
+          16072.999988426236
+        ],
+        "rawTimeUnit": "days since 1980-01-06 00:00:00Z",
+        "rawEndMarkerUTC": "2024-01-07T23:59:59.000Z",
+        "globalEndUTC": "2024-01-07T23:59:59.999Z",
+        "convention": "Inclusive source end-of-day markers mapped to exclusive next-midnight UTC; numeric bounds retained"
+      },
+      "sourceMetadata": {
+        "inputPointers": [
+          "3B-HHR.MS.MRG.3IMERG.20240107-S000000-E002959.0000.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S003000-E005959.0030.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S010000-E012959.0060.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S013000-E015959.0090.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S020000-E022959.0120.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S023000-E025959.0150.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S030000-E032959.0180.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S033000-E035959.0210.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S040000-E042959.0240.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S043000-E045959.0270.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S050000-E052959.0300.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S053000-E055959.0330.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S060000-E062959.0360.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S063000-E065959.0390.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S070000-E072959.0420.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S073000-E075959.0450.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S080000-E082959.0480.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S083000-E085959.0510.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S090000-E092959.0540.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S093000-E095959.0570.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S100000-E102959.0600.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S103000-E105959.0630.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S110000-E112959.0660.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S113000-E115959.0690.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S120000-E122959.0720.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S123000-E125959.0750.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S130000-E132959.0780.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S133000-E135959.0810.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S140000-E142959.0840.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S143000-E145959.0870.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S150000-E152959.0900.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S153000-E155959.0930.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S160000-E162959.0960.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S163000-E165959.0990.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S170000-E172959.1020.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S173000-E175959.1050.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S180000-E182959.1080.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S183000-E185959.1110.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S190000-E192959.1140.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S193000-E195959.1170.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S200000-E202959.1200.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S203000-E205959.1230.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S210000-E212959.1260.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S213000-E215959.1290.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S220000-E222959.1320.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S223000-E225959.1350.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S230000-E232959.1380.V07B.HDF5",
+          "3B-HHR.MS.MRG.3IMERG.20240107-S233000-E235959.1410.V07B.HDF5"
+        ],
+        "productionTime": "2024-06-12T14:29:28.552Z",
+        "transformHistory": "2026-11-14 10:21:08 GMT hyrax-1.18.0-166 https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240107-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D\n",
+        "transformUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240107-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D"
+      },
+      "quality": {
+        "rawFill": -9999.900390625,
+        "validHalfHourlySamples": 48,
+        "policy": "inversis-full-day-support-v1: require 48 valid half-hours; author QC convention, not a NASA validity rule",
+        "unit": "mm/day",
+        "accumulationConversion": "none"
+      },
+      "limitations": [
+        "One day does not validate historical crop windows.",
+        "Gridded satellite/gauge estimate, not field measurement.",
+        "48 valid half-hours establish temporal support, not independent rainfall accuracy."
+      ],
+      "receipt": {
+        "sourceUrl": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240107-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+        "sha256": "ce8dc970f31d64e5d2f3da0e79763ececf5be26ba841313f61c4f009f03f8aa9",
+        "bytes": 39186,
+        "registeredAtUTC": "2026-11-14T10:21:23.436Z",
+        "retrievalTimeUTC": null,
+        "retrievalTimeNote": "Browser download completed; exact completion timestamp not captured. Registration is not retrieval.",
+        "acquisitionMode": "Authenticated official NASA OPeNDAP DAP4 browser download; independently parsed on import"
+      },
+      "rawPath": "/evidence/imerg-dap4/2024-01-07.nc4"
+    }
+  ]
+}

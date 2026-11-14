@@ -5,6 +5,11 @@ as a development-only dependency. It reads authentic NetCDF4/HDF5 files offline 
 is not included in the application bundle. See its LICENSE.txt for NIST and bundled
 third-party terms.
 
+Independent precipitation validation uses h5py 3.15.1 (BSD-3-Clause), NumPy 2.3.5
+(BSD-3-Clause) and the bundled HDF5 library. Exact reader versions are retained in
+the oracle output; Python requirements are pinned in `requirements-validation.txt`.
+These are local/CI scientific validation tools, not shipped application dependencies.
+
 Installed versions from package metadata; complete transitive versions are pinned in package-lock.json. Runtime packages: React, React DOM and Scheduler. All other direct entries below are build/test/lint tooling.
 
 | Package | Version | License | Source |

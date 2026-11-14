@@ -1,0 +1,113 @@
+{
+  "method": "Reuse source-backed DAP4 transform, native 3x3 subset; validate every output independently",
+  "start": "2024-01-01",
+  "end": "2024-01-07",
+  "cmrSha256": "e2bc8a75969e86496717c20550340b869244adbcb29c4a484d52ee0f0a63e8cd",
+  "items": [
+    {
+      "day": "2024-01-01",
+      "url": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+      "cmr": {
+        "concept-type": "granule",
+        "concept-id": "G3087510500-GES_DISC",
+        "revision-id": 2,
+        "native-id": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240101-S000000-E235959.V07B.nc4",
+        "collection-concept-id": "C2723754864-GES_DISC",
+        "provider-id": "GES_DISC",
+        "format": "application/echo10+xml",
+        "revision-date": "2026-05-11T17:54:38.769Z"
+      },
+      "status": "not-downloaded"
+    },
+    {
+      "day": "2024-01-02",
+      "url": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+      "cmr": {
+        "concept-type": "granule",
+        "concept-id": "G3087510289-GES_DISC",
+        "revision-id": 2,
+        "native-id": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240102-S000000-E235959.V07B.nc4",
+        "collection-concept-id": "C2723754864-GES_DISC",
+        "provider-id": "GES_DISC",
+        "format": "application/echo10+xml",
+        "revision-date": "2026-05-11T17:57:31.961Z"
+      },
+      "status": "not-downloaded"
+    },
+    {
+      "day": "2024-01-03",
+      "url": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+      "cmr": {
+        "concept-type": "granule",
+        "concept-id": "G3087522811-GES_DISC",
+        "revision-id": 2,
+        "native-id": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240103-S000000-E235959.V07B.nc4",
+        "collection-concept-id": "C2723754864-GES_DISC",
+        "provider-id": "GES_DISC",
+        "format": "application/echo10+xml",
+        "revision-date": "2026-05-11T17:53:38.667Z"
+      },
+      "status": "not-downloaded"
+    },
+    {
+      "day": "2024-01-04",
+      "url": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240104-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+      "cmr": {
+        "concept-type": "granule",
+        "concept-id": "G3087524463-GES_DISC",
+        "revision-id": 2,
+        "native-id": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240104-S000000-E235959.V07B.nc4",
+        "collection-concept-id": "C2723754864-GES_DISC",
+        "provider-id": "GES_DISC",
+        "format": "application/echo10+xml",
+        "revision-date": "2026-05-11T17:57:28.797Z"
+      },
+      "status": "not-downloaded"
+    },
+    {
+      "day": "2024-01-05",
+      "url": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240105-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+      "cmr": {
+        "concept-type": "granule",
+        "concept-id": "G3087547284-GES_DISC",
+        "revision-id": 2,
+        "native-id": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240105-S000000-E235959.V07B.nc4",
+        "collection-concept-id": "C2723754864-GES_DISC",
+        "provider-id": "GES_DISC",
+        "format": "application/echo10+xml",
+        "revision-date": "2026-05-11T17:59:30.332Z"
+      },
+      "status": "not-downloaded"
+    },
+    {
+      "day": "2024-01-06",
+      "url": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240106-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+      "cmr": {
+        "concept-type": "granule",
+        "concept-id": "G3087546266-GES_DISC",
+        "revision-id": 2,
+        "native-id": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240106-S000000-E235959.V07B.nc4",
+        "collection-concept-id": "C2723754864-GES_DISC",
+        "provider-id": "GES_DISC",
+        "format": "application/echo10+xml",
+        "revision-date": "2026-05-11T17:59:31.246Z"
+      },
+      "status": "not-downloaded"
+    },
+    {
+      "day": "2024-01-07",
+      "url": "https://opendap.earthdata.nasa.gov/collections/C2723754864-GES_DISC/granules/GPM_3IMERGDF.07%3A3B-DAY.MS.MRG.3IMERG.20240107-S000000-E235959.V07B.nc4.dap.nc4?dap4.ce=%2Flon%5B2072%3A2074%5D%3B%2Ftime%3B%2Fprecipitation_cnt%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D%3B%2Ftime_bnds%3B%2Flat%5B1344%3A1346%5D%3B%2Fprecipitation%5B%5D%5B2072%3A2074%5D%5B1344%3A1346%5D",
+      "cmr": {
+        "concept-type": "granule",
+        "concept-id": "G3087547285-GES_DISC",
+        "revision-id": 2,
+        "native-id": "GPM_3IMERGDF.07:3B-DAY.MS.MRG.3IMERG.20240107-S000000-E235959.V07B.nc4",
+        "collection-concept-id": "C2723754864-GES_DISC",
+        "provider-id": "GES_DISC",
+        "format": "application/echo10+xml",
+        "revision-date": "2026-05-11T17:59:29.326Z"
+      },
+      "status": "not-downloaded"
+    }
+  ]
+}

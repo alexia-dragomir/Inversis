@@ -20,7 +20,7 @@ const exposures = [0, -7, 7, -14, 14].flatMap(shift => Array.from({length:10},(_
 const referenceValues = exposures.filter(e => e.calendarShiftDays === 0 && e.physical.status === 'valid').map(e => e.physical.status === 'valid' ? e.physical.quantity.value : NaN);
 requireCondition(referenceValues.length === 40, 'Reference protocol requires all 40 valid crop-years before comparison');
 const processingHashes: Record<string,string> = {};
-for (const name of ['scripts/build-analysis-evidence.ts', 'scripts/verify-capture.ts', 'src/data/ingestion/power.ts', 'src/data/ingestion/validation.ts', 'src/data/foundation.ts', 'src/domain/contracts.ts', 'src/engine/exposures.ts', 'src/engine/decision.ts', 'src/engine/canonical.ts', 'src/engine/analysis.ts', 'package-lock.json']) processingHashes[name] = sha256(await readFile(name));
+for (const name of ['scripts/build-analysis-evidence.ts', 'scripts/verify-capture.ts', 'src/data/ingestion/power.ts', 'src/data/ingestion/validation.ts', 'src/data/foundation.ts', 'src/domain/contracts.ts', 'src/engine/exposures.ts', 'src/engine/decision.ts', 'src/engine/canonical.ts', 'src/engine/analysis.ts', 'src/engine/stability.ts', 'package-lock.json']) processingHashes[name] = sha256(await readFile(name));
 const evidence: AnalysisEvidence = {
   schemaVersion: 'inversis-evidence-v1', source: 'NASA POWER T2M_MAX', period: { startYear: 2015, endYear: 2024 },
   dailyCoverage: { expected: 3653, valid: observations.filter(o => o.measurement.status === 'valid').length, missing: observations.filter(o => o.measurement.status !== 'valid').length },

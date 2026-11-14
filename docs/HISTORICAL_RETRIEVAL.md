@@ -1,5 +1,42 @@
 # Historical NASA retrieval and recovery
 
+## Update after fc80643: successful DAP4 recovery
+
+On 2026-11-14 the owner authorized investigating reuse of the successful original
+route. Public CMR metadata confirmed each January 1–7 granule and its OPeNDAP URL.
+Six additional official DAP4 browser downloads succeeded, without contacting the
+rejected Harmony download endpoint or using signed-URL workarounds. Navigation
+reported `ERR_ABORTED` because the response initiated a download; completion paths
+and actual NetCDF bytes were verified separately. No repeated request was needed.
+
+All seven daily cells passed the existing NetCDF parser and an independently
+executed h5py 3.15.1 reader. Rounded daily rates in mm/day: 0, 3.08, 5.65, 0.03, 0,
+0.01, 15.74. Every count is 48. Native center is 44.55 N, 27.350000381469727 E.
+Raw files, import receipts, exact float32 values, time bounds, source history and
+hashes are in `public/evidence/imerg-dap4`. The independent oracle retains reader
+versions and its code/source hashes. `npm run imerg:verify` reparses all actual bytes.
+Seven winter days still support no historical crop-window rainfall comparison.
+
+`scripts/plan-imerg-dap4.ts START END` discovers a bounded (maximum 31-day) set of
+actual CMR granules, caches metadata with receipt/hash, and generates exact transforms
+using the validated native subset. It refuses incomplete/ambiguous source coverage.
+`scripts/download-imerg-dap4.ts PLAN.json` is prepared for an owner-supplied local
+Earthdata token: one request at a time, cache/hash validation, bounded retries for
+429/502/503/504, Retry-After handling, size limits and NetCDF validation. It sends
+the token only to the exact approved OPeNDAP origin and refuses redirects. Terminal
+authentication and historical throughput are **not yet verified**. The owner agreed
+to save the token locally; no token was present at the latest checkpoint inspection.
+
+For history, validate one uncached 2015 day first, then use monthly CMR plans and
+resume verified daily captures. Do not recreate the already retained seven days.
+Monitor NASA limits and service latency before choosing the historical batch size.
+Promote new measurements only after receipts and independent extraction agree; build
+the full date/quality manifest before enabling rainfall scenarios. If DAP4 throughput
+is inadequate, a separately authorized official Harmony client can be evaluated;
+the browser-origin restriction must still not be bypassed.
+
+The following sections retain the earlier Harmony investigation and exact blocker.
+
 ## Actual state on 2026-11-14
 
 POWER: ten annual responses, 3,653/3,653 daily maxima, 2015-01-01 through 2024-12-31,

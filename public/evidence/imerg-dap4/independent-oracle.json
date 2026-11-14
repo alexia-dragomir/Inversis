@@ -1,0 +1,72 @@
+{
+  "method": "Independent h5py extraction from retained NetCDF4; containing native cell; no interpolation",
+  "h5pyVersion": "3.15.1",
+  "hdf5Version": "1.14.6",
+  "numpyVersion": "2.3.5",
+  "observations": [
+    {
+      "day": "2024-01-01",
+      "rawValue": 0.0,
+      "count": 48,
+      "status": "valid",
+      "latitude": 44.55,
+      "longitude": 27.350000381469727,
+      "sha256": "f305cb218e5cdccf45b3cc0c8b1d1c34e1a957c82ff565959d2b1cd599be372f"
+    },
+    {
+      "day": "2024-01-02",
+      "rawValue": 3.0799999237060547,
+      "count": 48,
+      "status": "valid",
+      "latitude": 44.55,
+      "longitude": 27.350000381469727,
+      "sha256": "32d965d44a73255700a5aa361c1c5de5478a6a2b917c3678d0b487dbc2bea7c6"
+    },
+    {
+      "day": "2024-01-03",
+      "rawValue": 5.649999618530273,
+      "count": 48,
+      "status": "valid",
+      "latitude": 44.55,
+      "longitude": 27.350000381469727,
+      "sha256": "d6a03ccbf50e9d6d6e44e3810631d725e4b741ce760107c87599d7b207415745"
+    },
+    {
+      "day": "2024-01-04",
+      "rawValue": 0.029999999329447746,
+      "count": 48,
+      "status": "valid",
+      "latitude": 44.55,
+      "longitude": 27.350000381469727,
+      "sha256": "2381698c38f02b77f7c07db414102e6dde1c3b1b7d5180f6c6d1fed91bb4f45c"
+    },
+    {
+      "day": "2024-01-05",
+      "rawValue": 0.0,
+      "count": 48,
+      "status": "valid",
+      "latitude": 44.55,
+      "longitude": 27.350000381469727,
+      "sha256": "2af4090965bf45d302d7846719fbca9d293f6bfa907dfdc250ec1695fdac6cef"
+    },
+    {
+      "day": "2024-01-06",
+      "rawValue": 0.009999999776482582,
+      "count": 48,
+      "status": "valid",
+      "latitude": 44.55,
+      "longitude": 27.350000381469727,
+      "sha256": "f0d4d68c501dd2718478ad3bfe191163f1b0196994fccb51fcd9e2a770ce86a1"
+    },
+    {
+      "day": "2024-01-07",
+      "rawValue": 15.739999771118164,
+      "count": 48,
+      "status": "valid",
+      "latitude": 44.55,
+      "longitude": 27.350000381469727,
+      "sha256": "ce8dc970f31d64e5d2f3da0e79763ececf5be26ba841313f61c4f009f03f8aa9"
+    }
+  ],
+  "oracleCodeSha256": "14f979a2020841567ea9c24daa17839ea7c8c3cb3425d5da64c1bd313205c7e7"
+}

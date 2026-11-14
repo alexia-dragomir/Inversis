@@ -1,5 +1,29 @@
 # Validation record
 
+## Seven-day precipitation recovery checkpoint
+
+After fc80643, `npm run check` passed **89 tests in ten files**, lint, TypeScript,
+the POWER history verifier, both Stage 1 and seven-day IMERG byte/receipt/metadata
+verifiers, and production build. The preserved original 84 tests continue to pass.
+New tests compare every daily precipitation value, count, cell and source hash
+against an independently executed h5py 3.15.1/HDF5 1.14.6 reader (NumPy 2.3.5).
+The 5% preference sweep tests cover an independently specified synthetic 50/50 tie,
+neighboring preferred-set changes, the singleton real heat-only domain, and refusal
+at all 21 combined-model weights when historical precipitation is missing.
+
+Browser smoke checks confirmed the seven actual values and source links in Context,
+preserved missing-rainfall refusal, and successful audit download containing the
+preference diagnostic. No browser console warnings/errors were reported. The downloaded
+certificate passed `certificate:verify` with SHA-256
+`ca396a1f293c699ad127ffea8d4e29404d4fe7b00a8dc32bc6f0d8070216abdf`.
+Production JavaScript is 310.66 kB (87.35 kB gzip), including sample provenance.
+Current mobile rendering remains unverified.
+
+GitHub Actions now reruns both independent Python oracles before the complete npm
+check; remote execution of the updated workflow is not implied by local success.
+The token-authenticated downloader is prepared and type/lint checked, but no token
+was available to validate its authenticated network path or historical throughput.
+
 ## Reduced-model checkpoint, 2026-11-14
 
 `npm run check` passed lint, strict TypeScript, **84 tests in eight files**, retained
