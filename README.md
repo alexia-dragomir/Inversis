@@ -67,9 +67,10 @@ without rewrite rules: `#context`, `#decision`, `#stability`, `#certificate`.
 
 Only React and React DOM are direct runtime dependencies. No backend, database,
 authentication, external font service, runtime AI or NASA API dependency is present.
-The approved ivory/teal/green palette is used; the original logo was not supplied,
-so the shell uses a text wordmark. Inter is preferred if available locally with a
-system sans fallback; no font is downloaded.
+The approved ivory/teal/green palette and supplied original Inversis logo/banner
+are used. Inter is preferred if available locally with a system sans fallback;
+no font is downloaded. Only Inversis artwork supplies branding; see the
+[branding restriction and asset audit](docs/BRANDING_AUDIT.md).
 
 ## Demonstration context
 

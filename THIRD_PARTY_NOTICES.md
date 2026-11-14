@@ -30,5 +30,7 @@ Installed versions from package metadata; complete transitive versions are pinne
 | scheduler | 0.28.0 | MIT | https://react.dev/ |
 
 Official configuration reference consulted: https://vitest.dev/config/.
-License terms remain in each installed package; no logos or external image/font assets are bundled.
+License terms remain in each installed package. The project owner's original
+Inversis logo and banner are bundled; their provenance is in `public/brand/README.md`.
+No NASA logos, flags, mission insignia or external font assets are bundled.
 OpenAI Codex and Firecrawl were used during development; see docs/AI_USE.md.

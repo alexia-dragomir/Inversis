@@ -1,5 +1,9 @@
 # Supplied Inversis artwork
 
+Only these original Inversis assets may supply branding. Do not add, imitate or
+modify NASA logos, flags, mission insignia or NASA-specific branding/design elements.
+Factual dataset attribution remains appropriate. See `docs/BRANDING_AUDIT.md`.
+
 The project owner supplied these originals for integration into Inversis on
 2026-11-14. The files are preserved without pixel modification or regeneration.
 
