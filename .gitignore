@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+.vite/
+.local/
+.handoff-read.txt
+.env
+.env.*
+!.env.example
+.vercel/
+*.log
+*.tsbuildinfo
