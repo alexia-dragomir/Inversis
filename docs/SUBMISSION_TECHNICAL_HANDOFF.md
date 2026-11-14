@@ -87,5 +87,6 @@ The slides/video, final project-page narrative, team details and final submissio
 form remain the separate workstream's responsibility. Recheck the live guide/form
 for current asset limits and terms before submitting. No final form has been
 submitted here. User-supplied deadline: November 15, 2026, 23:59 Europe/Bucharest.
-The approved original logo is still absent; the app uses its text wordmark without
-inventing a replacement or modifying NASA branding.
+The supplied original Inversis logo and banner are now integrated and retained in
+`public/brand`. See PRODUCT_DESIGN_CHECKPOINT.md for the interactive visual refinement,
+109-test verification and unchanged certificate identity. No NASA branding is modified.

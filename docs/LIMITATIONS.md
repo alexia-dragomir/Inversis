@@ -46,5 +46,6 @@ sequence comparisons without proving causal rotation benefit. Overlapping window
 are dependent; gridded values do not measure a field. Unknown pH, salinity, drainage,
 history and management must not become favorable defaults. A/B composition is equal.
 
-The approved original logo is absent. A text wordmark and local system-font fallback
-are used without inventing a replacement logo. No generated imagery is present.
+The owner-supplied original logo and banner are now integrated, with originals
+preserved in `public/brand`. Local system fonts remain in use. No replacement logo,
+fabricated map imagery or generated scientific imagery is introduced.

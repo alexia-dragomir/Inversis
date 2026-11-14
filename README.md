@@ -5,6 +5,11 @@
 **[Open the live application](https://alexia-dragomir.github.io/Inversis/)** ·
 [Submission technical handoff](docs/SUBMISSION_TECHNICAL_HANDOFF.md)
 
+The [product design checkpoint](docs/PRODUCT_DESIGN_CHECKPOINT.md) adds the original
+Inversis branding, interactive replay/regret comparison, a 21-state preference
+explorer, physical crop-year history and a structured certificate. The scientific
+engine and evidence remain unchanged; 109 tests cover the current implementation.
+
 A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
 *Field Shift: Adapting Farms with NASA Data*.
 

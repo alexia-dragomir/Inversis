@@ -1,5 +1,12 @@
 # AI assistance record
 
+2026-11-14, product refinement: Codex assisted presentation components, styling,
+original-asset integration, browser review and two independent-output display tests.
+The project owner supplied the logo/banner; neither was generated or redrawn during
+this work. No scientific engine, source observations or canonical certificate method
+changed. Source-derived charts use validated outputs, with no fabricated geography
+or reversals. All 109 tests and the independent verification scripts passed locally.
+
 2026-11-14, public release verification: Codex assisted GitHub Pages deployment,
 desktop/390px browser checks, static-asset integrity checks and exported-certificate
 recomputation. The repository owner enabled Pages and permitted the checkpoint branch
