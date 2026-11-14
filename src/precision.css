@@ -9,6 +9,220 @@
 @media(max-width:700px){.interactive-profile text{font-size:28px}.margin-bracket text{font-size:28px}.profile-main .chart-axis-caption{font-size:11px}.interpretation-triptych{grid-template-columns:1fr;gap:18px}.margin-diagnostic{padding:17px 12px}.diagnostic-point,.method-margin-grid .diagnostic-point{grid-template-columns:92px 1fr 56px;gap:8px}.margin-scale,.method-margin-grid .margin-scale{padding-left:100px;padding-right:64px}.evidence-workbench{display:block}.evidence-question-tabs{display:grid;grid-template-columns:repeat(3,1fr);border:0;border-bottom:1px solid var(--line);padding:8px;gap:5px}.evidence-question-tabs button{display:block;padding:10px 6px;font-size:10px;text-align:center;min-height:64px;border:1px solid #b5c8b7}.evidence-question-tabs button>span{display:block;margin-bottom:6px}.evidence-question-tabs button[aria-pressed=true]{border:1px solid #527663;border-bottom:3px solid #076b6d}.evidence-preview{padding:20px 14px}.evidence-preview h3{font-size:21px}.before-after{grid-template-columns:1fr}.branch-state{padding:16px}.branch-state h4{font-size:23px}.consequence-line>strong{font-size:17px}.preview-actions .button{width:100%;justify-content:center}}
 .secondary-button{display:inline-flex;align-items:center;justify-content:center;border:1px solid #547865;background:#fff;color:var(--ink);padding:10px 15px;border-radius:4px;min-height:44px;font:inherit;font-size:12px;font-weight:600;cursor:pointer}.secondary-button:hover{background:#e5eee2}.audit-actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin:15px 0}.audit-actions .button{margin:0}.audit-record>header{border-bottom:2px solid #a7beb0}.audit-record .audit-seal{font-size:11px;letter-spacing:.8px}.audit-body{padding-bottom:22px}.audit-rationale{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:0 32px 25px;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.audit-rationale span{font-size:11px;color:var(--muted)}.audit-rationale strong{display:block;font-size:27px;font-weight:550;margin-top:4px}.audit-rationale>p{grid-column:1/-1;font-size:11px;color:var(--muted);margin:0}.audit-assumptions h3{font-size:14px;margin-bottom:10px}.audit-source-summary{padding:22px 32px;border-top:1px solid var(--line)}.audit-source-summary h3{font-size:14px}.audit-source-summary p{font-size:12px;color:var(--muted);overflow-wrap:anywhere}.copy-status{display:inline-block;font-size:11px;margin:8px 12px}.fingerprint-panel>p{margin-top:14px}.canonical-hash{user-select:all}.print-only{display:none}
 @media(max-width:700px){.audit-rationale{margin:0 18px 20px;grid-template-columns:1fr;gap:12px}.audit-rationale>div{display:flex;justify-content:space-between;align-items:center;gap:10px}.audit-rationale strong{font-size:23px}.audit-source-summary{padding:20px 18px}.audit-record .audit-seal{font-size:9px}.audit-actions{gap:8px}.copy-status{display:block;margin-left:0}}
+/* Release polish: screen rules are isolated from the verified A4 presentation. */
+@media screen {
+  :root { --space-section: 28px; }
+  h2, h3 { line-height: 1.28; }
+  .header { min-height: 80px; padding-block: 12px; }
+  .header .brand { width: 178px; }
+  nav a { min-height: 44px; display: inline-flex; align-items: center; gap: 7px; }
+  .section { padding-block: var(--space-section); }
+  .analysis-heading ~ .methodology { margin-block: 18px; }
+  .section-heading { gap: 18px; margin-bottom: 14px; }
+  .small-note, .method-content p, caption { font-size: 13px; line-height: 1.6; }
+  .eyebrow { font-size: 11px; letter-spacing: 1.3px; }
+  .analysis-heading .lead { font-size: 14px; line-height: 1.6; }
+  .analysis-settings + .small-note, .calculation-status { font-size: 12px; }
+  .methodology summary { font-size: 13px; min-height: 48px; }
+  .method-content { padding: 12px 22px 22px; }
+  .methodology .table-scroll { margin-block: 12px; }
+  .instrument-summary, .replay-lab { min-width: 0; }
+  th, td { padding: 12px 16px; line-height: 1.55; }
+  thead th, caption { font-size: 12px; }
+  tbody td code { font-size: 12px; overflow-wrap: anywhere; }
+  button:disabled { cursor: default; }
+  .results-updating button:disabled { cursor: wait; }
+  .secondary-button:disabled:hover { background: #fff; }
+
+  /* Evidence: let the history lead; give the coordinate schematic its own size. */
+  .heading-context { padding-block: 30px; }
+  .workflow-schematic { top: 30px; bottom: 30px; display: flex; flex-direction: column; justify-content: center; border-left: 3px solid #7ca697; }
+  .workflow-schematic li { font-size: 14px; padding-block: 15px; }
+  .metric-grid article { padding: 20px 24px; }
+  .metric-grid strong { font-size: 31px; font-weight: 600; }
+  .metric-grid span, .metric-grid small { font-size: 12px; }
+  .atlas-grid { grid-template-columns: minmax(250px, .8fr) minmax(0, 2fr); gap: 28px; align-items: start; }
+  .location-panel { padding: 24px; }
+  .location-panel svg { max-width: 340px; margin: 20px auto; }
+  .location-panel svg text { font-family: inherit; font-size: 14px; fill: #405753; }
+  .location-panel .small-note { font-size: 13px; }
+  .history-panel > p { font-size: 13px; }
+  .history-panel .section-heading { align-items: center; }
+  .history-panel select { min-height: 44px; font-size: 13px; }
+  .history-annotation { font-size: 13px; margin-top: 14px; padding: 12px 16px; }
+  .history-year { grid-template-columns: 42px minmax(0,1fr) minmax(0,1fr); gap: 14px; padding: 7px 0; }
+  .history-year > strong, .history-track span { font-size: 13px; }
+  .history-track { height: 30px; }
+  .history-track span { padding: 6px 8px; line-height: 18px; }
+  .history-legend { padding-left: 56px; gap: 14px; line-height: 1.5; }
+  .peak-year > strong { font-weight: 700; }
+  .rotation-sequences article { padding-block: 16px; }
+  .rotation-sequences li { min-height: 72px; padding: 12px; }
+  .rotation-sequences small { font-size: 10px; letter-spacing: .3px; }
+  .rotation-sequences strong { font-size: 14px; }
+
+  /* Decision: aligned numbers, visible selection and restrained mini-charts. */
+  .result-panel { padding: 24px 28px; }
+  .result-panel > p:not(.eyebrow) { font-size: 14px; }
+  .result-panel > .small-note { font-size: 12px!important; }
+  .decision-rationale { gap: 18px; padding-top: 18px; }
+  .decision-rationale span, .decision-rationale > p { font-size: 12px; }
+  .decision-rationale strong { font-size: 28px; }
+  .ranked-score { gap: 12px; margin-block: 24px; }
+  .ranked-score small { font-size: 10px; }
+  .score-track { height: 9px; }
+  .score-gap { padding: 16px 18px; margin-block: 22px; }
+  .score-gap p, .instrument-summary > p:not(.eyebrow) { font-size: 13px; }
+  .replay-tabs button { min-height: 72px; padding: 10px 5px; }
+  .replay-tabs button small { font-size: 12px; }
+  .replay-selection span, .loss-axis, .replay-loss small { font-size: 12px; }
+  .replay-loss > div:first-child { font-size: 13px; }
+  .loss-track { height: 16px; margin-block: 8px 5px; }
+  .replay-small-multiples { gap: 14px; }
+  .replay-small-multiples > button { padding: 16px; }
+  .replay-small-multiples > button > strong { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 14px; }
+  .replay-card-state { font-size: 11px; font-weight: 500; color: #405753; }
+  [aria-pressed=true] > strong > .replay-card-state { color: #073e40; font-weight: 700; }
+  .replay-small-multiples > button[aria-pressed=true] { background: #edf4e9; }
+  .mini-loss { margin-block: 8px; min-height: 32px; }
+  .mini-loss > span { font-size: 12px; padding: 5px 8px; }
+  .replay-small-multiples > button > small { font-size: 12px; }
+
+  /* Laboratory: keep the plot spacious and the readout subordinate. */
+  .preference-instrument { grid-template-columns: minmax(0,1fr) 270px; margin-top: 12px; }
+  .profile-main { padding: 26px; }
+  .interactive-profile text { font-family: inherit; font-variant-numeric: tabular-nums; }
+  .profile-readout { padding: 26px 22px; }
+  .profile-selection .eyebrow { margin-bottom: 10px; }
+  .profile-readout h3 { font-size: 26px; }
+  .margin-readout { padding-block: 20px; margin-bottom: 10px; }
+  .margin-readout strong { font-size: 38px; }
+  .readout-row { font-size: 13px; padding-block: 10px; }
+  .readout-row strong { font-size: 15px; }
+  .profile-readout > .small-note { font-size: 12px; margin-top: 18px; }
+  .preference-slider, .preference-slider strong { font-size: 13px; }
+  .preference-slider input { min-height: 44px; margin-block: 8px; }
+  .chart-legend { font-size: 13px; gap: 20px; }
+  .interpretation-triptych h3 { font-size: 14px; }
+  .interpretation-triptych p { font-size: 14px; }
+  .margin-diagnostic { margin-block: 18px; padding: 20px; }
+  .margin-diagnostic figcaption { font-size: 19px; }
+  .margin-diagnostic figcaption small, .margin-scale, .diagnostic-point > small, .margin-diagnostic > .small-note { font-size: 12px; }
+  .diagnostic-point .diagnostic-label { font-size: 13px; }
+  .diagnostic-point > strong { font-size: 16px; }
+  .diagnostic-point { min-height: 62px; padding-block: 11px; }
+  .diagnostic-track { height: 9px; }
+  .method-margin-grid { gap: 24px; }
+  .method-margin-column { min-width: 0; }
+  .method-margin-column .interpretation-note { margin-top: 20px; padding: 20px; }
+  .method-margin-column .interpretation-note h3 { font-size: 17px; }
+  .method-margin-column .interpretation-note p { font-size: 13px; }
+  .evidence-workbench { grid-template-columns: 220px minmax(0,1fr); }
+  .evidence-question-tabs { padding: 16px 12px; }
+  .evidence-question-tabs button { font-size: 14px; min-height: 76px; }
+  .evidence-preview { padding: 26px; }
+  .evidence-preview > .eyebrow { line-height: 1.6; color: #405753; }
+  .branch-options button { font-size: 13px; min-height: 46px; }
+  .branch-state { padding: 20px; }
+  .branch-state h4 { font-size: 25px; margin-block: 8px 16px; }
+  .branch-state dt { font-size: 12px; }
+  .branch-state dd { font-size: 13px; line-height: 1.5; }
+  .preview-actions p { font-size: 12px; }
+
+  /* Record: readable metadata and a consistent document rhythm on screen. */
+  .audit-body { gap: 32px; }
+  .audit-body p, .audit-body dl { font-size: 14px; }
+  .audit-body .small-note { font-size: 12px; }
+  .audit-body dl > div { padding-block: 12px; }
+  .audit-rationale span, .audit-rationale > p { font-size: 12px; }
+  .audit-rationale strong { font-size: 30px; }
+  .audit-assumptions p, .audit-source-summary p { font-size: 13px; }
+  .fingerprint-panel > div, .fingerprint-panel > p, .copy-status { font-size: 12px; }
+  .fingerprint-panel > code { line-height: 1.65; letter-spacing: .2px; }
+  .certificate-limitations { padding-top: 24px; }
+  .certificate-limitations > p { max-width: 85ch; }
+}
+@media screen and (max-width:1100px) {
+  .heading-context { padding-right: 34%; }
+  .workflow-schematic { width: 29%; right: 20px; padding: 16px; }
+  .atlas-grid { grid-template-columns: 260px minmax(0,1fr); gap: 24px; }
+  .decision-instrument { grid-template-columns: 1fr 1.1fr; gap: 18px; }
+  .preference-instrument { grid-template-columns: minmax(0,1fr) 240px; }
+  .profile-main { padding: 22px; }
+  .profile-readout { padding: 22px 18px; }
+  .interactive-profile text { font-size: 20px; }
+  .margin-bracket text { font-size: 20px; }
+}
+@media screen and (max-width:900px) {
+  .preference-instrument { grid-template-columns: 1fr; }
+  .profile-readout { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; border-left: 0; border-top: 1px solid var(--line); }
+  .profile-readout .margin-readout { padding: 0 0 16px; border-bottom: 0; margin: 0; }
+  .profile-scores { grid-column: 1/-1; border-top: 1px solid var(--line); padding-top: 8px; }
+  .profile-readout > .small-note { grid-column: 1/-1; }
+  .readout-row { padding-block: 7px; }
+  .margin-readout strong { font-size: 34px; }
+  .evidence-workbench { grid-template-columns: 170px minmax(0,1fr); }
+  .evidence-preview { padding: 22px; }
+  .before-after { gap: 12px; }
+  .branch-state { padding: 16px; }
+  .atlas-grid { grid-template-columns: 240px minmax(0,1fr); }
+  .location-panel { padding: 20px; }
+  .history-legend { font-size: 12px; }
+}
+@media screen and (max-width:700px) {
+  .header { padding: 12px 16px 0; gap: 8px; min-height: 0; }
+  .header .brand { width: 148px; }
+  nav a { justify-content: center; font-size: 13px; padding-inline: 8px; }
+  .stage-label { display: none; }
+  .section { padding-block: 24px; }
+  .heading-context { padding: 24px 18px; }
+  .workflow-schematic { position: static; display: block; width: auto; margin-top: 24px; padding: 16px; }
+  .workflow-schematic li { padding-block: 12px; }
+  .analysis-heading .lead { font-size: 13px; }
+  .metric-grid article { padding: 15px 16px; }
+  .metric-grid strong { font-size: 25px; }
+  .metric-grid small { font-size: 11px; }
+  .atlas-grid { grid-template-columns: 1fr; gap: 24px; }
+  .location-panel svg { max-width: 340px; }
+  .history-year { grid-template-columns: 38px minmax(0,1fr) minmax(0,1fr); gap: 10px; }
+  .history-legend { padding-left: 48px; gap: 10px; font-size: 12px; }
+  .history-year > strong, .history-track span { font-size: 12px; }
+  .history-track span { padding-inline: 6px; }
+  .rotation-sequences li { padding: 9px 4px; min-height: 65px; }
+  .rotation-sequences small { font-size: 9px; }
+  .rotation-sequences strong { font-size: 11px; }
+  .rotation-sequences ol { gap: 4px; }
+  .result-panel { padding: 22px 20px; }
+  .decision-rationale { gap: 12px; }
+  .decision-rationale strong { font-size: 25px; }
+  .decision-instrument { grid-template-columns: 1fr; }
+  .replay-tabs button small { font-size: 11px; }
+  .replay-small-multiples > button { padding: 16px; }
+  .profile-main { padding: 22px 16px; }
+  .profile-main .status { display: inline-block; margin-top: 10px; font-size: 11px; }
+  .interactive-profile text, .margin-bracket text { font-size: 28px; }
+  .chart-legend { gap: 12px; font-size: 12px; }
+  .profile-readout { padding: 22px 18px; gap: 0 18px; }
+  .profile-readout h3 { font-size: 24px; }
+  .profile-selection .eyebrow { font-size: 10px; }
+  .margin-readout > span, .margin-readout > small, .readout-caption { font-size: 12px; }
+  .margin-diagnostic, .method-margin-grid .margin-diagnostic { padding: 18px 14px; }
+  .diagnostic-point, .method-margin-grid .diagnostic-point { grid-template-columns: 100px minmax(0,1fr) 58px; }
+  .margin-scale, .method-margin-grid .margin-scale { padding-left: 108px; padding-right: 66px; }
+  .diagnostic-point .diagnostic-label { font-size: 12px; }
+  .diagnostic-point > small { font-size: 11px; }
+  .evidence-workbench { display: block; }
+  .evidence-question-tabs { padding: 8px; }
+  .evidence-question-tabs button { font-size: 12px; min-height: 76px; }
+  .evidence-preview { padding: 22px 16px; }
+  .before-after { grid-template-columns: 1fr; gap: 14px; }
+  .branch-state { padding: 18px; }
+  .audit-record > header { gap: 12px; }
+  .audit-body { padding: 24px 18px; gap: 20px; }
+  .audit-rationale strong { font-size: 26px; }
+  .audit-body dd { max-width: 64%; }
+  .method-content { padding: 10px 14px 18px; }
+}
 @page{size:A4 portrait;margin:12mm}
 @media print{
   html,body{background:#fff!important;color:#073e40;font-size:10pt;line-height:1.4;-webkit-print-color-adjust:exact;print-color-adjust:exact}
