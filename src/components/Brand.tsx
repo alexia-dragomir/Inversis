@@ -1,6 +1,4 @@
-/** Viewport crop only: the supplied original bytes and artwork are unmodified. */
+/** Deterministic transparency derivative; the supplied original remains retained. */
 export function Brand({className=''}:{className?:string}) {
-  return <svg className={`brand ${className}`} viewBox="160 380 1140 295" role="img" aria-label="Inversis">
-    <image href={`${import.meta.env.BASE_URL}brand/inversis-logo-original.png`} width="1448" height="1086"/>
-  </svg>;
+  return <img className={`brand ${className}`} src={`${import.meta.env.BASE_URL}brand/inversis-logo-transparent.png`} width="1122" height="281" alt="Inversis"/>;
 }

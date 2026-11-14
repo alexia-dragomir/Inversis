@@ -1,5 +1,9 @@
 # Product design checkpoint — 2026-11-14
 
+The subsequent controlled refinement and final verification are recorded in
+[FINAL_PRODUCT_REPORT.md](FINAL_PRODUCT_REPORT.md). This earlier checkpoint remains
+the historical record of the initial redesign.
+
 Recovery checkpoint: `5de673ace3db75c88de1c3da0afe08d93c6446d2`.
 Public application: https://alexia-dragomir.github.io/Inversis/.
 

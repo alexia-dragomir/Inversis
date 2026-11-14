@@ -40,3 +40,21 @@ source metadata remain intact.
 Two outdated documentation statements about absent branding were corrected in
 README.md and THIRD_PARTY_NOTICES.md. The verified scientific pipeline, certificate
 canonicalization, source archives and completed redesign were preserved.
+
+## Final product refinement audit — 2026-11-14
+
+This supersedes the earlier visual inventory. Both original PNGs remain
+byte-identical. Added images are only a deterministic transparent Inversis logo
+and a favicon derived from its original symbol. No generative redrawing, NASA
+emblem, flag, mission insignia or NASA-specific visual styling was added.
+
+Reviewed the header, Context banner, analytical charts, certificate, two-page
+headless A4 output and complete public visual inventory. The print record
+identifies itself as an Inversis decision record and disclaims NASA endorsement.
+Required textual data attribution, product identifiers, source archives, receipts,
+manifests and canonical JSON remain intact. See the brand README for hashes.
+
+The resume phase used terminal and isolated headless processes only: no Computer
+Use, desktop screenshots or interactive print dialog. Temporary QA artifacts stay
+under ignored `.local`. Release-file credential-pattern and unrelated-file checks
+found nothing to exclude. No Earthdata token was opened, moved or included.
