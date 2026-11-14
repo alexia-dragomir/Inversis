@@ -1,50 +1,67 @@
-# Method status and next implementation boundary
+# Implemented scientific methods
 
-**Planned, not implemented:** deterministic conditional comparison of fixed-start,
-ordered five-year crop plans using common historical weather windows. Cyclic phases
-are separate diagnostics, not added primary scenarios.
+Model `inversis-fixed-start-heat-v1` is a reduced, provisional historical heat-exposure
+comparison, authorized by the current user request. It is not a crop recommendation.
+All inputs derive from retained NASA POWER bytes; no interpolation or substitute observations.
 
-Physical exposures: longest complete-window precipitation run below an illustrative
-1 mm/day threshold; complete-window fraction of days at T2M_MAX ≥35 °C; optional mean
-SMAP daily root-zone moisture after validated aggregation. These are environmental
-proxies, not biological crop damage. Window dates and thresholds require explicit
-assumptions. Missing precipitation/heat days invalidate the window; do not shorten
-dry runs at gaps. The provisional SMAP ≥90% coverage / maximum 3-day gap rule is an
-author convention, not a NASA standard.
+## Physical exposures and common scenarios
 
-Use predeclared candidate-independent physical reference bounds. Preserve raw units,
-reference populations, clipping and near-constant behavior. Weights express preferences
-over documented swings. Historical windows overlap and are not probability samples.
+UTC daily maximum T2M_MAX is in °C. Count days >=35°C and divide by the complete
+crop-window length. The threshold is illustrative, not calibrated damage. Handoff
+windows are wheat May 1–June 30, maize July 1–August 31, sunflower June 20–August 10,
+soybean June 15–August 31, inclusive. All are provisional phenology assumptions.
+Missing, duplicate, invalid-unit, unverified or nonphysical daily values refuse the
+whole metric. Valid dry-spell code counts the longest consecutive run strictly below
+1 mm/day, requiring 48 valid IMERG half-hours per day. It has test coverage but no
+historical precipitation inputs, so no real dry-spell result is published.
 
-For each eligible candidate r and common scenario s:
+Three fixed ordered five-year plans use the handoff crop sequences. Every plan must
+have complete evidence on the same five-year replay. Temperature supports six windows:
+2015–2019 through 2020–2024. They overlap and are not independent statistical samples.
+Two complete common scenarios is an explicit author comparison minimum, not confidence.
+Eligibility exclusions occur before minima and regret. Field suitability remains
+conditional. Interface crop prohibitions are hypothetical, never inferred farmer facts.
+
+## Normalization and decision
+
+Fixed references pool all 40 crop/year combinations (four windows × ten years,
+zero shift), independent of candidate order, eligibility and preferences. The
+observed heat-fraction bounds are 0 and 41/62. Normalize `(x-low)/(high-low)`, clip
+ to [0,1], then average five crop-year exposures with equal weight. Near-constant
+reference width <=1e-12 refuses comparison. The same references remain fixed for
+shift and phase diagnostics. Window durations and differing biological vulnerability
+limit cross-crop interpretation; scores are relative environmental exposure only.
 
 ```
 L(r,s,w) = sum_k w_k E_k(r,s)
-R(r,s,w) = L(r,s,w) - min_q L(q,s,w)
+R(r,s,w) = L(r,s,w) - min_eligible_q L(q,s,w)
 M(r,w) = max_s R(r,s,w)
-preferred = all r within declared tolerance of min_q M(q,w)
+preferred = all eligible r within 1e-10 of min_eligible_q M(q,w)
 ```
 
-Filter eligibility before scenario minima. Compare average historical weighted loss
-on the identical matrix. Preserve ties, empty-set refusal, insufficient-evidence
-refusal, provisional field suitability, and the single-candidate limitation.
+The average-loss benchmark uses the identical loss matrix. Single-candidate zero
+regret means absence of competition. Empty eligibility and insufficient evidence
+have distinct refusal states. Heat-only weight is necessarily 1; it is not inferred
+farmer preference. The generic 5% simplex produces 1, 21 or 231 points for one,
+two or three indicators. Broader preference landscapes are withheld pending evidence.
+The combined model is an explicit refusal, never a silent fallback to heat-only.
 
-Counterfactual questions require finite defensible answer branches and full
-recomputation. Addendum I consequence classes distinguish changed preferred sets,
-eligibility-only changes, unchanged tested cases and unresolved questions. Hypothetical
-answers must stay hypothetical. There is no probability or expected-value claim.
+## Diagnostics, Next Evidence and audit
 
-## Stage 1 checkpoint recommendation
+Five crop-window shifts (-14,-7,0,+7,+14 days) recompute exposures and comparisons.
+Five cyclic phases are separate diagnostics, never pooled into primary scenarios.
+Changed results on these axes indicate methodological sensitivity, not preference
+reversals or probabilities. No claims extend beyond tested configurations.
 
-After owner review, implement only NASA source access and validation first: retrieve
-a tiny POWER T2M_MAX UTC sample at the proposed coordinates, inspect actual metadata,
-validate identity/units/time/quality/spatial support, cache the response and hash it.
-Then try a small IMERG Final daily subset; SMAP is optional if it delays a reliable
-two-indicator path. Do not request a decade until the small-sample gate passes.
+Soybean/sunflower permission questions have permitted/prohibited hypothetical
+branches. Each branch recomputes eligibility, minima, regret and preferred sets.
+Classifications distinguish changed preferred sets, eligibility only, unchanged
+tested cases and unresolved evidence. Soil/disease questions remain unresolved
+because no validated quantitative or locally applicable exclusion rule is available.
 
-The next vertical slice must expand to enough validated crop-window data and common
-five-year scenarios before computing a comparison. A single authentic observation
-proves access only; it cannot support a five-year decision. Connect this validated
-comparison to one defensible counterfactual and a reproducible certificate before
-broad feature expansion. Test an independent synthetic minimax reference separately
-from NASA evidence. No Stage 1 acquisition was performed in this implementation.
+Certificates include manifests, physical exposures, scenario matrices, references,
+assumptions, diagnostics, counterfactuals and limitations. Canonicalization recursively
+sorts object keys, preserves array order, uses finite JSON numbers, normalizes -0,
+and hashes UTF-8 with SHA-256. Only top-level fingerprint and generation timestamp
+are excluded from the certificate hash. Integrity is not endorsement or field validation.
+Verify an export with `npm run certificate:verify -- PATH`.

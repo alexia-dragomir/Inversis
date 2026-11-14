@@ -46,7 +46,8 @@ export interface ProvenanceRecord {
   readonly sourceUrl: string;
   readonly doi: string | null;
   readonly queryOrGranule: string;
-  readonly retrievalTimeUTC: string;
+  /** Null for user-imported captures when completion time was not observed. */
+  readonly retrievalTimeUTC: string | null;
   readonly sourceTimeStandard: 'UTC' | 'LST' | 'other';
   readonly utcAlignment: string;
   readonly temporalSupport: string;
@@ -101,8 +102,9 @@ export interface CropYearExposure {
   readonly calendarShiftDays: number;
   readonly physical: QualityValue<PhysicalUnit>;
   readonly coverage: Coverage;
-  readonly sourceRefs: NonEmpty<string>;
-  readonly contributingObservationIds: NonEmpty<string>;
+  /** May be empty for a refused window with no observations; valid exposures require lineage. */
+  readonly sourceRefs: readonly string[];
+  readonly contributingObservationIds: readonly string[];
   readonly normalizationRef: string | null;
 }
 export interface FarmerConstraint {

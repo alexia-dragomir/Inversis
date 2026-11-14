@@ -1,5 +1,40 @@
 # Validation record
 
+## Reduced-model checkpoint, 2026-11-14
+
+`npm run check` passed lint, strict TypeScript, **84 tests in eight files**, retained
+Stage 1 evidence verification, offline verification of all ten annual POWER captures,
+deterministic regeneration of 200 crop/year/shift records and the production build.
+The JavaScript bundle is 259.47 kB (80.82 kB gzip); no NASA login is required at runtime.
+
+Tests cover physical units, strict UTC dates, missing/partial daily support, full
+crop windows, dry-run and heat thresholds, shared scenario refusal, eligibility
+before minima, ties, single-candidate interpretation, reference degeneracy, benchmark
+consistency, 1/21/231-point weight grids, counterfactual classifications, fingerprints
+and certificate scope. Synthetic arithmetic fixtures are confined to tests.
+
+`scripts/independent-oracle.py` was executed using Python's standard library and the
+retained raw POWER bytes. It imports no TypeScript computation. Its retained output
+checks all default scenario losses/regrets and preferred set to 12 decimal places.
+Spot checks: wheat 2015 has 1 hot day of 61; maize 2024 has 41 of 62. This is independent
+arithmetic verification, not independent agronomic review. The oracle output retains
+source and Python code hashes. Run it from the repository root with Python, then
+`npm test` to compare again.
+
+Browser checks passed all four routes, real coverage and physical-value tables,
+soybean exclusion leaving one candidate, maize exclusion leaving none, reset,
+combined-model insufficient-evidence refusal, window diagnostics and recomputed
+Next Evidence. No console warnings/errors were reported. Certificate JSON downloaded
+successfully and `npm run certificate:verify -- PATH` verified the exact browser
+export hash `e0024eb6ae440a781b1549b2dc9028f31d0175f976e83ae569d83ad8993980a0`.
+Visual inspection passed at the observed 1280-pixel viewport. A requested mobile
+viewport override did not take effect; a new mobile render is **not verified**.
+The earlier Stage 0 responsive audit does not establish current mobile correctness.
+
+Harmony downloader is prepared, type/lint checked, but actual seven-day binaries,
+its authentication/redirect path and historical scientific ingestion remain unverified.
+GitHub Actions results are separate from these local checks.
+
 ## Stage 1 checkpoint
 
 Executed 2026-11-14: `npm run check` passed lint, strict TypeScript, **58 tests in five

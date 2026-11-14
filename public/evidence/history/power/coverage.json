@@ -1,0 +1,118 @@
+{
+  "source": "NASA POWER T2M_MAX",
+  "timeStandard": "UTC",
+  "unit": "degC",
+  "summaries": [
+    {
+      "year": 2015,
+      "expectedDays": 365,
+      "validDays": 365,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "7d52fabbfa0fb5688b33c172cc05ff836625909d258ef35e6e71c54f958dbc06"
+    },
+    {
+      "year": 2016,
+      "expectedDays": 366,
+      "validDays": 366,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "487a9c125fd1b1910ec11f1ec1f016c6d9758befe1361b85c9f0674ec42b3594"
+    },
+    {
+      "year": 2017,
+      "expectedDays": 365,
+      "validDays": 365,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "339dd77c21061ac2f964e73f68fc273d9d375d0e93655692ac28c0dce318ed78"
+    },
+    {
+      "year": 2018,
+      "expectedDays": 365,
+      "validDays": 365,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "1317c7c258e26aba6731b250e2b147c5c7dcbd5657eaee4486cf5b8da8f64a69"
+    },
+    {
+      "year": 2019,
+      "expectedDays": 365,
+      "validDays": 365,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "0659e4ca741076bd99b16e63be6fa71451cb50dcb3e5b2b79c46e06846aa798f"
+    },
+    {
+      "year": 2020,
+      "expectedDays": 366,
+      "validDays": 366,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "503f692ba0bb6efca9a951c96b8fddcefd960de2d0a7321001dc48ee7140445a"
+    },
+    {
+      "year": 2021,
+      "expectedDays": 365,
+      "validDays": 365,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "fe930c42bea4b2cd125c112cdee9e14c8e4bee0f9345a10a25975295e95dd730"
+    },
+    {
+      "year": 2022,
+      "expectedDays": 365,
+      "validDays": 365,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "21ee95999ddc49b8155faa955db3678a82d2fe401630decf65342c2b08baa2c7"
+    },
+    {
+      "year": 2023,
+      "expectedDays": 365,
+      "validDays": 365,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "767513aeb11212ac6785da20e63cb51e778e6dcab3933734b692e521be9772e2"
+    },
+    {
+      "year": 2024,
+      "expectedDays": 366,
+      "validDays": 366,
+      "missingDays": 0,
+      "longestGapDays": 0,
+      "policyId": "stage1-complete-daily-sample-v1",
+      "status": "passed",
+      "reasons": [],
+      "sha256": "10255bc7e2897600e365b88545cf9c1c0ddc1a5c441e27df48d8e9201824a3ad"
+    }
+  ],
+  "cropComparisonEstablished": false
+}

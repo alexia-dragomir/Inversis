@@ -1,11 +1,12 @@
 # Limitations and specification reconciliation
 
-Stage 1 validates seven POWER days and one IMERG day, including NetCDF extraction
-and an independent authenticated repeat. Historical coverage is not established.
-There is no exposure/normalization engine, ranking, agronomic rules, sensitivity
-grid, counterfactual execution or certificate generation. Contract completeness and
-source-format validation are not independent scientific validation. No field
-recommendation is supported. Full historical coverage remains unvalidated.
+POWER now has complete 2015–2024 daily coverage; IMERG remains one validated day,
+including NetCDF extraction and an independent authenticated repeat. The engine and
+four-screen workflow implement a clearly labeled heat-only model, conditional comparisons,
+finite sensitivity diagnostics, hypothetical counterfactuals and audit exports.
+No drought or combined-climate result is supported. Full historical precipitation,
+locally applicable agronomic rules and independent field validation remain unavailable.
+Automated checks and independent arithmetic do not establish agricultural usefulness.
 
 Resolved specification conflicts:
 
@@ -26,11 +27,12 @@ Resolved specification conflicts:
   deployment gate is therefore reported separately from local acceptance.
 - Addendum J updates guide/preflight status; it does not revise G–I science contracts.
 
-Open scientific decisions before later computation: minimum valid common scenario
-coverage, numerical tie tolerance, near-constant normalization policy, reference
-population under window shifts, subdaily SMAP aggregation/QC, exact variable/unit
-semantics and source applicability for agronomic exclusions. Record chosen policies
-before inspecting winners; do not tune them to obtain a dramatic reversal.
+Current author conventions are explicit in METHODS.md: at least two common scenarios,
+1e-10 tie tolerance, refusal of reference widths <=1e-12, and fixed 40-crop-year
+references under shifts. These policies were coded before running the real comparison;
+they were not tuned to obtain a preferred result or reversal. SMAP aggregation/QC
+and locally applicable agronomic exclusions remain open. Latest user authorization
+permits the explicitly labeled reduced model while precipitation remains unavailable.
 
 Raw dry-run length may reflect differing crop-window lengths. Normalized exposure
 does not establish equal crop vulnerability. Crop-year weather allocation can drive

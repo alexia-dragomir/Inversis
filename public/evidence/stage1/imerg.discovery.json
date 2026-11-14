@@ -24,8 +24,8 @@
     }
   ],
   "processingHashes": {
-    "src/data/ingestion/validation.ts": "0eb0ea092b0dc7ed993505d64ae219af15013b18746d7e7c3d2011f20407b5a0",
-    "src/data/ingestion/power.ts": "021b4cfa0d49de321ef538be25e126e3cdcf1bdf42e9b1860bfa8aa7d0a8aba9",
+    "src/data/ingestion/validation.ts": "d5382c89c7d1fb07dd27f8773458b60bd8641e66591ef7b5350a0d42cf267961",
+    "src/data/ingestion/power.ts": "2879341880fe3e879568cff18c3cbe679ec95bf281534b5fa775089bea008c10",
     "src/data/ingestion/imerg-discovery.ts": "0fb7ec183320e5bbb146377f6f3b4aeaad4293d3ff7f8e4476dde47155261d37",
     "src/data/ingestion/imerg.ts": "290265c169d44ef4ceac464d8a0d785e740381529f1935b1601d854b0af06e36",
     "scripts/verify-capture.ts": "095d207ba065c344b0353725c17966c3a9408cf7a9dbab27e05f33eee755afef",

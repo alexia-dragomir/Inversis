@@ -1,0 +1,8 @@
+{
+  "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX&community=AG&longitude=27.335&latitude=44.565&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+  "retrievedAt": "2026-11-14T08:56:28.444Z",
+  "status": 200,
+  "contentType": "application/json",
+  "bytes": 6585,
+  "sha256": "767513aeb11212ac6785da20e63cb51e778e6dcab3933734b692e521be9772e2"
+}

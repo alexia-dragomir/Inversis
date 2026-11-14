@@ -2,8 +2,9 @@
 
 2026-11-14: OpenAI Codex assisted reading/reconciling the supplied handoff, repository
 setup, TypeScript contracts, React/CSS implementation, tests, debugging and documentation.
-Firecrawl retrieved official software and competition documentation. No AI generated
-NASA observations, scientific findings, crop rankings, field facts or imagery.
+Firecrawl retrieved official software and competition documentation. No AI fabricated
+NASA observations, field facts or imagery. Numerical outputs are deterministic
+calculations from validated evidence, not language-model-generated results.
 
 Artifacts affected: the Stage 0 source, configuration, tests and documentation in this
 repository. All code must be treated as AI-assisted. Automated validation is recorded
@@ -24,3 +25,10 @@ Before submission update this log with actual subsequent tools, artifacts and hu
 verification. The official guide requires disclosure in descriptive text/metadata for
 generated code/data and visible marking for generated images/video; see the cited guide
 in `SUBMISSION_RULES.md`. No images/video requiring marking were generated here.
+
+Reduced-model checkpoint: Codex assisted the annual POWER acquisition, pure exposure
+and decision engine, independent Python arithmetic oracle, tests, interactive UI,
+counterfactual branches, certificate export and documentation. Browser smoke checks
+used the computer-use tool. Both implementation and oracle are AI-assisted code;
+independence here means separate arithmetic implementations, not independent human
+scientific review. No credentials or temporary signed NASA URLs are published.

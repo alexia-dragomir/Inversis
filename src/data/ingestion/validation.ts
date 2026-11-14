@@ -53,9 +53,13 @@ export function dayUTC(day: string): number {
 }
 
 export function daysInclusive(start: string, end: string): readonly string[] {
+  return calendarDays(start, end, 31);
+}
+
+export function calendarDays(start: string, end: string, maximumDays = 3660): readonly string[] {
   const first = dayUTC(start);
   const last = dayUTC(end);
-  requireCondition(last >= first && last - first < 31 * 86400000, 'Stage 1 requests must cover 1–31 days');
+  requireCondition(last >= first && last - first < maximumDays * 86400000, `Requests must cover 1–${maximumDays} days`);
   return Array.from({ length: (last - first) / 86400000 + 1 }, (_, index) => new Date(first + index * 86400000).toISOString().slice(0, 10));
 }
 
@@ -68,7 +72,7 @@ export function utcTimestamp(value: unknown, label: string): string {
 }
 
 export function completeDailyCoverage<U extends PhysicalUnit>(observations: readonly Observation<U>[], start: string, end: string): Coverage {
-  const expected = daysInclusive(start, end);
+  const expected = calendarDays(start, end);
   const seen = new Map<string, Observation<U>>();
   for (const observation of observations) {
     const time = utcTimestamp(observation.timeStartUTC, 'Observation start');

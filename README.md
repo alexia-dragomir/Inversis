@@ -5,12 +5,15 @@
 A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
 *Field Shift: Adapting Farms with NASA Data*.
 
-**Stage 1 small-sample checkpoint.** Seven authentic NASA POWER T2M_MAX daily values
-(1–7 January 2024 UTC) and one IMERG Final V07B daily cell (January 1, 0 mm/day,
-48 valid half-hours) are retained and validated. Historical coverage is not established. The four-screen
-Context → Decision → Stability → Certificate architecture is preserved. No ranking,
-reversal, exposure statistic or certificate has been computed. See the
-[Stage 1 evidence report](docs/STAGE_1_REPORT.md) for exact scope and limitations.
+**Working reduced-model checkpoint.** All 3,653 NASA POWER T2M_MAX daily values for
+2015–2024 are retained and validated in UTC and °C. The interactive four-screen
+workflow computes a clearly labeled, provisional **heat-only** comparison across six
+common historical five-year windows. It includes hypothetical crop exclusions,
+window/phase sensitivity, recomputed Next Evidence and downloadable audit records.
+IMERG Final V07B coverage remains **one validated day** (January 1, 2024; 0 mm/day,
+48 valid half-hours). The combined rainfall/heat model refuses to rank candidates.
+See the [implementation checkpoint](docs/IMPLEMENTATION_CHECKPOINT.md) and historical
+[Stage 1 evidence report](docs/STAGE_1_REPORT.md).
 
 ## Run locally
 
@@ -35,7 +38,8 @@ without rewrite rules: `#context`, `#decision`, `#stability`, `#certificate`.
   decisions, counterfactual branches and reproducible certificates.
 - `src/data`: explicit foundation state and runtime source validators. Source access
   samples are separated from comparison eligibility.
-- `src/engine`: reserved pure computational boundary, independent of React.
+- `src/engine`: pure exposure, normalization, minimax-regret, sensitivity,
+  counterfactual and certificate computation, independent of React.
 - `src/agronomy`: reserved source-backed rule and eligibility boundary.
 - `src/pages`, `src/components`, `src/App.tsx`: accessible presentation/navigation;
   no scientific ranking logic lives here.
@@ -54,7 +58,7 @@ system sans fallback; no font is downloaded.
 
 Proposed location: Bărăgan Plain, Romania, 44.565° N, 27.335° E. This is not a measured
 farm. Three fixed-start five-year crop sequences are configured, all conditional.
-2015–2024 is a requested historical period, not validated coverage. Field soil,
+2015–2024 temperature coverage is validated; precipitation history is incomplete. Field soil,
 crop/disease history and management remain unknown. A and B share crop composition.
 
 ## Documentation
@@ -80,7 +84,7 @@ imply that the remote workflow has run.
 
 ## Scope and license
 
-Future results are conditional historical exposure comparisons, never yield,
+Results are conditional historical heat-exposure comparisons, never yield,
 soil-health, disease-probability or future-climate predictions. A certificate is an
 audit record, not agricultural certification or NASA endorsement.
 

@@ -1,10 +1,18 @@
 import type { Coverage, Observation, ProvenanceRecord } from '../../domain/contracts.ts';
-import { completeDailyCoverage, dayUTC, daysInclusive, finite, record, requireCondition, text } from './validation.ts';
+import { completeDailyCoverage, dayUTC, calendarDays, finite, record, requireCondition, text } from './validation.ts';
 
 export const powerRequest = {
   latitude: 44.565, longitude: 27.335, start: '2024-01-01', end: '2024-01-07',
   url: 'https://power.larc.nasa.gov/api/temporal/daily/point?parameters=T2M_MAX&community=AG&longitude=27.335&latitude=44.565&start=20240101&end=20240107&format=JSON&time-standard=UTC',
 } as const;
+
+export function createPowerRequest(start: string, end: string) {
+  calendarDays(start, end, 366);
+  const url = new URL(powerRequest.url);
+  url.searchParams.set('start', start.replaceAll('-', ''));
+  url.searchParams.set('end', end.replaceAll('-', ''));
+  return { ...powerRequest, start, end, url: url.href };
+}
 
 export interface PowerSample {
   readonly kind: 'validated-access-sample';
@@ -22,17 +30,18 @@ export interface VerifiedCapture {
 }
 
 /** Metadata/schema/physical-value validation, not independent reanalysis validation. */
-export function parsePower(payload: unknown, capture: VerifiedCapture): PowerSample {
+export function parsePower(payload: unknown, capture: VerifiedCapture, request: ReturnType<typeof createPowerRequest> = powerRequest): PowerSample {
+  requireCondition(capture.url === request.url, 'POWER capture URL differs from declared request');
   const root = record(payload, 'POWER response');
   requireCondition(root.type === 'Feature', 'Expected POWER GeoJSON Feature');
   const geometry = record(root.geometry, 'geometry');
   requireCondition(geometry.type === 'Point' && Array.isArray(geometry.coordinates) && geometry.coordinates.length === 3, 'Expected three POWER point coordinates');
   const [longitude, latitude, elevation] = geometry.coordinates as unknown[];
-  requireCondition(Math.abs(finite(longitude, 'longitude') - powerRequest.longitude) < 1e-6 && Math.abs(finite(latitude, 'latitude') - powerRequest.latitude) < 1e-6, 'POWER response coordinates do not match request');
+  requireCondition(Math.abs(finite(longitude, 'longitude') - request.longitude) < 1e-6 && Math.abs(finite(latitude, 'latitude') - request.latitude) < 1e-6, 'POWER response coordinates do not match request');
   finite(elevation, 'elevation');
   const header = record(root.header, 'header');
   requireCondition(header.time_standard === 'UTC', 'POWER response must explicitly report UTC');
-  requireCondition(header.start === '20240101' && header.end === '20240107', 'POWER returned period differs from request');
+  requireCondition(header.start === request.start.replaceAll('-', '') && header.end === request.end.replaceAll('-', ''), 'POWER returned period differs from request');
   const api = record(header.api, 'api');
   requireCondition(api.name === 'POWER Daily API', 'Unexpected NASA service');
   const serviceVersion = text(api.version, 'API version');
@@ -44,7 +53,7 @@ export function parsePower(payload: unknown, capture: VerifiedCapture): PowerSam
   requireCondition(parameter.units === 'C', 'POWER T2M_MAX units must be C; no silent conversion');
   requireCondition(parameter.longname === 'Temperature at 2 Meters Maximum', 'Unexpected T2M_MAX description');
   const series = record(record(record(root.properties, 'properties').parameter, 'parameter').T2M_MAX, 'T2M_MAX series');
-  const dates = daysInclusive(powerRequest.start, powerRequest.end);
+  const dates = calendarDays(request.start, request.end, 366);
   const keys = dates.map(day => day.replaceAll('-', ''));
   requireCondition(Object.keys(series).every(key => keys.includes(key)), 'Unexpected or malformed daily date key');
   const provenanceId = `power-t2m-max-${capture.sha256}`;
@@ -87,7 +96,7 @@ export function parsePower(payload: unknown, capture: VerifiedCapture): PowerSam
   };
   return {
     kind: 'validated-access-sample', eligibleForCropComparison: false, observations,
-    coverage: completeDailyCoverage(observations, powerRequest.start, powerRequest.end), provenance,
-    limitations: ['Seven winter days prove access/format only; no complete crop window or five-year scenario.', 'Native cell identity and underlying collection/science version are not reported by this response; API version is not a dataset version.', 'Daily availability is checked; subdaily completeness and per-day source QC are not exposed by this API response.', 'Values are modeled gridded temperature estimates, not farm measurements.'],
+    coverage: completeDailyCoverage(observations, request.start, request.end), provenance,
+    limitations: ['Source availability alone does not establish complete common crop windows or five-year scenarios.', 'Native cell identity and underlying collection/science version are not reported by this response; API version is not a dataset version.', 'Daily availability is checked; subdaily completeness and per-day source QC are not exposed by this API response.', 'Values are modeled gridded temperature estimates, not farm measurements.'],
   };
 }
