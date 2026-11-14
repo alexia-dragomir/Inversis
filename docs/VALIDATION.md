@@ -1,5 +1,38 @@
 # Validation record
 
+## Phase 2 and public deployment, 2026-11-14
+
+`npm run check` passed **107 tests in 14 files**, lint, TypeScript, source/history
+verification, deterministic regeneration and production build. The original heat
+fallback remains covered. Independent Python arithmetic matches 105 preference ×
+calendar cases under each of two reference protocols (210 total) and six single-replay
+omissions. Independence is computational, not independent human scientific review.
+The audit is in PHASE_2_FINDINGS.md.
+
+Public application: https://alexia-dragomir.github.io/Inversis/. Scientific check and
+deployment succeeded in GitHub Actions run **43595682592**, commit `ff3527e`, with
+runtime implementation `b538001`. All four public screens were checked on desktop
+and at 390px viewport width; document width equaled client width (375px with scrollbar),
+with no horizontal page overflow. Controls, hypothetical exclusions, reset, heat-only
+fallback, preference selection, methodological disclosures, source coverage and
+certificate export worked. Direct Stability navigation and Certificate refresh worked;
+refresh restores default assumptions. No captured console warnings/errors.
+
+Seven fetched public assets matched production SHA-256 exactly: HTML, JS, CSS,
+both historical analysis inputs, the January 1 sample NetCDF and 2015 source archive.
+All twenty annual archive/manifest URLs returned HTTP 200. No NASA request or token
+was needed for these static deployment checks.
+
+Downloaded public certificate `inversis-0e0f04011a61.json` used heat weight 0.2,
+dry-spell weight 0.8, +7-day windows and no exclusions. Canonical SHA-256 verified:
+`0e0f04011a61824c52089963690f799c46f9b61b80a28c877034f637f387af15`.
+Its entire decision record (including loss/regret matrices) and weights exactly
+matched fresh `analyze` output from retained source-backed inputs at those settings.
+The export also recorded +7 days and no prohibited crops. Production JavaScript:
+340.57 kB (94.96 kB gzip); CSS: 14.59 kB (3.82 kB gzip).
+
+Earlier sections are historical checkpoint records, superseded where applicable.
+
 ## Complete rainfall-and-heat checkpoint, 2026-11-14
 
 `npm run check` passed **101 tests in 13 files**, lint, strict TypeScript, every

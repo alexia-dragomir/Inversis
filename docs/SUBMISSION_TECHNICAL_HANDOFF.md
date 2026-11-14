@@ -47,6 +47,7 @@ AI-assisted; their independence is computational. The app has no runtime AI.
 
 ## Evidence and verification links
 
+- Live application: https://alexia-dragomir.github.io/Inversis/
 - Repository: https://github.com/alexia-dragomir/Inversis/tree/stage-1/evidence
 - Scientific findings: https://github.com/alexia-dragomir/Inversis/blob/stage-1/evidence/docs/PHASE_2_FINDINGS.md
 - Methods: https://github.com/alexia-dragomir/Inversis/blob/stage-1/evidence/docs/METHODS.md
@@ -56,9 +57,15 @@ AI-assisted; their independence is computational. The app has no runtime AI.
 - Phase 2 runtime checkpoint: b538001e0cefe7e77e8c6fd86c0c3176d0b0c4f4.
 - Local full verification: **107 tests in 14 files**, lint, TypeScript, original-byte
   verifiers, independent numerical diagnostics and production build passed.
-- Remote scientific job passed in run 43594362237. Public deployment/browser
-  verification is pending the new workflow after the owner authorized the checkpoint
-  branch for the github-pages environment.
+- Remote scientific check and deployment passed in run 43595682592 for `ff3527e`.
+  Public desktop and 390px checks passed all four screens, controls, heat-only
+  fallback, exclusions, reset, evidence loading and certificate export. No horizontal
+  page overflow or console warnings/errors were observed. Direct routes and refresh
+  work; refresh resets assumptions to defaults.
+- Public export at heat 20%, dry spell 80%, +7-day windows and no exclusions:
+  `0e0f04011a61824c52089963690f799c46f9b61b80a28c877034f637f387af15`.
+  Canonical hash verified; entire exported decision and weights matched fresh local
+  recomputation using the retained evidence. See VALIDATION.md.
 
 ## Suggested live evidence sequence
 

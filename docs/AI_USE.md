@@ -1,5 +1,12 @@
 # AI assistance record
 
+2026-11-14, public release verification: Codex assisted GitHub Pages deployment,
+desktop/390px browser checks, static-asset integrity checks and exported-certificate
+recomputation. The repository owner enabled Pages and permitted the checkpoint branch
+in the deployment environment. No security check was bypassed. All four public screens
+were exercised; the exported custom configuration matched retained-evidence arithmetic.
+No new NASA retrieval or credential access was needed during this verification.
+
 2026-11-14: OpenAI Codex assisted reading/reconciling the supplied handoff, repository
 setup, TypeScript contracts, React/CSS implementation, tests, debugging and documentation.
 Firecrawl retrieved official software and competition documentation. No AI fabricated

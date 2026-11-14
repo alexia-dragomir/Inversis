@@ -10,19 +10,26 @@ uploads only `dist`, then deploys through a dependent Pages job. The deploy job 
 only Pages-write and OIDC permissions; source access remains read-only. No NASA
 credential is available or needed in CI or the deployed app.
 
-Phase 2's scientific job and static upload passed for `b538001` in run
-`43594362237`. Its first deployment was rejected before execution because the
-`github-pages` environment did not allow branch `stage-1/evidence`. The owner subsequently permitted only that branch while preserving other protections.
-The connector could not rerun jobs (Actions-write permission unavailable, HTTP 403);
-a normal authorized documentation push triggers a fresh gated workflow. Public URL
-verification is pending the deployment result. Do not weaken all branch restrictions
-or claim a successful deployment from the artifact upload alone.
+**Live application: https://alexia-dragomir.github.io/Inversis/**
+
+Scientific check and Pages deployment passed in
+[run 43595682592](https://github.com/alexia-dragomir/Inversis/actions/runs/43595682592)
+for `ff3527e`; runtime implementation is `b538001`. The initial deployment was
+blocked by the environment branch rule. The owner permitted `stage-1/evidence`
+while preserving other protections. A normal documentation push triggered the
+successful workflow; no security checks were bypassed.
 
 Relative asset/evidence URLs and four hash routes support the repository subpath,
 refresh and direct links without server rewrites. Local desktop/mobile (390px)
 checks passed, including settings keyboard activation, source coverage, charts and
-heat-only fallback. Public checks must still cover those behaviors and a downloaded
-certificate. Verify with `npm run certificate:verify -- EXPORT.json`.
+heat-only fallback. Public desktop and 390px checks passed all four screens,
+controls, exclusions, reset, evidence loading and certificate export. Direct routes
+and refresh worked; refresh restores default assumptions. There was no horizontal
+page overflow or captured console warning/error. Seven public assets matched the
+production build byte for byte; twenty annual archive/manifest URLs returned HTTP 200.
+The exported 20% heat / 80% dry-spell, +7-day decision exactly matched fresh
+recomputation. See VALIDATION.md for its hash and numerical validation.
+Verify exports with `npm run certificate:verify -- EXPORT.json`.
 
 The retained `vercel.json` is an unused alternative configuration, not a second
 hosting project. No Vercel account/project was created. No other repository was
@@ -86,5 +93,5 @@ Switch to the preserved heat-only model to demonstrate the explicit fallback.
 Certificate: download and verify its SHA-256, source records and diagnostic samples.
 Do not imply stable sampled sets prove future performance or field suitability.
 
-**Links still required:** verified public application URL; final project/submission
-page; public demonstration asset in the format accepted by the live form.
+**Links still required:** final project/submission page and public demonstration
+asset in the format accepted by the live form. The application URL above is verified.

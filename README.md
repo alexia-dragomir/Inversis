@@ -2,6 +2,9 @@
 
 **Know what would change the decision.**
 
+**[Open the live application](https://alexia-dragomir.github.io/Inversis/)** ·
+[Submission technical handoff](docs/SUBMISSION_TECHNICAL_HANDOFF.md)
+
 A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
 *Field Shift: Adapting Farms with NASA Data*.
 
