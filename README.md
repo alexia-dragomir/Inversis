@@ -8,7 +8,12 @@
 The [product design checkpoint](docs/PRODUCT_DESIGN_CHECKPOINT.md) adds the original
 Inversis branding, interactive replay/regret comparison, a 21-state preference
 explorer, physical crop-year history and a structured certificate. The scientific
-engine and evidence remain unchanged; 109 tests cover the current implementation.
+engine and evidence remain unchanged. The [five-stage guided demonstration](docs/PRODUCT_COMPLETION.md)
+and dynamic result explanations preserve the ordinary user's workspace.
+[Field Evidence & Readiness](docs/FIELD_EVIDENCE.md) adds optional, session-only
+soil, management and crop-history notes, source labels, local review questions and
+a separate unverified JSON export. Notes never change scientific results or certificates.
+The current suite contains 142 passing tests across 20 files.
 
 A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
 *Field Shift: Adapting Farms with NASA Data*.
@@ -77,7 +82,8 @@ no font is downloaded. Only Inversis artwork supplies branding; see the
 Proposed location: Bărăgan Plain, Romania, 44.565° N, 27.335° E. This is not a measured
 farm. Three fixed-start five-year crop sequences are configured, all conditional.
 2015–2024 temperature and precipitation coverage are validated. Field soil,
-crop/disease history and management remain unknown. A and B share crop composition.
+crop/disease history and management default to unknown. Users can record supplied,
+unverified notes; agronomic suitability remains unestablished. A and B share crop composition.
 
 ## Documentation
 

@@ -70,3 +70,14 @@ certificate provenance, and prepared GitHub Pages deployment. No new NASA data,
 credentials, model thresholds or candidate sequences were introduced. Both the app
 and diagnostic oracle remain AI-assisted. Browser checks are implementation QA,
 not independent scientific or agronomic approval.
+
+Product completion and field evidence: Codex assisted the isolated five-stage guided
+demonstration, dynamic result explanations and methodology presentation, then added
+the presentation-only field intake, source labels, validation, local review questions,
+separate JSON export and Stability connection. Field values remain unknown by default;
+browser test fixtures are test inputs, not observations. No runtime AI, source-data
+changes, new scientific calculations or automatic agronomic exclusions were added.
+Codex assisted unit tests, headless interaction/accessibility checks, screenshot review,
+certificate comparisons and documentation. The US extension sources are general
+guidance, not verified Romanian field constraints. Human agronomic validation remains
+necessary; software QA does not supply it.
