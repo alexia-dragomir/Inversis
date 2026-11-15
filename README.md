@@ -1,5 +1,9 @@
 # Inversis
 
+> **Historical development archive — Stage 0 (November 14, 2026)**
+>
+> This branch preserves Inversis's initial technical foundation. For the completed application, validated NASA data integration, scientific findings, and current documentation, see the [current repository](https://github.com/alexia-dragomir/Inversis/tree/stage-1/evidence).
+
 **Know what would change the decision.**
 
 A crop-rotation decision-assurance prototype for NASA Space Apps 2026,
@@ -64,15 +68,6 @@ crop/disease history and management remain unknown. A and B share crop compositi
 - [Submission rules](docs/SUBMISSION_RULES.md)
 - [AI assistance](docs/AI_USE.md)
 - [Third-party software](THIRD_PARTY_NOTICES.md)
-
-## Repository and deployment
-
-The sole intended remote is https://github.com/alexia-dragomir/Inversis.
-Vercel is not configured or verified. To deploy, create a **new Inversis project**,
-authorize only this repository, select Vite, build with `npm run build`, and publish
-`dist`. No environment variables are needed. See the execution report for actual
-Git publication status. GitHub Actions is configured; local passing checks do not
-imply that the remote workflow has run.
 
 ## Scope and license
 
