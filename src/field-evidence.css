@@ -10,6 +10,8 @@
   .field-input-grid fieldset { min-width: 0; border: 1px solid var(--line); padding: 16px; background: #fff; }
   .field-input-grid legend { padding: 0 6px; font-weight: 650; font-size: 15px; }
   .field-input-grid label { display: block; margin: 12px 0 6px; font-size: 13px; }
+  .field-input-grid .field-input-label { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .field-input-grid fieldset { align-self: start; }
   .field-input-grid input, .field-input-grid select, .field-input-grid textarea { display: block; width: 100%; min-width: 0; min-height: 44px; box-sizing: border-box; margin-top: 6px; border: 1px solid #6f8d7e; background: #fff; color: #073e40; padding: 9px; font: inherit; border-radius: 3px; }
   .field-input-grid textarea { resize: vertical; }
   .field-input-grid .field-provenance { font-size: 12px; padding-left: 10px; border-left: 2px solid #087f80; }

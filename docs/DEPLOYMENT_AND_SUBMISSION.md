@@ -1,5 +1,14 @@
 # Deployment and submission preparation
 
+## Final refinement, 2026-11-15
+
+The latest release scope and verification gates are recorded in
+[FINAL_RELEASE.md](FINAL_RELEASE.md). The current suite contains 142 tests in 20
+files plus separate headless regressions. `426d57f` was the verified field-evidence
+deployment preceding this refinement; older workflow runs below document historical
+deployments. Publication uses the same protected Actions/Pages workflow. The
+competition submission itself has not been completed by this work.
+
 ## Actual readiness
 
 The static Vite/React application has no backend, runtime NASA login, API key or

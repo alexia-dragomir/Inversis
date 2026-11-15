@@ -1,5 +1,14 @@
 # Technical handoff for submission materials
 
+## Current release summary, 2026-11-15
+
+The current application includes the isolated five-stage guided demo, dynamic result
+explanations, session-only unverified field evidence and four-screen top-of-page
+navigation. The suite contains 142 tests in 20 files plus separate headless browser
+regressions. See [final release verification](FINAL_RELEASE.md) and the
+[reviewer walkthrough](../README.md). Historical counts and checkpoints below are
+retained as dated evidence, not current totals. Competition submission is not completed.
+
 ## Transferable claims
 
 Inversis compares three ordered five-year crop plans through four screens:

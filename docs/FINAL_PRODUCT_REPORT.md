@@ -1,5 +1,10 @@
 # Final product refinement checkpoint
 
+Historical checkpoint: this report describes the 2026-11-14 refinement below.
+For the current 2026-11-15 release, 142-test suite, navigation fix and reviewer-facing
+documentation, see [FINAL_RELEASE.md](FINAL_RELEASE.md). Earlier counts are retained
+as historical records, not presented as current verification totals.
+
 Date: 2026-11-14. Repository: `alexia-dragomir/Inversis`.
 Branch: `stage-1/evidence`.
 Starting/rollback checkpoint: `bd786d9fbad269ecb261e7972ca86562e264654a`.

@@ -1,5 +1,17 @@
 # Validation record
 
+## Current release verification, 2026-11-15
+
+The current suite is **142 tests in 20 files**. The 2026-11-15 refinement adds
+`scripts/verify-navigation.mjs`, a separate headless regression suite for direct
+hashes, all four destinations, same-route clicks, Back/Forward, internal links,
+keyboard focus and skip-to-content at 390 and 1440 CSS pixels. This browser suite
+is additional to the Vitest count. The scientific pipeline and default certificate
+are unchanged. See [final release verification](FINAL_RELEASE.md) for the complete
+release gates, file inventory and scope. Earlier counts below describe their dated
+checkpoints; they are not the current release totals. Dependency audit findings
+below are historical, not a new security audit.
+
 ## Product redesign and public verification, 2026-11-14
 
 The presentation release `6103347` passed **109 tests in 15 files**, full source/history

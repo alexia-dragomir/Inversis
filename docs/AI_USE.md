@@ -81,3 +81,12 @@ Codex assisted unit tests, headless interaction/accessibility checks, screenshot
 certificate comparisons and documentation. The US extension sources are general
 guidance, not verified Romanian field constraints. Human agronomic validation remains
 necessary; software QA does not supply it.
+
+Final pre-submission refinement, 2026-11-15: Codex assisted the focus/scroll-restoration
+fix and headless navigation regression checks, historically bounded Decision heading,
+accessible field-label spacing cleanup, README restructuring and documentation
+reconciliation. The creator/lead paragraphs were supplied and approved by Alexia
+Maria Dragomir and reproduced exactly. No other team contributions were inferred.
+No engine, source evidence, certificate serialization, branding or runtime AI changes
+were introduced. The optional new replay explanation was omitted to keep scope small.
+Competition submission itself was not performed.
